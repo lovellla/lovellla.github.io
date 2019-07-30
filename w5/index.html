@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EGG DROP</title>
+    <link rel="stylesheet" href="font.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    body, html{width: 100%; font-family: 'S-CoreDream-3Light', sans-serif; font-size: 14px;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
+    
+    .wrap{border: 15px solid #8b1538;}
+    .hd{height: 170px; box-sizing: border-box;}
+    .logo{display: block; text-align: center; padding-top: 50px;}
+    .menu{position: absolute; right: 180px; top: 50px; font-size: 1.6em;
+         font-weight: 800; width: 92px; border-bottom: 3px solid #8b1538;}
+    .menu a{color:#333;}
+    .menu img{position: absolute; padding-left: 5px; padding-top: 6px;}
+    .bar{width: 100%; height: 80px; text-align: center;}
+    .line_box{width: 100px;  margin: 0 auto; clear: both; position: relative;}
+    .line_box label{position: absolute; width: 5px; height: 20px; background-color: #f0dae0; text-align: center; 
+        border-radius: 5px; transition: 0.6s; top: 50px; }
+    .line_box label#lin1{position: absolute; left: 0;}
+    .line_box label#lin2{position: absolute; left: 15px;}
+    .line_box label#lin3{position: absolute; left: 30px;}
+    .line_box label#lin4{position: absolute; left: 45px;}
+    .line_box label#lin5{position: absolute; left: 60px;}
+    .bar1 .rdo{display: none;}
+    #ra1:checked ~ .line_box label#lin1{height: 50px; background-color: #8b1538; top: 35px;}
+    #ra2:checked ~ .line_box label#lin2{height: 50px; background-color: #8b1538; top: 35px;}
+    #ra3:checked ~ .line_box label#lin3{height: 50px; background-color: #8b1538; top: 35px;}
+    #ra4:checked ~ .line_box label#lin4{height: 50px; background-color: #8b1538; top: 35px;}
+    #ra5:checked ~ .line_box label#lin5{height: 50px; background-color: #8b1538; top: 35px;}
+    #gnb{clear: both; position: absolute; right: 105px; z-index: 99; width: 200px; height: auto;
+        background-color: #fff; opacity: 0; transition: 1s; border: 5px solid #8b1538;
+        padding-top: 20px;}
+    #ck2:checked ~ #gnb{opacity: 1;}
+    #ck2:checked ~ .close img{opacity: 1; z-index: 100;}
+    .dp1{font-size: 1.4em; line-height: 50px; cursor: pointer;}
+    .sub li{font-size: 1.2em;}
+   
+    #gnb li{clear: both; line-height: 2; padding-left: 25px;}
+    #gnb li a{display: block; color:#333; position: relative; font-weight: 800;}
+    #gnb li a:hover{color: #8b1538; border-bottom: 1px solid  #8b1538;}
+    .sub li a{font-size: 0.8em;}
+
+    .ck_item{display: none;}
+    .close img{position: absolute; margin-top: 90px; right: 120px; top:30px; opacity: 0;}
+    .sub{height: 0; overflow: hidden; transition: 0.5s; font-size: 1.0em;}
+    .sub.on{height: 100px;}
+    .item1 .sub.on{height: 200px;}
+  
+    #gnb .close{position: absolute; right: 30px; top: 30px;}
+
+    .ft{clear: both; height: 100px; border-top: 1px solid #333; color: #333; font-size: 0.8em; text-align: center; line-height: 1.4;
+        padding-bottom: 15px; font-weight: 400; position: absolute; bottom: 0; left: 0; width: 100%; padding-top: 20px;}
+    .ft_wrap{width: 280px; margin: 0 auto;}
+    
+    /* .main{clear: both;}
+    .main li { width: 320px; height: 320px; position:relative; float: left;}
+    .main li a {display:block; width: 320px; height: 320px; transform:rotateY(0deg); 
+    transition: transform 1s; transform-style: preserve-3d;}
+    .main li a:hover {transform: rotateY(180deg);}
+    .front{width: 320px; height: 320px; text-align: center; transform:rotateY(0deg); position: absolute;}
+    .front img{width: 320px; height: 320px;}
+    .back {background-color: rgba(0,0,0,0.8); border-radius: 160px; top: 0;
+    color:#fff; transition: transform 1s; width: 320px; height: 320px;}
+    main li a:hover .back{opacity: 1;} */
+    .main {clear:both; width: 1800px;margin: 0 auto; margin-bottom: 100px; }
+	.main li { width:320px; height:320px; position:relative; float:left; margin: 60px; overflow:hidden; }
+	.main li a { display:block; width: 320px; height: 320px; transform:rotateY(0deg);
+		transition: 1s; transform-style: preserve-3d; }
+	.main li a div { width: 320px; height: 320px; position:absolute; top: 0; left: 0;
+		border-radius:200px; overflow:hidden; transition:1s; }
+	.main li a img { width:320px; height:320px;}	
+	.front { transform:rotateY(0deg);}	
+	.back { transform:rotateY(180deg); background:rgba(0,0,0,0.7); opacity:0;}	
+    .main li a:hover { transform:rotateY(180deg); }
+    .main li:hover .txt{ opacity:1; text-indent: 0px; }
+	.main li a:hover .back {opacity:1;}	
+    .main li a .front img {opacity:1;}
+    .tx{display: block; width: 320px;  position: absolute; text-align: center; opacity: 0; top: 120px; 
+         transition: 0.6s; color:#fff; font-size: 1.5em;}
+    .main li:hover .tx{opacity: 1;}
+    .txt{display: block; width: 320px;  position: absolute; text-align: center; opacity: 0; top: 150px; 
+        text-indent: -999px; transition: 0.6s; color:#fff; font-size: 1.2em; line-height: 50px;}
+    .txt1{margin-top: 26px;}
+    
+    #ft{clear: both; width: 100%; height: 150px; margin: 0 auto; border-top: 1px solid #ccc;
+    padding-top:20px; padding-bottom: 20px;}
+    .list{margin-left: 850px;}
+    .list li{float: left; line-height: 40px;}
+    .list li:after{content:"|"; padding: 10px;}
+    .list li:last-child::after{content:"";}
+    .list li a{color:#333; font-size: 0.9em; font-weight: 600;}
+    .copyright{clear: both; text-align: center; font-size: 0.8em;
+            font-weight: 700; color:#555; line-height: 18px;}
+    .sns{display: block; padding-top: 20px; margin-left: 900px;}
+    .sns li{float: left; padding-right: 10px;}
+    .sns img{width: 30px; height: 30px;}
+    
+</style>
+<script>
+     $(document).ready(function(){
+            $("#gnb a.dp1").click(function(){
+                $(".sub").removeClass("on");
+                $(this).next(".sub").addClass("on");
+                $("#gnb a.dp1").removeClass("on");
+                $(this).addClass("on");
+            });
+        });
+</script>
+<body>
+    <div class="wrap">
+            <a href="" class="logo"><img src="./img/logo.png" alt=""></a>
+       <header class="hd">
+          
+          <input type="checkbox" class="ck_item" id="ck2">
+          <label for="ck2" class="close"><img src="./img/close.png" alt=""></label>
+          <ul>
+          <li class="menu">
+                <label for="ck2">MENU<img src="./img/san.png" alt=""></label>
+            </li>
+         </ul>
+         <nav id="gnb">
+                <ul class="nav">
+                    <li><a class="dp1">BRAND</a>
+                       <ul class="sub">
+                            <li><a href="#">ABOUT EGG DROP <br> <span>에그드랍소개</span></a></li>
+                            <li><a href="#">BRAND B.I <br><span>브랜드 아이덴티티</span></a></li>
+                            <li><a href="#">BRAND INTERIOR <br><span>브랜드 인테리어</span></a></li>
+                        </ul>
+                   </li>
+                    <li><a class="dp1">MENU</a>
+                       <ul class="sub">
+                            <li><a href="#">EGG SANDWICH <br><span>샌드위치</span></a></li>
+                            <li><a href="#">COFFEE & DRINK <br><span>음료</span></a></li>
+                        </ul>
+                   </li>
+                    <li><a class="dp1">STORE</a></li>
+                    <li><a class="dp1">CONTACT</a></li>
+                    <li><a class="dp1">FRANCHISE</a></li>
+                   </ul>
+                   <img src="./img/img2.jpg" alt="" class="bg_img">
+            </nav>
+          <ul class="bar">
+            <li class="bar1">
+                <input type="radio" name="rdo" class="rdo" id="ra1" checked>
+                <input type="radio" name="rdo" class="rdo" id="ra2">
+                <input type="radio" name="rdo" class="rdo" id="ra3">
+                <input type="radio" name="rdo" class="rdo" id="ra4">
+                <input type="radio" name="rdo" class="rdo" id="ra5">
+            <div class="line_box">
+                <label for="ra1" class="lin" id="lin1"></label>
+                <label for="ra2" class="lin" id="lin2"></label>
+                <label for="ra3" class="lin" id="lin3"></label>
+                <label for="ra4" class="lin" id="lin4"></label>
+                <label for="ra5" class="lin" id="lin5"></label>
+            </div>  
+        </li>
+        </ul>
+       </header>
+      
+        <ul class="main">
+            <li class="item1">
+                <a href="">
+                   <div class="front"><img src="./img/ban1.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">브랜드소개</h3>
+                <h3 class="txt">EGG DROP</h3>
+            </li>
+
+            <li class="item2">
+                <a href="">
+                   <div class="front"><img src="./img/ban2.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Mr.Egg</h3>
+                <h3 class="txt txt1">미스터에그</h3>
+            </li>
+            <li class="item3">
+                <a href="">
+                   <div class="front"><img src="./img/ban3.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Mr.American Ham Cheese</h3>
+                <h3 class="txt txt1">아메리칸햄치즈</h3>
+            </li>
+            <li class="item4">
+                <a href="">
+                   <div class="front"><img src="./img/ban4.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Bacon Double Cheese</h3>
+                <h3 class="txt txt1">베이컨더블치즈</h3>
+            </li>
+            <li class="item5">
+                <a href="">
+                   <div class="front"><img src="./img/ban5.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Teriyaki</h3>
+                <h3 class="txt txt1">데리야끼바베큐</h3>
+            </li>
+            <li class="item6">
+                <a href="">
+                   <div class="front"><img src="./img/ban6.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Garlic Bacon Cheese</h3>
+                <h3 class="txt txt1">갈릭베이컨치즈</h3>
+            </li>
+            <li class="item7">
+            <a href="">
+                   <div class="front"><img src="./img/ban7.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Avo Holic</h3>
+                <h3 class="txt txt1">아보홀릭</h3>
+            </li>
+            <li class="item8">
+                <a href="">
+                   <div class="front"><img src="./img/ban8.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샌드위치</h3>
+                <h3 class="txt">Tamago Sando</h3>
+                <h3 class="txt txt1">타마고산도</h3>
+            </li>
+            <li class="item9">
+                <a href="">
+                   <div class="front"><img src="./img/ban9.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">샐러드</h3>
+                <h3 class="txt">Egg Cobb Salad</h3>
+                <h3 class="txt txt1">에그콥샐러드</h3>
+            </li>
+            <li class="item10">
+                <a href="">
+                   <div class="front"><img src="./img/ban10.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">DRINK</h3>
+                <h3 class="txt">Coffee&Juice</h3>
+                <h3 class="txt txt1">커피&쥬스</h3>
+            </li>
+            <li class="item11">
+                <a href="">
+                   <div class="front"><img src="./img/ban11.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">STORE</h3>
+                <h3 class="txt">매장찾기</h3>
+            </li>
+            <li class="item12">
+                <a href="">
+                   <div class="front"><img src="./img/ban12.png" alt=""></div> 
+                   <div class="back"></div>
+                </a>
+                <h3 class="tx">FRANCHISE</h3>
+                <h3 class="txt">가맹점문의</h3>
+            </li>
+        </ul>
+    <footer id="ft">
+        <ul class="list">
+            <li><a href="">브랜드소개</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+        </ul>
+            <div class="copyright">상호 주식회사 골든하인드 주소 서울특별시 서초구 서초대로78길 22 (서초동, 홍우빌딩)
+                <br>전화 1670-4809 팩스 02-6302-7013
+                    <br>사업자 등록번호 138-87-00801 이메일 support@goldenhind.co.kr</div>
+        <ul class="sns">
+            <li class="insta"><a href=""><img src="./img/sns3.png" alt=""></a></li>
+            <li class="face"><a href=""><img src="./img/sns4.png" alt=""></a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
