@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+            @media screen and (max-width:767px){
+                /* 모바일의 경우 */
+              #left{position: absolute; height: 100px;}
+              #gnb{display: none;}
+              .logo{display: block; margin-left: 85px; margin-top: 25px;}
+              #content{clear: both; float: none; display: block; width:100%;}
+              .title{margin-top: 115px; margin-left: 25px; margin-bottom: 10px;}
+              .list{column-count: 2; margin-top: 10px; width: 90%; margin: 0 auto;}
+              .list li{display: block;}
+              .list li a{display: block; margin: 0 auto; margin-bottom: 5px;}
+              .list li a img{display: block; width: 100%;}
+              .list1 #vdo1{display: block; width: 90%; margin: 0 auto;}
+              .title1{margin-left: 25px; margin-top: 10px; margin-bottom: 10px;}
+             
+              
+            }
+            @media screen and (min-width:768px) and (max-width:959px){
+                /* 태블릿의 경우 */
+              
+            }
+            @media screen and (min-width:960px) and (max-width:1280px){
+                /* 데스크탑의 경우 */
+              .list{column-count: 3;}
+              .list1{column-count: 2;}
+              .list2{column-count: 3;}
+            }
+            @media screen and (min-width:1281px){
+                /* 고해상도 데스크탑 */
+              .list{column-count: 6;}
+              .list1{column-count: 2;}
+              .list2{column-count: 3;}
+        
+            }
+        </style>
+    <script>
+        $(document).ready(function(){
+            $("#gnb li a").click(function(){
+                $(".sub").removeClass("on");
+                $(this).next(".sub").addClass("on");
+                $("#gnb a.dp1").removeClass("on");
+                $(this).addClass("on");
+            });
+        });
+    </script>
+</head>
+<body>
+    <aside id="left">
+        <a href="" class="logo"><img src="./img/logo.png" alt=""></a>
+        <select name="lang" id="lang">
+            <option value="">Korean</option>
+            <option value="">English</option>
+        </select>
+        <nav id="gnb">
+            <ul>
+                <li><a class="dp1">국립발레단소개</a>
+                    <ul class="sub">
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">발레단소개</a></li>
+                        <li><a href="">이사진</a></li>
+                        <li><a href="">연보</a></li>
+                        <li><a href="">CI소개</a></li>
+                        <li><a href="">고객현장</a></li>
+                        <li><a href="">윤리헌장</a></li>
+                        <li><a href="">경영고시</a></li>
+                        <li><a href="">찾아오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a class="dp1">발레단 사람들</a>
+                    <ul class="sub">
+                        <li><a href="">조직도</a></li>
+                        <li><a href="">예술스태프</a></li>
+                        <li><a href="">아티스트</a></li>
+                        <li><a href="">행정스태프</a></li>
+                    </ul>
+                    </li>
+                <li><a class="dp1">공연정보</a>
+                    <ul class="sub">
+                        <li><a href="">공연안내</a></li>
+                        <li><a href="">연간일정</a></li>
+                    </ul>
+                    </li>
+                <li><a class="dp1">후원회</a>
+                    <ul class="sub">
+                        <li><a href="">인사말 및 후원예우</a></li>
+                        <li><a href="">후원조직</a></li>
+                    </ul>
+                </li>
+                <li><a class="dp1">아카데미</a>
+                    <ul class="sub">
+                        <li><a href="">교장 인사말</a></li>
+                        <li><a href="">아카데미 소개</a></li>
+                        <li><a href="">강사진 소개</a></li>
+                        <li><a href="">갤러리</a></li>
+                        <li><a href="">강좌 및 등록안내</a></li>
+                        <li><a href="">환불관련 안내</a></li>
+                        <li><a href="">아카데미 공지사항</a></li>
+                        <li><a href="">자주 묻는 질문</a></li>
+                    </ul>
+                </li>
+                <li><a class="dp1">발레단소식</a>
+                    <ul class="sub">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">뉴스레터</a></li>
+                        <li><a href="">1:1문의</a></li>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </aside>
+    <main id="content">
+    <section class="con_wrap">
+        <h3 class="title"><img src="./img/txt1.png" alt=""></h3>
+        <ul class="list">
+        <li class="item1">
+            <a href="">
+                <img src="./img/po1.jpg" alt="">
+            </a>
+        </li>
+        <li class="item2">
+            <a href="">
+                <img src="./img/po2.jpg" alt="">
+            </a>
+        </li>
+        <li class="item3">
+            <a href="">
+                <img src="img/po3.jpg" alt="">
+            </a>
+        </li>
+        <li class="item4">
+                <a href="">
+                    <img src="img/po4.jpg" alt="">
+                </a>
+            </li>
+        <li class="item5">
+                <a href="">
+                    <img src="img/po5.jpg" alt="">
+                </a>
+        </li>
+        <li class="item6">
+                <a href="">
+                    <img src="img/po6.jpg" alt="">
+                </a>
+        </li>
+    </ul>
+    <!-- <figure class="vs">
+            <img src="./img/vs1.jpg" alt="">
+        </figure> -->
+        <ul class="list1">
+            <li class="item1">
+                <h3 class="title1"><img src="./img/txt2.png" alt=""></h3>
+                <video src="./img/mv.mp4" id="vdo1" class="rel" autoplay></video>
+            </li>
+            <li class="item2">
+                    <h3 class="title2"><img src="./img/txt3.png" alt=""></h3>
+                 <div class="log">
+                    <h3 class="por_tit">국립발레단 뉴스레터 & 공연 소식 받기</h3>
+                    <p class="pro_com">국립발레단의 다양한 소식을 만나보세요!</p>
+                    <div class="field">
+                            <label for="m_name"><h3>이름</h3></label>
+                            <input type="text" id="m_name" class="data_f" placeholder="이름을 입력해주세요">
+                    </div>
+                    <div class="field">
+                        <label for="m_pw"><h3>이메일</h3></label>
+                        <input type="password" id="m_email" class="data_f2" placeholder="이메일주소">
+                    <span class="frm_div">@</span>
+                    <select name="email_sel" id="email_sel" class="data_f2">
+                        <option value="">선택안함</option>
+                        <option value="">네이버</option>
+                        <option value="">다음</option>
+                        <option value="">구글</option>
+                    </select>
+                    </div>
+                    <div class="field">
+                    <label for="m_hp"><h3>연락처</h3></label>
+                    <input type="password" id="m_hp" class="data_f" placeholder="전화번호를 입력해주세요">
+                <div class="btn">
+                    <button class="btn1">신청하기</button>   
+                </div>
+            </div>
+            </li>
+        </ul>
+        <ul class="list2">
+            <li class="item">
+                <a href="">
+                    <img src="./img/vs2.jpg" alt="">
+                </a>
+            </li>
+            <!-- <li class="item">
+                <a href="">
+                    <img src="./img/bo2.jpg" alt="">
+                </a>
+            </li>
+            <li class="item">
+                <a href="">
+                    <img src="./img/bo3.jpg" alt="">
+                </a>
+            </li> -->
+            </ul>
+          </section>
+    </main>
+</body>
+</html>
