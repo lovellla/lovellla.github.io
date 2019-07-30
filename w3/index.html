@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+    *{margin: 0; padding: 0;}
+    body, html{width: 100%; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
+
+    .hd{width: 100%; height: 150px; background: #333;}
+    .tnb{position: absolute; height: 50px;right: 0; font-size: 0.9em; font-weight: normal;}
+    .tnb li:after{content:"|"; color:#fff; padding-left: 5px;}
+    .tnb li:last-child::after{content:"";}
+    .tnb li a{color:#fff;}
+    .top{width: 200px; height: 50px;float: left; padding-right:50px; padding-top: 50px;}
+    .top li{float: left; padding-right: 5px;}
+    .tog{position: absolute; width: 70px; height: 70px; right: 0; background-color: teal;
+    text-align: center;}
+    .tog img{display: block; padding-left: 15px; padding-top: 10px;}
+    .tog a{color:#fff;}
+    
+    #gnb{width: 1200px; height: 50px; padding-top: 100px; margin: 0 auto;}
+    .sub{width: 100%; height: auto; background: #333;}
+    .sub li{float: left;}
+    .sub li a{color:#fff; width: 200px;}
+    .sub .menu1{font-size: 1.2em; line-height: 50px; padding-left: 50px;
+    }
+    .sub1{clear: both;line-height: 40px; width: 130px; 
+    transition: 0.6s; position: absolute; z-index: 999; visibility: hidden; opacity: 0;}
+   .sub1 li{width: 130px; height: auto; background: #2c2c2c;
+    margin-left: 40px; text-align: center;}
+    .sub1.sub2{margin-left: -20px;}
+    .sub1 li a{color: #fff;}
+    .sub1 li:hover{background: #fff;}
+    .sub1 li:hover a{color:#333; font-weight: 700;}
+    .sub li:hover .sub1{visibility: visible; opacity:1;}
+  
+    .logo{position: absolute; top: 20px; left: 10px;}
+    
+    .vs{clear: both; width: 1920px; height: 685px;}
+    .vs_lst{width: 300%; height: 100%; position: relative;}
+    .vs_lst li{width: 33.3333%; height: 685px; float: left;}
+    .vs1{background-image: url("./img/vs1.jpg"); background-repeat: no-repeat;}
+    .vs2{background-image: url("./img/vs2.jpg");background-repeat: no-repeat;}
+    .vs3{background-image: url("./img/vs3.jpg"); background-repeat: no-repeat;}
+    
+    .num_box{width: 1200px; position: relative; margin-left: 600px;}
+    .num_box li{position: absolute; bottom: 30px;}
+    .num_box li.item1{width: 200px; height: 5px;}
+    .num_box li.item2{width: 200px; height: 5px; left: 210px;}
+    .num_box li.item3{width: 200px; height: 5px; left: 420px;}
+    .num_box li button{display: block; width: 200px; height: 5px;
+       background: rgba(0, 0, 0, 0.2); cursor: pointer;} 
+    .num_box li.on{background:#696969;}
+
+    .box{display: block; width: 100%; height: 103px;}
+    .content{width: 100%; height: 1120px; background-image: url("./img/banner_bg.jpg");
+    margin-top:104px;}
+    .ban1{width: 1200px; margin: 0 auto; padding-top: 100px;}
+    .ban1 li{float: left; padding: 10px;}
+    .img1{margin-top: 80px; width: 100%;}
+
+    .bottom{clear: both; display: block; width: 1200px; height: 500px; margin: 0 auto; margin-bottom: 100px; margin-top: 100px;}
+    .bottom li{float: left; margin-left: 20px;}
+    .map{width: 400px; height: 500px; border: 1px solid #ccc;}
+    .map p{text-align: center; font-size: 1.2em; padding-top: 20px;}
+    .time{width: 300px; height: 500px; border: 1px solid #ccc;
+    text-align: center; line-height: 30px; padding-top: 50px; 
+    color:#333; box-sizing: border-box;}
+    .pho i, .tim i{font-size: 3em;}
+    .pho .tel{width: 200px; font-size: 2em; border-bottom: 1px solid #333; margin: 0 auto;}
+    .txt{font-size: 1em; padding-top: 10px; padding-bottom: 10px;}
+    .kakao{width: 400px; height: 500px; background:#f1d35d;}
+
+    .page_title{text-align: center; margin-top: 50px; color:#856a28; margin-bottom: 30px;}
+    .page_title span{font-size: 1.5em;}
+    .field{width: 100%; height: 60px;}
+    
+     .field label{line-height: 40px; display:block; width: 100px; float: left; text-indent: 2em;}
+     .field .data_f{display: block; height: 32px; border: 1px solid #fff; width: 200px; 
+        text-indent: 1em; background: rgba(255,255,255,0.8);}
+    .field .data_f2{display: block; width: 120px; height: 32px; float: left; border: 1px solid #fff;
+    background: rgba(255,255,255,0.8);}
+    .frm_div{display: block; width: 20px; text-align: center; float: left; line-height: 30px;}
+    .frm_ra{display: none;}
+    .frm_ra + label:before{content: ""; display: block; width: 10px; height:10px; margin-top: 15px; margin-left: 20px; 
+    border: 2px solid #333; border-radius: 20px; float: left; background: rgba(255,255,255,0.6);}
+    .frm_ra:checked + label:before{background: #2c2c2c;}
+    .frm_btn{display: block; margin-top: 6px; margin-left: 30px; background: #333; color:#fff;
+    text-align: center; float: left; border-radius: 5px; margin-right: 10px;}
+    .content{width: 100%; height: 100%; background-image: url("./img/banner_bg.jpg");
+    background-repeat: no-repeat;}
+    #regBtn{display: block; width: 50%; height: 50px;}
+    
+    .btn{width: 250px; margin: 0 auto;}
+    .btn1{float: left; width: 250px; height: 30px; background: #a18c59; 
+    color:#fff; cursor: pointer;}
+
+    #ft{clear: both; width: 100%; border-top: 1px solid #eee; text-align: center;}
+    .footer{width: 1200px; height: 160px; margin: 0 auto;}
+    .foot{width: 530px; height: 50px; margin: 0 auto;}
+    .foot li{float: left; margin-left: 10px; margin-top: 20px;}
+    .txt_box{margin-top: 10px; width: 120px; height: 25px; padding-top: 5px; 
+        border: 1px solid #333; font-size: 0.9em;}
+    .txt_box a{color:#333;}
+    .ft_logo{display: block;}
+    .copyright{line-height: 20px; font-size: 0.9em; color: #333;}
+    .copy{font-size: 0.8em;}
+    .copy span{font-weight: bold;}
+    </style>
+    <script>
+    $(document).ready(function(){
+    $(window).resize(function(){
+    var wd = $(window).width();
+    if(wd<=767){
+        $("#tstyle").remove();
+        $("#dstyle").remove();
+        $("head").append("<link rel='stylesheet'href='mobile.css' id='mstyle'>");
+    } else if(wd>=768 && wd<=959){ //&& 두개다 참이여야할때 
+        $("head").append("<link rel='stylesheet'href='tablet.css' id='tstyle'>>");
+    }else{}
+    }).resize();
+    });
+</script>
+<script>
+//     var wd = $(window).width();
+//     $(document).ready(function(){
+//     $(".num_box li").click(function(i){
+//         $(this).addClass("on");
+//         $(this).siblings().removeClass("on");
+//         var idx = $(this).index();
+//         $(".vs_lst li").eq(idx).addClass("on");
+//         $(".vs_lst li").eq(idx).siblings().removeClass("on");
+//         $(".vs_lst").animate({"margin-left":idx*-1*wd},800);
+//    });
+// });
+$(document).ready(function(){
+    var intv = setInterval(function() { nextAni(); }, 2800);
+    function nextAni() {
+        $(".vs_lst").not(":animated").animate({"margin-left":"-1920px"}, 800, function(){
+            $(".vs_lst li").eq(0).appendTo($(".vs_lst"));
+            $(".vs_lst").css("margin-left", "0px");
+            $(".num_box li").eq(0).appendTo($(".num_box"));            
+            $(".num_box li").removeClass("on");
+            $(".num_box li").eq(0).addClass("on");
+        });
+    }
+    function prevAni(){
+        $(".vs_lst li").eq(2).prependTo($(".banFrame"));
+        $(".vs_lst").css("margin-left", "-1920px");
+        $(".vs_lst").not(":animated").animate({"margin-left":"0px"}, 800);
+        $(".num_box li").eq(2).appendTo($(".num_box"));            
+        $(".num_box li").removeClass("on");
+        $(".num_box li").eq(0).addClass("on");
+    }
+    var intv=setInterval(function(){nextAni();},2900);
+    $(".num_box li").click(function(){
+            clearInterval(intv);
+            var idx = $(this).index()-1;
+            for(var i=0;i<idx;i++){
+                $(".vs_lst li").eq(0).appendTo($(".vs_lst"));
+                $(".num_box li").eq(0).appendTo($(".num_box"));
+            }
+            nextAni();
+            intv=setInterval(function(){nextAni();},2900);
+        });
+});
+   </script>
+</head>
+<body>
+    <header class="hd">
+        <a href="" class="logo">
+            <img src="./img/logo.png" alt="">
+        </a>
+        <div class="tnb">
+            <ul class="top">
+                <li><a href="">온라인상담</a></li>
+                <li><a href="">전후사진</a></li>
+                <li><a href="">이벤트</a></li>
+            </ul>
+            <ul class="tog">
+                <li><a href=""><img src="./img/tog.png" alt="">전체메뉴</a></li>
+            </ul>
+        </div>
+        
+        <nav id="gnb">
+            <ul class="sub">
+                <li>
+                    <a href="" class="menu1">병원소개</a>
+                    <ul class="sub1 sub2">
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">의료진 소개</a></li>
+                        <li><a href="">직원소개</a></li>
+                        <li><a href="">진료안내 및 시간</a></li>
+                        <li><a href="">언론속의 엠제이</a></li>
+                        <li><a href="">보유장비 안내</a></li>
+                        <li><a href="">엠제이 둘러보기</a></li>
+                        <li><a href="">찾아오시는길</a></li>
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">비급여 수가표</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="menu1">여드름·흉터·모공</a>
+                    <ul class="sub1">
+                            <li><a href="">여드름이란?</a></li>
+                            <li><a href="">여드름 치료</a></li>
+                            <li><a href="">흉터 클리닉</a></li>
+                            <li><a href="">흉터 치료</a></li>
+                            <li><a href="">모공이란?</a></li>
+                            <li><a href="">여드름 홍반치료</a></li>
+                            <li><a href="">염증 후 색소침착</a></li>
+                        </ul></li>
+                <li>
+                    <a href="" class="menu1">기미·잡티·점 제거</a>
+                    <ul class="sub1">
+                            <li><a href="">기미란?</a></li>
+                            <li><a href="">기미치료</a></li>
+                            <li><a href="">기미 치료장비</a></li>
+                            <li><a href="">치료 후 주의사항</a></li>
+                            <li><a href="">치료 후 피부관리</a></li>
+                            <li><a href="">주근깨/검버섯/잡티</a></li>
+                            <li><a href="">점/밀크반점</a></li>
+                            <li><a href="">오타모반양반점</a></li>
+                        </ul></li>
+                <li>
+                    <a href="" class="menu1">주름·탄력·리프팅</a>
+                    <ul class="sub1">
+                            <li><a href="">주름이란?</a></li>
+                            <li><a href="">주름의 원인</a></li>
+                            <li><a href="">주름의 종류</a></li>
+                            <li><a href="">주름 치료</a></li>
+                        </ul></li>
+                <li>
+                    <a href="" class="menu1">탈모·제모·비만</a>
+                    <ul class="sub1">
+                            <li><a href="">두피</a></li>
+                            <li><a href="">모발</a></li>
+                            <li><a href="">비듬</a></li>
+                            <li><a href="">탈모</a></li>
+                            <li><a href="">탈모치료/모발관리</a></li>
+                            <li><a href="">제모클리닉</a></li>
+                            <li><a href="">비만클리닉</a></li>
+                            <li><a href="">찾아오시는길</a></li>
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">비급여 수가표</a></li>
+                        </ul></li>
+                <li><a href="" class="menu1">쁘띠성형</a>
+                    <ul class="sub1 sub2">
+                            <li><a href="">사각턱보톡스</a></li>
+                            <li><a href="">입술/코 필러</a></li>
+                            <li><a href="">퍼펙타</a></li>
+                            <li><a href="">부분지방파괴</a></li>
+                        </ul></li>
+                <li><a href="" class="menu1">온라인상담·후기</a>
+                    <ul class="sub1">
+                            <li><a href="">온라인상담</a></li>
+                            <li><a href="">전화상담 신청하기</a></li>
+                            <li><a href="">치료전후사진</a></li>
+                            <li><a href="">우수치료후기</a></li>
+                            <li><a href="">자주묻는질문</a></li>
+                        </ul></li>
+            </ul>
+        </nav>
+    </header>
+    <figure class="vs">
+        <ul class="vs_lst">
+            <li class="vs1"></li>
+            <li class="vs2"></li>
+            <li class="vs3"></li>
+        </ul>
+        <ul class="num_box">
+            <li class="item1 on"><button></button></li>
+            <li class="item2"><button></button></li>
+            <li class="item3"><button></button></li>
+            </ul>
+        <div class="box"><img src="./img/vs4.jpg" alt=""></div>
+    </figure>
+    <div class="content">
+        <ul class="ban1">
+            <li><a href=""><img src="./img/banner1.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/banner2.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/banner3.jpg" alt=""></a></li>
+        </ul>
+        <ul class="ban1">
+            <li><a href=""><img src="./img/banner4.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/banner5.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/banner6.jpg" alt=""></a></li>
+        </ul>
+        <img src="./img/img1.jpg" alt="" class="img1">
+    </div>
+    <div class="bottom">
+        <ul>
+            <li class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.471059481969!2d127.37460231562456!3d36.34936730064582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654be0c92ce543%3A0x961c0e3a98f22bec!2z7Jeg7KCc7J207ZS867aA6rO8!5e0!3m2!1sko!2skr!4v1563257606338!5m2!1sko!2skr" width="400" height="400" frameborder="0" style="border:1" allowfullscreen></iframe>
+                <p>대전광역시 서구 둔산동 대덕대로 179 <br> MJ피부과·굿모닝어학원빌딩 13층 </p>
+            </li>
+            <li class="time">
+                <div class="pho"><i class="fas fa-phone-volume"></i>
+                <h3>대표상담전화</h3>
+                <p class="tel">042.471.0880</p>
+                </div> 
+                <p class="txt">카카오톡<i class="fas fa-comments"></i>엠제이피부과</p>
+                <div class="tim"><i class="far fa-clock"></i>
+                <h3>진료시간</h3>
+                <p>월-목: 10:00~19:00 <br>
+                    금요일: 10:00~21:00 <br>
+                    점심시간: 13:00~14:00<br>
+                    토요일: 09:00~15:00 <br>
+                    (점심시간없이 진료) <br>
+                    일.공휴일 진료</p>
+                </div>
+            </li>
+            <li class="kakao">
+                <h3 class="page_title">무엇이든 물어보세요! <br> <span>쉽고 빠른 상담신청!</span></h3>
+               
+
+                <div class="field">
+                    <label for="m_name">이름</label>
+                    <input type="text" id="m_name" class="data_f" placeholder="이름을 입력해주세요">
+                </div>
+                <!-- div.field>label[for=m_id]+input[type=text]#m_id.data_f -->
+            
+            <!-- div.field>label[for=m_pw]+input[type=password]#m_pw.data_f -->
+        
+        <div class="field">
+                <label for="m_pw">이메일</label>
+                <input type="password" id="m_email" class="data_f2" placeholder="이메일주소">
+            <span class="frm_div">@</span>
+            <select name="email_sel" id="email_sel" class="data_f2">
+                <option value="">선택안함</option>
+                <option value="">네이버</option>
+                <option value="">다음</option>
+                <option value="">구글</option>
+            </select>
+        </div>
+         <div class="field">
+            <label for="m_hp">연락처</label>
+            <input type="password" id="m_hp" class="data_f" placeholder="전화번호를 입력해주세요">
+    </div>
+    <div class="field">
+        <label for="">성별</label>
+        <input type="radio" name="male" id="sex1" class="frm_ra" checked>
+        <label for="sex1">여성</label>
+        <input type="radio" name="male" id="sex2" class="frm_ra">
+        <label for="sex2">남성</label>
+    </div>
+    <div class="field">
+        <input type="checkbox" value="약관동의" class="frm_btn">개인정보취급방침 동의  
+    </div>
+    <div class="btn">
+        <button class="btn1">상담하기</button>   
+    </div>
+</form>
+            </li>
+        </ul>
+    </div>
+    <footer id="ft">
+        <div class="footer">
+        <ul class="foot">
+            <li class="txt_box"><a href="">병원소개</a></li>
+            <li class="txt_box"><a href="">진료시간안내</a></li>
+            <li class="txt_box"><a href="">개인정보취급방침</a></li>
+            <li class="txt_box"><a href="">홈페이지이용약관</a></li>
+        </ul>
+        <div class="ft_logo"><a href=""><img src="" alt=""></a></div>
+        <p class="copyright">
+        상호: 엠제이피부과의원 주소: 대전 서구 대덕대로 179(둔산동 1110번지) 엠제이피부과·굿모닝어학원 빌딩 13층<br>
+        사업자등록번호: 314-27-63046 대표자명:김경훈 전화: 042-471-0880
+            </p>
+            <br>
+            <p class="copy"> 
+                COPYRIGHT © 2019 <span>MJA DESIGN.</span> ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+</html>
