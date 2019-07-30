@@ -1,0 +1,20 @@
+@charset "utf-8";
+@media all and (max-width:767px){
+    /* 모바일 사이즈 */
+    .hd{height: 60px; background-color: #fff;}
+    .logo{display: block; background-image: url("./img/logom.png"); width: 160px; height: 60px; top: 10px;}
+   .img_box{width: 92%; margin: 0 auto; float: none;}
+   .img_box img{width: 100%; display: block;}
+   .img_box1{width: 92%; margin: 0 auto;}
+    .img_box1 img{width: 100%; display: block; margin-top: 10px;}
+    .page{background-position: center center; background-repeat: no-repeat;
+    background-size: cover; height: 100vh;}
+    /* background-size: contain; 하단부분을 기준으로 */
+    #page1{background-image: url("./img/vs1.jpg");}
+    #page2{background-image: url("./img/vs5.jpg");}
+    #page3{background-image: url("./img/vs3.jpg");}
+    #gnb{position: fixed; margin-right: 0; top: 120px; right: -110%; width: 30%; float: none;}
+    #gnb.on{right: 0px;}
+    }
+    /* position: static relactive margin,float,clear으로 포지션 */ 
+    /* position: fixed, absolute (위치지정)right,top 등으로 포지션 */
