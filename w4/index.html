@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마리끌레르</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   
+    <style>
+    *{margin: 0; padding: 0;}
+    body, html{width: 100%; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
+
+    #container{padding-left: 300px;}
+    #container:after{content: ""; display: block; clear: both;}
+    #content{float: right; width: 100%;}
+    #aside{position: fixed;  left: 0; top: 0; z-index: 99; float: left;}
+    #ft{ position: fixed;  z-index: 100; width: 100%; height: 100px; background: #000; bottom: 0; font-weight: 100;}
+    
+    /* .hd{width: 300px; height: 850px; background: #000;} */
+    #find_nav{}
+    .frm1{position: absolute; width: 180px; height: 30px; border: 1px solid #333; border-radius: 20px; margin-left: 60px; margin-top: 20px; overflow: hidden;}
+    .frm_btn{width: 50px;float: right;}
+    .in_data{width: 130px; height: 30px; line-height: 30px; text-align: center;}
+    .frm_btn{width: 50px; height: 32px; background-color: #000;}
+
+    .logo{display: block; margin-left: 50px; margin-top: 70px; width: 300px;}
+    .logo img{width: 200px; height: 36px; margin: 0 auto;}
+    .gnb{width: 300px; height: auto; padding-top: 80px; font-size: 16px;}
+    .sub{text-align: center; line-height: 30px;}
+    .sub a{color:#000;}
+    .vs{width: 100%; height: 4560px;}
+    .vs_lst li{clear: both; width: 100%; height: 760px;}
+    .vs_lst .item1{background: url("./img/vs1.jpg");}
+    .vs_lst .item2{background: url("./img/vs2.jpg");}
+    .vs_lst .item3{background: url("./img/vs3.jpg");}
+    .vs_lst .item4{background: url("./img/vs4.jpg");}
+    .vs_lst .item5{background: url("./img/vs5.jpg");}
+    .vs_lst .item6{background: url("./img/vs6.jpg");}
+
+    .sns{width: 300px; height: 50px; margin-top: 360px; text-align: center; margin-left: 60px;}
+    .sns li{float: left; padding-left: 10px;}
+    .sns li img{width: 30px; height: 30px;}
+    
+    .footer{color: #fff; margin-left: 20px; margin-top: 10px;}
+    .copy{font-size: 0.9em;}
+    .copyright{color:rgb(148, 148, 148); font-size: 0.9em;}
+    .top{position: absolute; right: 0; top: 40px; margin-right:40px;}
+    .top a{color: #fff;}
+    .top span{margin-top: 10px;}
+    .top img{padding-top: 5px;}
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="aside">
+                <a href="" class="logo">
+                        <img src="./img/logo.png" alt="로고"></a>
+        <div class="hd">
+            <ul class="gnb">
+                <li class="sub"><a href="">Video</a></li>
+                <li class="sub"><a href="">Fashion</a></li>
+                <li class="sub"><a href="">Beauty</a></li>
+                <li class="sub"><a href="">Star</a></li>
+                <li class="sub"><a href="">Life</a></li>
+                <li class="sub"><a href="">Runway</a></li>
+                <li class="sub"><a href="">Maison</a></li>
+                <li class="sub"><a href="">Ad Campaign</a></li>
+                <li class="sub"><a href="">Outdoor event</a></li>
+            </ul>
+            <nav id="find_nav">
+                <form action="" class="frm1">
+                    <input type="text" id="keyword" class="in_data" placeholder="검색어 입력">
+                    <input type="submit" value="검색" class="frm_btn">
+                </form>
+            </nav>
+                <ul class="sns">
+                    <li><a href=""><img src="./img/sns1.png" alt=""></a></li>
+                    <li><a href=""><img src="./img/sns2.png" alt=""></a></li>
+                    <li><a href=""><img src="./img/sns3.png" alt=""></a></li>
+                    <li><a href=""><img src="./img/sns4.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <figure class="vs">
+                <ul class="vs_lst">
+                    <li class="item1"><a href=""></a></li>
+                    <li class="item2"><a href=""></a></li>
+                    <li class="item3"><a href=""></a></li>
+                    <li class="item4"><a href=""></a></li>
+                    <li class="item5"><a href=""></a></li>
+                    <li class="item6"><a href=""></a></li>
+                </ul>
+            </figure>
+        </div>
+        
+    </div>
+    <footer id="ft">
+            <div class="footer">
+                <p class="copy">(주)엠씨케이퍼블리싱 <br> 서울특별시 강남구 봉은사로 226 Tel 02.3458.7300 Fax 02.3458.7119 정기구독문의 Tel 02.3458.7122 <br> 
+                    사업자등록번호211-86-54814 통신판매업신고제 2007-3210121-30-2-10512호 대표 손기연 </p>
+                <p class="copyright"> Copyright © 2019 MJA Publishing Co. Ltd. All Rights Reserved. </p>
+            </div>
+            <div class="top">
+                <a href="#">Top &nbsp;&nbsp;&nbsp;<img src="./img/top.png" alt=""></a>
+            </div>
+        </footer>
+</body>
+</html>
