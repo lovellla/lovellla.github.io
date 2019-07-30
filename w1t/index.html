@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>티파니앤코</title>
+     <link rel="stylesheet" href="common.css">
+     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+     <!-- 아이콘폰트 링크(어썸아이콘) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<!-- 제이쿼리 연결 -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function(){
+    var ck1 = true;
+    $(".lst_btn, .close").click(function(){
+        if(ck1){
+            $(".collap").addClass("on");
+            $(".lst_btn").addClass("on");
+        } else{
+            $(".collap").removeClass("on");
+            $(".lst_btn").removeClass("on");
+        }
+        ck1 = !ck1;
+    });
+    $(".collap li").click(function(){
+        $(".collap li").removeClass("on");
+        $(this).addClass("on");
+    });
+    $(window).scroll(function(){
+        var sc_top = $(window).scrollTop();
+        if(sc_top>=500 && sc_top<5000){
+            $(".hd").addClass("on");
+            $(".hd").removeClass("off");
+        } else if(sc_top>=5000) {
+            $(".hd").removeClass("on");
+            $(".hd").addClass("off");
+        } else {
+            $(".hd").removeClass("on");
+            $(".hd").removeClass("off");
+        }
+    });
+    // 1) 한 페이지 높이를 계산
+    var wh = $(window).height();
+    var wd = $(window).width();
+    // 2) 페이지 마다의 top(꼭대기)로 부터의 해당 페이지 위치를 계산해서 지정 var secPos = parseInt($(this).attr("data-val"));
+    $(".page").each(function(index){
+        // each 반복해라 attr 태그의 속성을 추가할때
+        $(this).attr("data-val",index*wh);
+    });
+    // 3)해당 페이지에서 마우스 휠을 굴릴 때 위로 스크롤 할 때와 아래로 스크롤 할 때를 나누어 처리
+    $(".page").on("mousewheel DOMMouseScroll", function(e){
+        // 현재 페이지의 위치값을 불러오기 (secPos:현재페이지)
+        // mousewheel(크롬) DOMMouseScroll(나머지브라우저)
+        var secPos = parseInt($(this).attr("data-val"));
+        // wheelDelta 마우스 휠의 동작 값을 저장
+        if(e.originalEvent.wheelDelta >= 0){ // 위로 스크롤
+            $("html, body").stop().animate({scrollTop:secPos - wh}, 700);
+            return false;
+        } else if(e.originalEvent.wheelDelta < 0){// 아래로 스크롤
+            $("html, body").stop().animate({scrollTop:secPos + wh}, 700);
+            return false;
+        }
+   });
+   $(".num_box li").click(function(i){
+        $(this).addClass("on");
+        $(this).siblings().removeClass("on");
+        var idx = $(this).index();
+        $(".vs_lst li").eq(idx).addClass("on");
+        $(".vs_lst li").eq(idx).siblings().removeClass("on");
+        $(".vs_lst").not(":animated").animate({"margin-left":idx*-1*wd});
+   });
+   var tar, tar_wd, tar_cnt;
+        tar_cnt = $(".vs_lst2 li").length;
+        tar_wd = parseInt($(".p2_sub2 li").width());
+
+        $(".p2_sub2 li").click(function(e){
+            tar = $(this).index();        
+            for(var i=1;i<tar;i++){
+                $(".vs_lst2 li").eq(0).appendTo($(".vs_lst2"));
+                $(".p2_sub2 li").eq(0).appendTo($("p2_sub2"));
+            }
+            nextAni();
+        });
+        function nextAni(){
+            $(".vs_lst2").not(":animated").animate({"margin-left":wd*-1}, 800, function(){
+                $(".vs_lst2 li").eq(0).appendTo($(".vs_lst2"));
+                $(".vs_lst2").css("margin-left", "0px");
+                $(".vs_lst2 li").eq(0).addClass("on");
+                $(".vs_lst2 li").eq(0).siblings().removeClass("on");
+                $(".p2_sub2 li").eq(0).appendTo($(".p2_sub2"));
+                $(".p2_sub2 li").removeClass("on");
+                $(".p2_sub2 li").eq(0).addClass("on");
+            });
+        }
+        function prevAni(){
+            $(".vs_lst2 li").eq(tar_cnt-1).prependTo($(".vs_lst2"));
+            $(".vs_lst2").css("margin-left", -wd+"px");
+            $(".vs_lst2").not(":animated").animate({"margin-left":"0px"}, 800, function(){
+                $(".vs_lst2 li").eq(0).addClass("on");
+                $(".vs_lst2 li").eq(0).siblings().removeClass("on");
+                $(".p2_sub2 li").eq(tar_cnt-1).prependTo($(".p2_sub2"));
+                $(".p2_sub2 li").removeClass("on");
+                $(".p2_sub2 li").eq(0).addClass("on");
+            });
+        }
+        $(".p2_sub1 .left").click(function(){
+            prevAni();
+        });
+        $(".p2_sub1 .right").click(function(){
+            nextAni();
+        });
+//    $(".p2_sub2 li").click(function(i){
+//         $(this).addClass("on");
+//         $(this).siblings().removeClass("on");
+//         var idx = $(this).index();
+//         $(".vs_lst2 li").eq(idx).addClass("on");
+//         $(".vs_lst2 li").eq(idx).siblings().removeClass("on");
+//         $(".vs_lst2").not(":animated").animate({"margin-left":idx*-1*wd});
+//    });
+//    $(".pre_btn1 li.left").click(function(){
+//             prevAni();
+//         });
+//         $(".pre_btn1 li.right").click(function(){
+//             nextAni();
+//         });
+    var colBtn = [true, true, true, true, true, true, true, true, true, true];
+    $(".tog_menu li").click(function(){
+        var idx = $(this).index();
+        if(colBtn[idx]){
+            // $(".tog_menu > li .dep1").css("display", "none");
+            $(".tog_menu > li").eq(idx).find(".dep1").slideDown();  
+        } else {
+            // $(".tog_menu > li .dep1").css("display", "none");  
+            $(".tog_menu > li").eq(idx).find(".dep1").slideUp();
+        }
+        colBtn[idx] = !colBtn[idx];
+    });
+    //var langCk = true;
+    $(".lang").click(function(){
+        $(this).toggleClass("on");
+    });
+});
+
+// a태그를 제이쿼리로 작동시킬시 href 삭제 후 클래스 이름 입력
+</script>
+<body>
+    <main class="page_wrap">
+            <ul class="collap">
+                    <li class="close">
+                       <div class="bar top1"></div>
+                       <div class="bar bottom1"></div>
+                   </li>
+                       <ul class="tog_menu">
+                            <li><a class="dp2">주얼리</a>
+                                <ul class="dep1">
+                                    <li><a href="#">네크리스 및 팬던트</a></li>
+                                    <li><a href="#">브레이 슬릿</a></li>
+                                    <li><a href="#">이어링</a></li>
+                                    <li><a href="#">링</a></li>
+                                    <li><a href="#">참</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dp2">사랑과 약혼</a>
+                                <ul class="dep1">
+                                    <li><a href="#">웨딩 링</a></li>
+                                    <li><a href="#">여성용 웨딩밴드</a></li>
+                                    <li><a href="#">남성용 웨딩밴드</a></li>
+                                    <li><a href="#">커플&웨딩 제품보기</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dp2">워치</a>
+                                <ul class="dep1">
+                                    <li><a href="#">여성용</a></li>
+                                    <li><a href="#">남성용</a></li>
+                                    <li><a href="#">워치 전체보기</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dp2">홈&액세서리</a>
+                                <ul class="dep1">
+                                    <li><a href="#">홈</a></li>
+                                    <li><a href="#">테이블웨어&바웨어</a></li>
+                                    <li><a href="#">데스크&데코레이션</a></li>
+                                    <li><a href="#">게임&노벨티</a></li>
+                                    <li><a href="#">모든 홈액세서리 보기</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dp2">기프트</a>
+                                <ul class="dep1">
+                                    <li><a href="#">여성</a></li>
+                                    <li><a href="#">남성</a></li>
+                                    <li><a href="#">커플</a></li>
+                                    <li><a href="#">베이비</a></li>
+                                    <li><a href="#">홈</a></li>
+                                    <li><a href="#">기프트 전체보기</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dp2">하이주얼리</a></li>
+                            <li><a class="dp2">티파니의 세계</a></li>
+                            <li><a class="dp2">지속가능성</a></li>
+                            <li><a class="dp2">고객서비스</a></li>
+                            <li><a class="dp2">맞춤서비스</a></li>
+                    </ul>
+                    <nav id="find_nav">
+                        <form action="" class="frm1">
+                            <input type="text" id="keyword" class="in_data" placeholder="검색어 입력">
+                            <input type="submit" value="검색" class="frm_btn">
+                    </form>
+                    
+               </ul>
+        <header class="hd">
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="로고"></a>
+            <nav class="gnb">
+                <ul calss="menu">
+                    <li class="item1">
+                        <a href="" class="dp1">주얼리</a>
+                        <ul class="sub">
+                            <li><a href="#">네크리스 및 팬던트</a></li>
+                            <li><a href="#">브레이 슬릿</a></li>
+                            <li><a href="#">이어링</a></li>
+                            <li><a href="#">링</a></li>
+                            <li><a href="#">참</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">사랑과 약혼</a>
+                        <ul  class="sub">
+                            <li><a href="#">네크리스 및 팬던트</a></li>
+                            <li><a href="#">브레이 슬릿</a></li>
+                            <li><a href="#">이어링</a></li>
+                            <li><a href="#">링</a></li>
+                            <li><a href="#">참</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">워치</a>
+                        <ul  class="sub">
+                            <li><a href="#">네크리스 및 팬던트</a></li>
+                            <li><a href="#">브레이 슬릿</a></li>
+                            <li><a href="#">이어링</a></li>
+                            <li><a href="#">링</a></li>
+                            <li><a href="#">참</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">홈&액세서리</a>
+                        <ul  class="sub">
+                            <li><a href="#">네크리스 및 팬던트</a></li>
+                            <li><a href="#">브레이 슬릿</a></li>
+                            <li><a href="#">이어링</a></li>
+                            <li><a href="#">링</a></li>
+                            <li><a href="#">참</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">기프트</a>
+                        <ul  class="sub">
+                            <li><a href="#">네크리스 및 팬던트</a></li>
+                            <li><a href="#">브레이 슬릿</a></li>
+                            <li><a href="#">이어링</a></li>
+                            <li><a href="#">링</a></li>
+                            <li><a href="#">참</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul>
+            <div class="lang">
+                <div value="">한국어&nbsp;<span>▼</span></div>
+                <ul>
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">일본어</a></li>
+                 </ul>
+            </div>
+            <ul class="lst_btn">
+                 <li>
+                    <div class="bar top"></div>
+                    <div class="bar bottom"></div>
+                </li>
+            </ul>
+        </header>
+    </main>
+        <section class="page" id="page1">
+            <figure class="vs1">
+                <ul class="vs_lst">
+                    <li class="item1">
+                        <div class="txt_box"> </div>
+                        <h1 class="tit_box">티파니와의 여행</h1>
+                        <p class="txt">자연의 세계에서 영감을 받은 Tiffany Paper Flowers™ <br>
+                            컬렉션이 새로운 로즈골드 디자인으로 밝게 빛납니다. </p>
+                        <div class="more"><p>Tiffany Paper Flowers™ 보기&nbsp;〉</p></div>
+                    </li>
+                    <li class="item2">
+                        <div class="txt_box1"> </div>
+                        <h2 class="tit_box">Tiffany Paper Flowers</h2>
+                        <p class="txt">예술과 상상력의 결합, 이 상상 속의 꽃은 자연에 대한 현대적인 해석입니다.<br>
+                            추상적인 꽃잎에서 영감을 받아, 브릴리언트 컷 화이트 다이아몬드, <br>진귀한 옐로우 다이아몬드,
+                            그리고 생동감 넘치는 탄자나이트가 <br>여성스러움을 새롭게 정의합니다.</p>
+                        <div class="more1">Tiffany Paper Flowers™ 보기&nbsp;〉</div>
+                    </li>
+                    <li class="item3">
+                        <div class="txt_box2"> </div>
+                        <h2 class="tit_box">티파니™ 세팅</h2>
+                        <p class="txt">1886년에 처음 선보인 티파니™세팅은<br>
+                            세계에서 가장 아이코닉한 웨딩 링입니다.
+                        <div class="more2">최신 제품 살펴보기&nbsp;〉</div>
+                    </li>
+                </ul>
+                <ul class="num_box">
+                    <li class="item1 on"><button></button></li>
+                    <li class="item2"><button></button></li>
+                    <li class="item3"><button></button></li>
+                </ul>
+            </figure>
+        </section>
+        <section class="page" id="page2">
+            <figure class="vs2">
+                <ul class="vs_lst2">
+                    <li class="item1 on">
+
+                    </li>
+                    <li class="item2">
+                        
+                    </li>
+                    <li class="item3">
+
+                    </li>
+                    <li class="item4">
+
+                    </li>
+                    <li class="item5">
+    
+                    </li>
+                    <li class="item6">
+    
+                    </li>
+                    <li class="item7"> 
+
+                    </li>
+                    <li class="item8">
+
+                    </li>
+                    </ul>
+                    <div class="p2_menu">
+                        <ul class="p2_sub1">
+                            <li class="left"><button class="pre_btn1"><img src="./img/prev_btn.png" alt=""></button></li>
+                            <li class="right"><button class="nex_btn1"><img src="./img/next_btn.png" alt=""></button></li>
+                        </ul>
+                    <ul class="p2_sub2">
+                        <li class="item1 on"><button>Tiffany T</button></li>
+                        <li class="item2"><button>Tiffany Paper Flowers</button></li>
+                        <li class="item3"><button>Tifany HardWear</button></li>
+                        <li class="item4"><button>리턴 투 티파니™</button></li>
+                        <li class="item5"><button>티파니 키</button></li>
+                        <li class="item6"><button>엘사 퍼레티™</button></li>
+                        <li class="item7"><button>팔로마 피카소™</button></li>
+                        <li class="item8"><button>Taffiny & Co. Schlimberger</button></li>
+                    </ul>
+                    </div>
+                </figure>
+        </section>
+        <section class="page" id="page3">
+
+        </section>
+        <section class="page" id="page4">
+                <ul class="thum_lst">
+                    <li class="item1">
+                        <a href="">
+                        <div class="ico_box"><img src="./img/bra.png" alt="" class="bra"> </div>
+                        <h2 class="thum_tit">브레이슬릿보기</h2>
+                        <p class="thum_com">자세히 보기</p>
+                        </a>
+                    </li>
+                    <li class="item2">
+                        <a href="">
+                        <div class="ico_box"><img src="./img/ring.png" alt="" class="ring"></div>
+                        <h2 class="thum_tit">링 보기</h2>
+                        <p class="thum_com">자세히 보기</p>
+                        </a>
+                    </li>
+                    <li class="item3">
+                        <a href="">
+                        <div class="ico_box"><img src="./img/neck.png" alt="" class="neck"></div>
+                        <h2 class="thum_tit">네크리스 및 팬던트 보기</h2>
+                        <p class="thum_com">자세히 보기</p>
+                        </a>
+                    </li>
+                </ul>
+        </section>
+    <footer class="ft">
+        <a href="#" class="ft_txt1">개인정보처리방침</a>
+        <a href="#" class="ft_txt1">영상정보처리기기 운영방침</a>
+        <p class="copyright">
+        
+        </p>
+        <br>
+        <p class="copy">At Tiffany, we believe a diverse workforce makes a difference. 
+            Equal Opportunity Employer. © J&CO. 2019 -</p>
+    </footer>
+</body>
+</html>
