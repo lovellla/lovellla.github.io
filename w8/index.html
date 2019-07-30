@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+     *{margin: 0; padding: 0;}
+    body,html{width: 100%; height: 100%; font-family: 'Noto Sans KR', sans-serif; -ms-overflow-style: none;}
+    ::-webkit-scrollbar{display: none;}
+    /* -ms-overflow-style: none;  ::-webkit-scrollbar{display: none;} 스크롤바가 안보이게 처리 */
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    button, input, label, a{border: 0; outline: 0; background-image: none; background-color: transparent;}
+    img{border:0;}
+
+    .con{
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    .con > * {
+        flex:1 100%;
+    }
+    .hd{background:#7e6956;}
+    .footer{background:#000; height: 150px;}
+    .tog1{position: fixed; width: 100%; height: 100%; background: #7e6956; z-index: 100; right: -110%; transition: 0.6s;}
+    .tog1.on{right: 0; text-align: center;}
+    .close{position: absolute;  z-index: 99; right: 50px; top: 50px;}
+    .close img{width: 30px; height: 30px;}
+    #gnb{width: 100%; margin-top: 150px; margin-left: 190px;}
+    #gnb li{float: left; width: 170px; text-align: center;}
+    #gnb .menu{margin-bottom: 10px; color:#000;}
+    .menu .m1{color:#fff; font-weight: 500; line-height: 40px;}
+    .sub li{font-weight: 300; font-size: 0.9em; line-height: 30px;}
+    .sub li a{color: #fff;}
+    .timg{ display: block; padding-top: 65px;}
+    .logo{position: absolute; display: block; padding-left: 860px; padding-top: 20px; z-index: 999;}
+    .line{position: absolute; top: 35px; right: 20px; width: 60px; height: 60px; margin: 0 auto;
+        cursor: pointer;}
+    .line li{margin-bottom: 10px;}
+    .lin1{width: 40px; height: 3px; background: #fff;}
+    .lin2{width: 40px; height: 3px; background: #fff;}
+    .lin3{width: 40px; height: 3px; background: #fff;}
+    .con{position: relative;}
+    .con li:after{content: ""; display: block; width: 100%; height: 100%;
+            top: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);}
+    .con li:hover:after{opacity: 0;}
+    .tit_box{position: absolute;}
+    .con li.on{width: 100%;}
+    .con1{background-image: url("./img/vs1.jpg"); background-repeat: no-repeat; background-position: center center; background-color: rgba(0,0,0,0.8);}
+    .con2{background-image: url("./img/vs2.jpg"); background-repeat: no-repeat; background-position: center center;}
+    .con3{background-image: url("./img/vs3.jpg"); background-repeat: no-repeat; background-position: -900px center;}
+    .txt{position: absolute;}
+    
+    @media screen and (min-width:960px) {
+        .con1{order:1; height: calc(100vh - 100px); flex: 1 0px;}
+        /* order: 요소에 지정하는 속성으로 순번 */
+        .con2{order:2; height: calc(100vh - 100px); flex: 1 0px;}
+        .con3{order: 3; height: calc(100vh - 100px); flex: 1 0px;}
+        .footer{order: 4;}
+        .hd{height: 100px;}
+    } 
+    /* flex: 1 0px; 앞의 1은 비율, 뒤의 0은 거터값 */
+    </style>
+    <script>
+    $(document).ready(function(){
+        var ck1 = true;
+    $(".line, .close").click(function(){
+        if(ck1){
+            $(".tog1").addClass("on");
+            $(".line").addClass("on");
+        } else{
+            $(".tog1").removeClass("on");
+            $(".line").removeClass("on");
+        }
+        ck1 = !ck1;
+    });
+    $(".tog1 li").click(function(){
+        $(".tog1 li").removeClass("on");
+        $(this).addClass("on");
+    });
+
+    });
+    </script>
+</head>
+<body>
+<div class="container">
+<header class="hd">
+    <div class="tog1">
+    <button class="close"><img src="./img/close.png" alt=""></button>
+    <ul id="gnb">
+        <li class="menu"><a href="" class="m1">RESERVATION</a></li>
+        <li class="menu"><a href="" class="m1">PROMOTION</a>
+            <ul class="sub">
+                <li><a href="">객실패키지&프로모션</a></li>
+                <li><a href="">다이닝 이벤트</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="" class="m1">ACCOMMODATION</a></li>
+        <li class="menu"><a href="" class="m1">DINING</a>
+            <ul class="sub">
+                <li><a href="">PLATZ</a></li>
+                <li><a href="">KUNST LOUNGE</a></li>
+                <li><a href="">LUFT THE BAR</a></li>
+                <li><a href="">ROOM SERVICE</a></li>
+                <li><a href="">BREAKFAST</a></li>
+                <li><a href="">ROOM SERVICE BREAKFAST</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="" class="m1">WEDDING&EVENT</a>
+            <ul class="sub">
+                <li><a href="">BAUM HALL</a></li>
+                <li><a href="">STEIN HALL</a></li>
+                <li><a href="">GARDEN</a></li>
+                <li><a href="">WEDDING</a></li>
+                <li><a href="">첫돌</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="" class="m1">OTHER</a>
+            <ul class="sub">
+                <li><a href="">FITNESS&SAUNA</a></li>
+                <li><a href="">KIDS ZONE</a></li>
+                <li><a href="">VENDING MACHINE</a></li>
+                <li><a href="">NEST DELI</a></li>
+                <li><a href="">NEST PARK</a></li>
+                <li><a href="">STRAND</a></li>
+                <li><a href="">SURROUNDINGS</a></li>
+                <li><a href="">SKY72 HANUL RESTAURANT</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="" class="m1">INFINITY POOL</a>
+            <ul class="sub">
+                <li><a href="">수영장 시설소개</a></li>
+                <li><a href="">운영 및 요금안내</a></li>
+                <li><a href="">부대 시설</a></li>
+                <li><a href="">이용 안내</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="" class="m1">ABOUT nest hotel</a></li>
+        <li class="menu"><a href="" class="m1">ARTICLE</a>
+            <ul class="sub">
+                <li><a href="">NEST BEHIND</a></li>
+                <li><a href="">DESIGN BY JOH</a></li>
+                <li><a href="">PRESS</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img src="./img/tog.jpg" alt="" class="timg">
+</div>
+    <a href="" class="logo"><img src="./img/logo.png" alt=""></a>
+    <div class="tog">
+    <ul class="line">
+        <li class="lin1"></li>
+        <li class="lin2"></li>
+        <li class="lin3"></li>
+    </ul>
+</div>
+</header>
+<ul class="con">
+    <li class="con1">
+        <p class="txt">자연의 세계에서 영감을 받은 Tiffany Paper Flowers™ <br>
+            컬렉션이 새로운 로즈골드 디자인으로 밝게 빛납니다. </p>
+    </li>
+    <li class="con2">
+        <p class="txt">자연의 세계에서 영감을 받은 Tiffany Paper Flowers™ <br>
+            컬렉션이 새로운 로즈골드 디자인으로 밝게 빛납니다. </p>
+    </li>
+    <li class="con3">
+            <p class="txt">자연의 세계에서 영감을 받은 Tiffany Paper Flowers™ <br>
+                컬렉션이 새로운 로즈골드 디자인으로 밝게 빛납니다. </p>
+    </li>
+</ul>
+    <footer class="footer">
+            푸터
+    </footer>
+</div>
+</body>
+</html>
