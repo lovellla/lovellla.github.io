@@ -1,0 +1,74 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; }
+body, html { width:100%; }
+ul { list-style:none; }
+img { border:0; }
+a { text-decoration:none; }
+label, input, button { border:0; outline:0; background-image:none;
+background-color:transparent; }
+table { display:table; }
+tr { display:table-row; }
+th, td { display:table-cell;}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(./fonts/NotoSansKR-Thin.woff2) format('woff2'),
+       url(./fonts/NotoSansKR-Thin.woff) format('woff'),
+       url(./fonts/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(./fonts/NotoSansKR-Light.woff2) format('woff2'),
+       url(./fonts/NotoSansKR-Light.woff) format('woff'),
+       url(./fonts/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(./fonts/NotoSansKR-Regular.woff2) format('woff2'),
+        url(./fonts/NotoSansKR-Regular.woff) format('woff'),
+        url(./fonts/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(./fonts/NotoSansKR-Medium.woff2) format('woff2'),
+        url(./fonts/NotoSansKR-Medium.woff) format('woff'),
+        url(./fonts/NotoSansKR-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(./fonts/NotoSansKR-Bold.woff2) format('woff2'),
+        url(./fonts/NotoSansKR-Bold.woff) format('woff'),
+        url(./fonts/NotoSansKR-Bold.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 900;
+   src: url(./fonts/NotoSansKR-Black.woff2) format('woff2'),
+        url(./fonts/NotoSansKR-Black.woff) format('woff'),
+        url(./fonts/NotoSansKR-Black.otf) format('opentype');
+ }
+@font-face{
+  font-family: '나눔스퀘어';
+  src: local("나눔스퀘어"),url("./font/나눔스퀘어.eot#iefix"), 
+  url("./font/NanumSquareB.ttf") format("truetype"),
+  url("./font/NanumSquareR.eot") format("opentype"),
+  url("./font/NanumSquareR.woff") format("woff")
+}
+@font-face{
+     font-family: 'Jalnan';
+     src: local("Jalnan"),url("./font/Jalnan.eot#iefix"), 
+     url("./font/Jalnan.ttf") format("truetype"),
+     url("./font/Jalnan.eot") format("opentype"),
+     url("./font/Jalnan.woff") format("woff")
+   }

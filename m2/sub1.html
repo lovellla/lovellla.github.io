@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache">  <!-- 메모리에 용량 남기지 않게 처리하기위해 처리함  -->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    
+    <title>쉐이크쉑</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicon.png">
+    <!-- 메타정보 -->
+    <meta name="title" content="shake shack">
+    <meta name="description" content="패스트푸드, 쉑쉑버거">
+    <meta name="keywords" content="쉐이크쉑, 쉑쉑버거, 햄버거, 프렌치후라이, 각종음료">
+    <meta name="auther" content="JiAe ">
+    <script src="./jquery.min.js"></script>       
+    <!-- <script src="./bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css"> -->
+    <!-- glyphicon 연결 -->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+    <!-- 부가적인 테마 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>       -->
+
+
+    <!-- font awesome 다운로드 후 링크 -->
+    <script src="./all.min.js"></script>
+    <link rel="stylesheet" href="./all.css">
+
+    <!-- xe-icon 다운로드 후 링크 -->
+    <!-- <link rel="stylesheet" href="./xeicon.min.css"> -->
+    <link rel="stylesheet" href="./normalize.css">
+    <!-- http://github.com/necolas/normalize.css css를 다운받지 않을경우엔 이 링크를 넣어주면 됨. 다운받을거면 저 링크로 이동-->
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    
+    <style>
+        /* main(index.html) sub1.html sub2.html */
+        body,html{font-family: '나눔스퀘어', sans-serif; width: 100%; height: 100%; overflow-x:hidden; }
+        .tit{font-family: "나눔스퀘어", sans-serif;}
+        body, html {height: 100%; width: 100%;}
+        .hd{position: fixed; width: 100%; height: 50px; clear:both; z-index: 999; background: #fff;}
+        .hd button { display: block; font-size: 1.3em; color:#fff; margin-top: 10px; margin-left: 10px;}
+        
+        .logo{display: block; width: 160px; height: 40px; position: absolute; top:5px; left:calc(50% - 80px);
+        background-image: url("./img/ss_logo.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center center; z-index: 100;}
+        .hd .lst_btn{font-size: 25px; float: left; margin-left: 15px; color:#60ae2b;}
+        .hd .sns{font-size: 20px; float: right; margin-top: 13px; margin-right: 10px; color:#60ae2b;}
+        .hd .ev{font-size: 20px; float: right; margin-top: 13px; color:#60ae2b;}
+        .hd .log{font-size: 20px; float: right; margin-top: 13px; color:#60ae2b;}
+        /* .log{position: absolute; float: right;  right: 40px;}
+        .ev{position: absolute; float: right;   right: 10px;} */
+        /* .tit{font-family: "나눔스퀘어","Noto Sans KR", sans-serif;} */
+        
+        /* .ico_lst{clear: both; width: 100%; height: 100px; padding-top: 60px;}
+        .ico_lst li{float: left;} 
+        .ico_lst li.item1{width: 100%; height: 60%;}
+        .ico_lst li.item2, .ico_lst li.item3{width: 50%; height: 40%;}
+        .ico_lst li a{display:block; width: 100%;}
+        .ico_lst li a .ico{display:block; width: 40%; height:auto; margin: 20px auto;}*/
+
+        .ico_lst .item1{width: 100%; height: 360px;}
+        .ico_lst .item1 .ico{width: 100%; height: 100%;}
+        .ico_lst .item2{background: #60ae2b; float: left; width: 50%; height: 220px;}
+        .ico_lst .item2 .ico{width: 60px; height: auto; padding-top:150px; margin-left: 115px;}
+        .ico_lst .item2 .ico_tit{font-family: 'Righteous', cursive; position: absolute; color:#fff; margin-top: -195px; text-indent: 12px;}
+        .ico_lst .item2 .ico_com{position: absolute; color:#fff; margin-top: -160px; font-size: 0.9em; padding-left: 12px;}
+        .ico_lst .item3{background: #f8a01a; float: right; width: 50%; height: 220px;}
+        .ico_lst .item3 .ico{width: 60px; height: auto; padding-top:146px; margin-left: 115px;}
+        .ico_lst .item3 .ico_tit{font-family: 'Righteous', cursive; position: absolute; color:#fff; margin-top: -195px; text-indent: 12px;}
+        .ico_lst .item3 .ico_com{ position: absolute; color:#fff; margin-top: -160px; font-size: 0.9em; padding-left: 12px;}
+        
+        .lst_box, .sns_box, .log_box, .event_box{position: fixed; top: 0; width: 100%; height: 100%; transition: 0.5s;
+        overflow:hidden; z-index:999; }
+        .lst_box{ left: -110%; top: 0; background: #fff; width: 100%; height: 100vh;} 
+        /* left: -110%; */
+        .lst_box.on{left: 0;}
+        .sns_box{right: -110%; top: 0;}
+        .sns_box.on {right: 0;}
+        .log_box{left: 0; top: -110%;}
+        .log_box.on{top: 0;}
+        .event_box{position:fixed; left: 0; bottom: -110%; display:none; }
+        .event_box.on{bottom: 0; display:block; }
+        
+        .lst_box{width: 100%; height: 100%;}
+        .lst_box .log_fr{float: right; margin-top: 25px; font-size: 22px; margin-right: 20px; color:#333;}
+        .lst_box .set{float: right; margin-top: 25px; font-size: 22px; padding-right: 5px; color:#333;}
+        .lst_status{width: 100%; height: 200px; position: fixed; top: 120px;}
+        .lst_status li{position: absolute; float: left;}
+        .lst_status .txt{display: block; line-height: 20px;}
+        .lst_status .item1{width: 125px; height: 125px; text-align: center; padding-left: 10px;}
+        .lst_status .item1 img{width: 50px; height: 50px;}
+        .lst_status .item2{width: 125px; height: 125px; left: 120px; text-align: center;}
+        .lst_status .item2 img{width: 50px; height: 50px;}
+        .lst_status .item3{width: 125px; height: 125px; left: 230px; text-align: center;}
+        .lst_status .item3 img{width: 50px; height: 50px;}
+
+        .lst_status .txt{font-weight: 700; font-size: 0.9em; color:#333;}
+        
+     
+        .close1{color:#ccc; font-size: 25px; margin-top: 23px; margin-left: 25px;}
+        .img1 img{width: 100%; height: 100%; margin-top:240px;}
+        
+        .event_box{width: 100%; }
+        .event_box .event_pic{width: 100%; height: 80%;}
+        .event_box .close2{position: absolute;}
+        .mv_page{clear: both; font-family: 'Righteous', cursive; width: 100%;}
+        .mv_page .sec_tit{text-align: center; line-height: 70px;}
+        #mv_fr{clear: both; width: 100%;  position: relative; margin-bottom: 30px;}
+        #vdo1{display: block; width: 100%; height: 100%; margin: 0 auto; }
+        #play_btn{font-size: 3em; position: absolute; top: 40%; left:calc(50%-190px); width:380px;color:#fff;}
+        .ft{clear: both; border-top: 1px solid #eee; background: rgb(245, 245, 245); 
+            padding-bottom: 10px;}
+        .fnb .menu{width: 70px; margin: 0 auto; height: 40px;}
+        .fnb li{float: left; margin-right: 10px; margin-top: 10px; font-size:25px;}
+        .fnb li a{color:#60ae2b;}
+        .copyright{clear: both; padding-top: 10px; font-size: 0.7em; text-align: center;}
+       </style>
+    <script>
+        $(document).ready(function(){
+            $(".lst_btn").click(function(){
+                $(".lst_box").addClass("on");
+            });
+            $(".lst_box .close1").click(function(){
+                $(".lst_box").removeClass("on");
+            });
+            $(".sns").click(function(){
+                $(".sns_box").addClass("on");
+            });
+            $(".sns_box .close").click(function(){
+                $(".sns_box").removeClass("on");
+            });
+            $(".ev").click(function(){
+                $(".event_box").addClass("on");
+            });
+            $(".event_box .close2").click(function(){
+                $(".event_box").removeClass("on");
+            });
+            $(".log").click(function(){
+                $(".log_box").addClass("on");
+            });
+            $(".log_box .close").click(function(){
+                $(".log_box").removeClass("on");
+            });
+            // var ht = parseInt($(window).height());
+            // $(".more").click(function(){
+            //     $("body, html").stop().animate({"scrollTop": "300px"}, 300);
+            //     setTimeout(function() {
+            //         moreAni();
+            //     }, 300);    
+            // });
+            // function moreAni(){
+            //     $(".more_con").slideDown(400, function(){
+            //         $(".more").fadeOut(200);
+            //     });
+            // };
+        });
+        $(document).ready(function(){
+            var sw = true;
+            $(".more").click(function(){
+                if(sw) {
+                    $(".more_con").slideDown(500);
+                    $(this).text("접기");
+                } else {
+                    $(".more_con").slideUp(500);
+                    $(this).text("열기");
+                }
+                sw = !sw;    
+            });
+        });
+    </script>
+    
+    <style>
+        /* sub1.html만의 스타일 */
+        .content{clear: both; padding-top: 40px;}
+        .tb_box{width: 100%;}
+        .tb_box .tb_btn{display: block; width: 33.3333%; line-height: 40px; text-align: center; background:#f3f4f0; color:#000;
+                        position: absolute; top: 50px; z-index: 40; padding-top: 0px; font-family: 'Righteous', cursive;}
+        #tab1 .tb_btn{left: 0;}
+        #tab2 .tb_btn{left: 33.3333%;}
+        #tab3 .tb_btn{left: 66.6666%;}
+        .tb_box:target .tb_btn{background: #f8a01a; color:#fff;}
+        .tb_con{width: 100%; height: 100%; display: none; padding-top:50px; text-align: center; padding-bottom: 100px; }
+        .tb_box:target .tb_con{display: block;}
+        /* .tb_con .tb_tit{font-size: 1.0em; text-align: center; margin-top: 10px;} */
+        .tb_con img{width: 100%; height: auto;}
+
+        .tb_con .ham1{width:120px; height: auto; padding: 15px; display: block;  margin: 0 auto;}
+        .tb_con .b1{width: 160px; height: auto; padding: 5px; }
+        .burger{width: 50%; height: auto; float: left; padding-bottom: 20px;}
+        .tb_con .ham1:target .burger{display: block;}
+        .more_con{ min-height:550px;}
+        /* display:none; */
+        
+        .drink{width: 50%; height: auto; float: left; padding-bottom: 20px;}
+        .drink .d_txt{width:130px; height: auto;}
+        .drink p{font-size: 0.8em; font-weight: 700; color:#333;}
+        .map{margin-top: 10px; margin-bottom:30px;}
+        .tb_con h4{margin-top: 10px; margin-bottom: 10px;}
+        .tb_con .m_txt{font-size: 0.8em; line-height: 18px; margin-bottom: 5px;}
+        .m_txt span{font-weight: 700; color:#60ae2b;}
+        .tb_con .m_txt1{font-size: 0.8em; line-height: 18px;}
+        .m_txt1 span{font-weight: 700; color:#60ae2b;}
+        
+    </style>
+</head>
+<body>
+<header class="hd">
+    <button class="lst_btn">
+          <i class="fas fa-bars"></i> 
+    </button>
+    <a href="index.html" class="logo"></a>
+    
+        <button class="sns">
+            <!-- xe-icon 삽입 클래스가 xi-로 시작하는 넣고 싶은 종류 -->
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="ev">
+                <i class="far fa-heart"></i>
+        </button>
+        <button class="log">
+            <!-- font-awesome icon 삽입 이중클래스 fas 옆에 넣고 싶은 종류 -->
+            <i class="far fa-smile"></i>
+        </button>
+    <!-- <button type="button" class="btn btn-default" aria-label="Left Align">
+         glyph icon 삽입 이중클래스 glyphicon 옆에 넣고 싶은 종류 
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+    </button> -->
+</header>
+<div class="lst_box">
+    <div class="log_fr">
+            <i class="far fa-smile"></i>
+        <button></button>
+    </div>
+    <div class="set">
+            <i class="fas fa-cog"></i>
+        <button></button>
+    </div>
+    <ul class="lst_status">
+            <li class="item1">
+                <a href="./sub1.html#tab1">
+                    <img src="./img/ham.png" alt="">
+                    <span class="txt">햄버거</span>
+                </a> 
+            </li>
+            <li class="item2">
+                <a href="./sub1.html#tab2">
+                    <img src="./img/drink.png" alt="">
+                    <span class="txt">음료</span>
+                </a>
+            </li>
+            <li class="item3">
+                <a href="./sub1.html#tab3">
+                    <img src="./img/shop.png" alt="">
+                    <span class="txt">가까운<br>매장찾기</span>
+                </a>
+            </li>
+        </ul>
+    <button class="close1"><i class="fas fa-times-circle"></i></button>
+            <ul>
+                <li class="img1">        
+                    <img src="./img/img4.jpg" alt="">
+                </li>
+            </ul>
+    <ul class="main">
+        <li class="item1">
+            <a href="sub1.html#tab1"></a>
+        </li>
+        <li class="item2">
+            <a href="sub1.html#tab2"></a>
+        </li>
+        <li class="item3">
+            <a href="sub1.html#tab3"></a>
+        </li>
+    </ul>
+    <!-- <button class="close1"><i class="fas fa-times-circle"></i></button> -->
+</div>
+<div class="sns_box">
+    <ul class="sns_lst">
+        <li class="sns1"><a href="">트위터</a></li>
+        <li class="sns2"><a href="">페이스북</a></li>
+        <li class="sns3"><a href="">인스타그램</a></li>
+        <li class="sns4"><a href="">카카오스토리</a></li>
+    </ul>
+    <button class="close"><i class="fas fa-times-circle"></i></button>
+</div>
+<div class="log_box">
+    <h3 class="collap_tit">로그인</h3>
+    <form action="" class="frm1">
+        <input type="text" id="m_id" class="in_frm">
+        <input type="password" id="m_pw" class="in_frm">
+        <fieldset class="btn_fr">
+            <input type="submit" class="btn_frm" value="로그인">
+            <input type="reset" class="btn_frm" value="취소">
+        </fieldset>
+    </form>
+    <button class="close"><i class="fas fa-times-circle"></i></button>
+</div>
+<div class="event_box">
+    <img src="./img/img21.jpg" alt="" class="event_pic">
+    <button class="close2"><i class="fas fa-times-circle"></i></button>
+</div>
+    <div class="content">
+        <div class="tb_box" id="tab1">
+            <a href="#tab1" class="tb_btn">Hamburger</a>
+            <div class="tb_con">
+                <!-- <h3 class="tb_tit">Shake shack - Hamburger</h3> -->
+                <img src="./img/img22.jpg" alt="">
+                <img src="./img/menu_tit_01.gif" alt="" class="ham1">
+                <div class="base">
+                            <img src="./img/b1.jpg" alt="" class="b1">
+                </div>
+                <div class="more_con" id="more_con">
+                    <div class="burger">
+                        <img src="./img/b1.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                    <div class="burger">
+                        <img src="./img/b2.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                    <div class="burger">
+                        <img src="./img/b3.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                    <div class="burger">
+                        <img src="./img/b4.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                    <div class="burger">
+                        <img src="./img/b5.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                    <div class="burger">
+                        <img src="./img/b6.jpg" alt="" class="b1">
+                        <p>바비큐쉑마이스터버거</p>
+                    </div>
+                </div>
+                <a class="more">더 보기</a>
+            </div>
+        </div>
+        <div class="tb_box" id="tab2">
+            <a href="#tab2" class="tb_btn">Drink</a>
+            <div class="tb_con">
+                <!-- <h3 class="tb_tit">Shake shack - Drink</h3> -->
+                <img src="./img/drink1.jpg" alt="">
+                <img src="./img/menu_tit_05.gif" alt="" class="ham1">
+                <div class="more_con" id="more_con">
+                        <div class="drink">
+                            <img src="./img/dr1.jpg" alt="" class="b1">
+                            <p>레몬에이드</p>
+                        </div>
+                        <div class="drink">
+                            <img src="./img/dr2.jpg" alt="" class="b1">
+                            <p>유기농 아이스티</p>
+                        </div>
+                        <div class="drink">
+                            <img src="./img/dr3.jpg" alt="" class="b1">
+                            <p>스페셜 에이드</p>
+                        </div>
+                        <div class="drink">
+                            <img src="./img/dr4.jpg" alt="" class="b1">
+                            <p>피프티/피프티</p>
+                        </div>
+                        <div class="drink">
+                            <img src="./img/dr5.jpg" alt="" class="b1">
+                            <p>탄산음료</p>
+                        </div>
+                        <div class="drink">
+                            <img src="./img/dr6.jpg" alt="" class="b1">
+                            <p>루트비어</p>
+                        </div>
+                        <div class="drink">
+                                <img src="./img/dr7.jpg" alt="" class="b1">
+                                <p>루트비어</p>
+                            </div>
+                    </div>
+                    <a class="more">더 보기</a>
+            </div>
+            
+        </div>
+        <div class="tb_box" id="tab3">
+            <a href="#tab3" class="tb_btn">Location</a>
+            <div class="tb_con">
+                <!-- <h3 class="tb_tit">Shake shack - Location</h3> -->
+                <img src="./img/img25.jpg" alt="매장사진">
+                <div class="map">
+                    <h4>청담점</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1582.5959678251409!2d127.0256483097194!3d37.50339102867747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb38f532752ed8e0!2z7ImQ7J207YGs7ImRIOqwleuCqOygkA!5e0!3m2!1sko!2skr!4v1561451554597!5m2!1sko!2skr"
+                    frameborder="0" style="border:0" allowfullscreen class="map1"></iframe>
+                    <p class="m_txt">
+                            <span>영업시간</span><br>
+                            월~목, 일 10:30 ~23:00 / (라스트 오더 22:30)<br>
+                            금, 토 10:30 ~24:00 / (라스트 오더 23:30)
+                            </p>
+                    <p class="m_txt1"><span>주소</span><br>서울시 강남구 강남대로 452 대연빌딩 1층 </p>
+                </div>
+                <div class="map">
+                <h4>강남점</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6334.648697039842!2d127.0224578321372!3d37.50335187189416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1589ef2d775%3A0xcb38f532752ed8e0!2z7ImQ7J207YGs7ImRIOqwleuCqOygkA!5e0!3m2!1sko!2skr!4v1561509372031!5m2!1sko!2skr"
+                frameborder="0" style="border:0" allowfullscreen class="map2"></iframe>
+                </div>
+                <h5>두타점</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.3801707571615!2d127.00755808838136!3d37.56966466779717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca33ca7285269%3A0xbe81dc24fad4c610!2z7ImQ7J207YGs7ImRIOuRkO2DgOygkA!5e0!3m2!1sko!2skr!4v1561509585489!5m2!1sko!2skr" 
+                frameborder="0" style="border:0" allowfullscreen class="map3"></iframe>
+            </div>
+        </div>
+    </div>
+<footer class="ft">
+    <nav class="fnb">
+        <ul class="menu">
+            <li class="item1"><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li class="item2"><a href=""><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </nav>
+    <p class="copyright">2004-2016 SHAKE SHACK. ALL RIGHTS RESERVED.
+         SOME INFORMATION ON THIS SITE MAY VARY SLIGHTLY BY
+         LOCATION AND IN STADIUMS, 
+         EVENT VENUES AND INTERNATIONAL SHACKS. 
+        </p>
+</footer>
+</body>
+</html>
