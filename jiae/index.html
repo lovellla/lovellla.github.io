@@ -6,52 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-</head>
-<style>
-*{margin: 0; padding: 0;}
-body,html{width: 1920px; background-color: #c5bbd6;}
-body, html{width: 100%; font-family: 'NanumSquare', sans-serif !important; font-size: 14px;}
-ul{list-style: none;}
-a{text-decoration: none;}
-button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
-#wrap{width: 100%; height: 100vh;}
-#page1{width:95%; height: 92vh; background-color: #fff; margin: 0 auto;margin-top: 35px;
-box-shadow: 5px 5px 5px rgba(0,0,0,0.2); }
-.hd{width: 100%; height: 100px; position: relative;}
-#gnb{width: 60%; height: 100px; border-bottom:2px solid #7262ab; position: absolute; right: 80px;}
-.navi{font-size: 1.6em;}
-.navi li{float: left; margin-top: 50px; margin-left: 130px; padding-left: 30px;}
-.photo{width: 22%; float: left; margin-top: 140px; margin-left: 150px; border-right: 1px solid #ccc;}
-.pro1{margin-left: 15px; margin-top: 20px;}
-.job{margin-bottom: 10px; margin-top: 5px;}
-.pro li{font-size: 1.4em;}
-.text{width: 78%; margin-top: 140px; margin-left: 650px; position: relative;}
-.left{position: absolute; width: 50%;}
-.text h3{font-size: 1.5em; line-height: 60px;}
-.text p{font-size: 1.2em; line-height: 30px;}
-.his h3{line-height: 50px;}
-.his p{line-height: 25px;}
-.right{position: absolute; right: 150px;}
-.right h3{font-size: 1.5em; line-height: 80px;}
-#wrap1{width: 100%; height: 100vh; position: relative;}
-#page2{ width: 95%; height: 92vh; background-color: #fff; top: 30px; left: 2.5%;
-box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
-#page3{width: 96%; height: 92vh; background-color: #fff; margin: 0 auto;margin-top: 110px;
-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);}
-#page4{width: 96%; height: 92vh; background-color: #fff; margin: 0 auto;margin-top: 110px;
-box-shadow: 5px 5px 5px rgba(0,0,0,0.2); margin-bottom: 40px;}
+    <script src="prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
 
-</style>
+    <script>
+    //  $(document).ready(function(){
+    //     var sc_ht = $(window).height();
+    //     $(".nav li").click(function(){
+    //         var t = $(this).index();
+    //        $("body, html").animate({"scrollTop":sc_ht*t+"px"}, 500);
+    //     });
+    // });
+    $(document).ready(function(){
+        var sc_ht = $("#wrap1").height();
+        $(".nav li").click(function(){
+            var t = $(this).index();
+           $(".rap").eq(t).slideDown(800);
+           $(".rap").eq(t).siblings().slideUp(800);
+        });
+        $(".navi li").click(function(){
+            var t = $(this).index();
+           $(".rap").eq(t).slideDown(800);
+           $(".rap").eq(t).siblings().slideUp(800);
+        });
+        $(".btn_box li").click(function(){
+        var wd = $(".lst li").width();
+        var idx = $(this).index(); //index
+        $(".lst").not(":animated").animate({"margin-left":idx*-1*wd});
+   });
+});
+    // $(document).ready(function(){
+    //     $("#btn1").click(function(){
+    //         $(".lst.fr").slideUp(500);
+    //         $(".lst.fr").siblings().slideDown(500);
+    //     });
+    //     $("#btn2").click(function(){
+    //         $(".lst.tw").slideUp(500);
+    //         $(".lst.tw").siblings().slideDown(500);
+    //     });
+    //     $("#btn3").click(function(){
+    //         $(".lst.th").slideUp(500);
+    //         $(".lst.th").siblings().slideDown(500);
+    //     });
+    // });
+
+    </script>
+</head>
 <body>
-<div id="wrap">
+<div id="wrap1" class="rap">
     <div id="page1">
+        <div class="intro">
+        <h1>Myung Ji Ae
+                <div class="message"> 
+                    <div class="word1">Portfolio</div>
+                    <div class="word2">Design</div>
+                    <div class="word3">creating</div>
+            </div>
+            </h1>
+            <div class="intro1">
+            <p>Web Designer / Web Publisher <br>
+               UI / UX
+            </p>
+            </div>
+        </div>
+        
+        <div class="side">
+            <ul class="nav">
+                    <li class="mn1">
+                        <img src="./img/in.png" alt="" class="mn1_img">
+                        <a data-link-alt="메인"><span>Intro</span></a></li>
+                    <li class="mn2">
+                            <img src="./img/pr.png" alt="" class="mn2_img">
+                        <a data-link-alt="프로필"><span>Profile</span></a></li>
+                    <li class="mn3">
+                            <img src="./img/pr.png" alt="" class="mn3_img">
+                        <a data-link-alt="포토폴리오"><span>Portfolio</span></a></li>
+                    <li class="mn4">
+                            <img src="./img/co.png" alt="" class="mn4_img">
+                        <a data-link-alt="정보"><span>Contact</span></a></li>
+                </ul>
+        </div>
+         <!-- <section class="button-start-pos">
+        <a href="#content" class="button-start" data-scrollax="properties: { 'translateY': '150%', 'opacity': 3 }" style="opacity: 1; transform: translateZ(0px) translateY(0%);">
+          <i class="fa fa-angle-double-down"></i>
+        </a>
+      </section> -->
+    </div>
+</div>
+<div id="wrap2" class="rap">
+    <div id="page2">
     <header class="hd">
     <nav id="gnb">
         <ul class="navi">
-            <li><a href="">home</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="#wrap1">Portfolio</a></li>
-            <li><a href="#page3">Contect</a></li>
+            <li><a>Intro</a></li>
+            <li><a>Profile</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -61,10 +114,10 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); margin-bottom: 40px;}
         <div class="pro1">
         <h2 class="name">Myung Ji Ae / 명 지 애</h2>
         <p class="job">Web Designer/Publisher</p>
-        <ul class="pro">
+        <!-- <ul class="pro">
             <li><img src="./img/mail.png" alt="">&nbsp;&nbsp;<span>lovellla@nate.com</span></li>
             <li><img src="./img/phone.png" alt="">&nbsp;&nbsp;<span>010-7554-7997</span></li>
-        </ul>
+        </ul> -->
         </div>
     </div>
     <div class="text">
@@ -94,20 +147,264 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); margin-bottom: 40px;}
                 </div>
             </div>
         </section>
-            <aside class="right">
-            <h3>Skill</h3>
-            <img src="./img/skill.png" alt="">
-                <div>
-        </aside>
+        <aside class="right">
+        <h3>Skill</h3>
+        <div class="skill">
+        <div class="box">
+        <div class="item cat1">
+            <svg width="140" height="140">
+                <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                <circle cx="60" cy="60" r="50" fill="white" stroke="#292a6a" stroke-width="10" stroke-style="dashed" id="circle1"/>
+                현재 브러우저는 SVG를 지원하지 않습니다.
+            </svg>
+        </div>
+        <div class="txt_box">
+            <div class="cat_tit"><img src="./img/typo.png" alt="">
+            <h2 class="txt1">PhotoShop</h2><br><span>80%</span></div>
+            <div class="txt" data-val="90%">
+          <!-- 
+                    원의둘레 = 반지름*2*3.1415 > 100*2*3.1415=629
+                    629*0.9=566 => 629-566=63
+                -->
+        </div>
+        <div class="box">
+        <div class="item cat2">
+            <svg width="140" height="140">
+                <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                <circle cx="60" cy="60" r="50" fill="white" stroke="#e99f48" stroke-width="10" stroke-style="dashed" id="circle2"/>
+                현재 브러우저는 SVG를 지원하지 않습니다.
+            </svg>
+        </div>
+        <div class="txt_box">
+                <div class="cat_tit1"><img src="./img/typo1.png" alt="">
+                <h2 class="txt2">Illustrator</h2><br><span>75%</span></div>
+                <div class="txt" data-val="90%">
+              <!-- 
+                        원의둘레 = 반지름*2*3.1415 > 100*2*3.1415=629
+                        629*0.9=566 => 629-566=63
+                    -->
+            </div>
+        <div class="box">
+        <div class="item cat3">
+            <svg width="140" height="140">
+                <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                <circle cx="60" cy="60" r="50" fill="white" stroke="#6e2d89" stroke-width="10" stroke-style="dashed" id="circle3"/>
+                현재 브러우저는 SVG를 지원하지 않습니다.
+            </svg>
+        </div>
+        <div class="txt_box">
+            <div class="cat_tit2"><img src="./img/typo2.png" alt="">
+            <h2 class="txt3">html5</h2><br><span>85%</span></div>
+            <div class="txt" data-val="80%"></div>
+            <!-- 629-602=125 -->
+        </div>
+    </div>
+    <div class="skill1">
+        <div class="box">
+            <div class="item cat4">
+                <svg width="140" height="140">
+                    <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                    <circle cx="60" cy="60" r="50" fill="white" stroke="#bc316c" stroke-width="10" stroke-style="dashed" id="circle4"/>
+                    현재 브러우저는 SVG를 지원하지 않습니다.
+                </svg>
+        </div>
+        <div class="txt_box">
+            <div class="cat_tit3"><img src="./img/typo3.png" alt="">
+            <h2 class="txt4">css3</h2><br><span>75%</span></div>
+            <div class="txt" data-val="80%"></div>
+            <!-- 629-602=125 -->
+        </div>
+        <div class="box">
+        <div class="item cat5">
+            <svg width="140" height="140">
+                <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                <circle cx="60" cy="60" r="50" fill="white" stroke="#2570a9" stroke-width="10" stroke-style="dashed" id="circle5"/>
+                현재 브러우저는 SVG를 지원하지 않습니다.
+            </svg>
+        </div>
+        <div class="txt_box">
+            <div class="cat_tit4"><img src="./img/typo4.png" alt="">
+            <h2 class="txt5">jQuery</h2><br><span>15%</span></div>
+            <div class="txt" data-val="80%"></div>
+            <!-- 629-602=125 -->
+        </div>
+        <div class="box">
+            <div class="item cat6">
+                <svg width="140" height="140">
+                    <circle cx="60" cy="60" r="40" stroke="#eee" stroke-width="30" stroke-style="dashed" id="circle"/>
+                    <circle cx="60" cy="60" r="50" fill="white" stroke="#f1524c" stroke-width="10" stroke-style="dashed" id="circle6"/>
+                    현재 브러우저는 SVG를 지원하지 않습니다.
+                </svg>
+            </div>
+            <div class="txt_box">
+                <div class="cat_tit5"><img src="./img/typo5.png" alt="">
+                <h2 class="txt6">Office</h2><br><span>70%</span></div>
+                <div class="txt" data-val="80%"></div>
+                <!-- 629-502=125 -->
+            </div>
+            <div>
+        </div>
+    </aside>
     </div>
     </div>
-  
     </div>
-<div id="wrap1">
-    <div id="page2"></div>
+<div id="wrap3" class="rap">
+<div id="page3">
+<header class="hd">
+    <nav id="gnb">
+        <ul class="navi">
+            <li><a>Intro</a></li>
+            <li><a>Profile</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+    <ul class="btn_box">
+            <li class="btn1"><button>반응형 홈페이지</button></li>
+            <li class="btn2"><button>PC홈페이지</button></li>
+            <li class="btn3"><button>모바일 홈페이지</button></li>
+        </ul>
+   </header> 
+<div class="content">
+
+   <!-- <div class="content"> 
+        <input type="radio" name="rdo" class="rdo" id="ra1" checked>
+        <input type="radio" name="rdo" class="rdo" id="ra2">
+        <input type="radio" name="rdo" class="rdo" id="ra3">
+    <div class="btn_box">
+        <label for="ra1" class="btn on" id="btn1">반응형홈페이지</label>
+        <label for="ra2" class="btn" id="btn2">PC홈페이지</label>
+        <label for="ra3" class="btn" id="btn3">모바일홈페이지</label>
+    </div> -->
+
+<ul class="lst">
+    <li class="lst1">
+            <div class="item1">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지1">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+            <div class="item1">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지2">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+            <div class="item1">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지3">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+    </li>
+    <li class="lst2">
+            <div class="item2">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지1">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+            <div class="item2">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지2">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+            <div class="item2">
+                <a href="">
+                    <img src="./img/pc1.png" alt="이미지3">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+    </li>
+    <li class="lst3">
+            <div class="item3">
+                <a href="">
+                    <img src="./img/mo1.png" alt="이미지1">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+            <div class="item3">
+                <a href="">
+                    <img src="./img/mo1.png" alt="이미지2">
+                </a>
+                <div class="text_box">
+                    <h2 class="lst_title">이미지 제목</h2>
+                    <p class="lst_com">이미지 설명</p>
+                </div>
+            </div>
+    </li>
+</ul>   
 </div>
-<div class="wrap">
-        <div id="page3"></div>
+</div> <!-- page -->
+</div> <!-- wrap -->
+<div id="wrap4" class="rap">
+<div id="page4">
+<header class="hd">
+    <nav id="gnb">
+        <ul class="navi">
+            <li><a>Intro</a></li>
+            <li><a>Profile</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="con2">
+        <div class="con_box fr">
+            <a href="mailto:lovellla@naver.com" target="blank"><img src="./img/m.png" alt="">
+            <h2>Mail</h2>
+            <div class="line"></div>
+            <p class="tel">lovellla@naver.com</p></a>
+        </div>
+        <div class="con_box tw">
+            <a href="tel:010-7554-7997" target="blank">
+            <img src="./img/p.png" alt="">
+            <h2>Tel</h2>
+            <div class="line"></div>
+            <p class="tel">010.7554.7997</p></a>
+        </div>
+        <div class="con_box th">
+            <a href="https://lovellla.github.io" target="blank"><img src="./img/c.png" alt="">
+            <h2>Portfolio</h2>
+            <div class="line"></div>
+            <p class="tel">https://lovellla.github.io</p></a>
+        </div>
     </div>
+    <div class="drawsvg">
+        <svg version="1.1" viewBox="0 0 700 300">
+            <symbol id="fade-text">
+                <text x="45%" y="40%" text-anchor="middle">Thank you. by MJA</text>
+            </symbol>
+            <g>
+                <use class="stroke" xlink:href="#fade-text" />
+                <use class="fill" xlink:href="#fade-text" />
+            </g>
+        </svg>
+    </div>
+</div>
+</div>
 </body>
 </html>
