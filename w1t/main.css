@@ -63,13 +63,13 @@ background-position: center center; float: left;}
 .tit_box a{position: absolute; color:#000; width: 600px; }
 .txt{ position: absolute;font-size: 1.1em; padding-left: 200px; line-height: 22px; margin-bottom: 10px;  width: 600px;
    top: 425px;}
-.more{position: absolute; width: 280px; height: 30px; top: 480px; background: #333; border-radius: 5px; margin-left: 200px; padding-top: 5px;  
+.more{position: absolute; width: 280px; height: 30px; top: 480px; background: #333; border-radius: 5px; left: 200px; padding-top: 5px;  
     color:#fff; font-size: 1.2em; text-indent: 30px;}
 .item1 .txt_box{position: absolute; top: 350px; left: 150px; width: 450px; height: 210px; background-color: rgba(255,255,255,0.5);}
 
-.more1{position: absolute; width: 280px; height: 30px;  background: #333; border-radius: 5px; margin-left: 200px; padding-top: 5px;  
+.more1{position: absolute; width: 280px; height: 30px;  background: #333; border-radius: 5px; left: 200px; padding-top: 5px;  
     color:#fff; font-size: 1.2em; text-indent: 30px; top: 530px;}
-.more2{position: absolute; width: 205px; height: 30px;  background: #333; border-radius: 5px; margin-left: 200px; padding-top: 5px;  
+.more2{position: absolute; width: 205px; height: 30px;  background: #333; border-radius: 5px;left: 200px; padding-top: 5px;  
     color:#fff; font-size: 1.2em; text-indent: 30px; top: 480px;}
 .item2 .txt_box1{position: absolute; top: 350px; left: 150px; width: 600px; height: 250px; background-color: rgba(255,255,255,0.8);}
 .item3 .txt_box2{position: absolute; top:350px; left: 150px; width: 380px; height: 200px; background-color: rgba(255,255,255,0.7);}
@@ -107,18 +107,22 @@ background-position: center center; }
 .vs_lst2 li.item8{background-image: url("./img/mimg8.jpg");}
 
 
-
+/* 
 #page3{background-position: center center; background-repeat: no-repeat; background-size: cover;
-background-image: url("./img/img1.jpg");}
+background-image: url("./img/img1.jpg");} */
 
-.thum_lst{width: 100%; height: 100%;}
+.thum_lst{width: 100%; height: 100%; position: relative;}
 .thum_lst li{width: 33.3333%; height: 100%; float: left; clear: none; background-repeat: no-repeat;
             background-size: cover; background-position: center center;}
 .thum_lst li.item1{background-image: url("./img/bimg3.jpg"); background-position: top center;}
 .thum_lst li.item2{background-image: url("./img/bimg2.jpg");}
 .thum_lst li.item3{background-image: url("./img/bimg4.jpg"); background-position: top center;}
-.ico_box{width: 150px; height: 150px; background-color:rgba(255,255,255,0.5);
-    border-radius: 50%;  cursor: pointer; position: absolute; margin-top:300px; margin-left: 250px;}
+.ico_box1{width: 150px; height: 150px; background-color:rgba(255,255,255,0.5);
+    border-radius: 50%;  cursor: pointer; position: absolute; top:300px; left: 250px;}
+.ico_box2{width: 150px; height: 150px; background-color:rgba(255,255,255,0.5);
+border-radius: 50%;  cursor: pointer; position: absolute;  top:300px; left: 890px;}
+.ico_box3{width: 150px; height: 150px; background-color:rgba(255,255,255,0.5);
+    border-radius: 50%;  cursor: pointer; position: absolute;  top:300px; left: 1520px;}
 /* .ico_box i{color:#fff; font-size: 6em; padding-left: 28px; padding-top: 37px;} */
 .bra{position: absolute; top: 35px; left: 38px;}
 .ring{position: absolute; top: 40px; left: 36px;}
@@ -129,7 +133,7 @@ line-height: 50px;}
 .thum_lst li a{display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.5); transition: 0.5s;}
 .thum_lst li a:hover{display: block; width: 100%; height: 100%; background: rgba(0,0,0,0);}
 
-.ft{clear: both;}
+.ft{clear: both; height: 100px;}
 .menu li a{float: left;}
 .company{}
 .address{}
@@ -155,7 +159,7 @@ line-height: 50px;}
     .in_data {width:100px; line-height:25px; border-bottom:2px solid #fff;  text-align: center;}
     .frm_btn {background-image:url("./img/search_btn1.png");}
 
-    .vs_lst li.item1{background-position: -700px center;}
+    .vs_lst li.item1{background-position: -750px center;}
     .vs_lst li.item2{background-position: left center;}
     .vs_lst li.item3{background-position: -450px center;}
     .vs_tit { padding-left:15px; }
@@ -170,19 +174,19 @@ line-height: 50px;}
         font-size: 2em; text-indent: 95px; font-weight: 100;}
     .item1 .tit_box a{color:#000; width: 600px;}
     .item1 .txt{display: none;}
-    .more{margin-left: 50px; top: 560px;}
+    .more{top: 560px; left: 50px;}
     .item2 .txt_box1{display: none;}
     .item2 .tit_box{color: #000; text-shadow: 2px 2px 2px #fff;
          padding-top: 510px;  margin-bottom: 10px; font-size: 2em; text-indent: 55px;}
     .item2 .tit_box a{color:#000; width: 600px;}
     .item2 .txt{display: none;}
-    .more1{margin-left: 50px; top: 560px;}
+    .more1{left: 50px; top: 560px;}
     .item3 .txt_box2{display: none;}
     .tit_box{color: #000; text-shadow: 2px 2px 2px #fff;
         padding-top: 510px;  margin-bottom: 10px; font-size: 2em; text-indent: 110px;}
     .tit_box a{color:#000; width: 600px;}
     .item3 .txt{display: none;}
-    .more2{margin-left: 90px; top: 560px;}
+    .more2{top: 560px; left: 90px;}
     .num_box li{margin-left: 100px; background: rgba(0,0,0,0.5);}
     .num_box li.item1{left: 0px; width: 50px; height: 5px;}
     .num_box li.item2{left: 60px; width: 50px; height: 5px;}
@@ -197,12 +201,16 @@ line-height: 50px;}
     .ico_box{display: none;}
     .thum_tit{padding-top: 130px; padding-left: 18px;}
     .thum_com{margin-left: 20px;}
-    .ft{clear: both; margin-top: 332px;}
-    
-}
-@media screen and (min-width:768px) and (max-width:1280px){
-    /* 저해상도 데스크탑 */
-    .gnb { display:none; }
+    .ft{clear: both; margin-top: 332px; }
+    }
+@media screen and (min-width:768px) and (max-width:959px){
+    /* 태블릿의 경우 */
+    .lst_btn{right: 20px;}
+    .lang{right: 80px;}
+    .collap{background-image: url("./img/tog_bg1.jpg");}
+    .close{margin-right: 20px;}
+    .frm1{right: 80px;}
+    .tog_menu{margin-left: 220px; margin-top: 150px;}
     .vs_tit { padding-left:35px; }
     .vs_com { padding-left:35px; }
     .vs_more { margin-left:35px; }
@@ -211,7 +219,47 @@ line-height: 50px;}
     .thum_tit { left:0;   width: 100%; top:35%; }
     .thum_com { left:0;   width: 100%; }
     .num_box { width: 80px; height: 80px; font-size:1.3rem; line-height:80px; }
-    .btn_box2 li button { width:300px; }
+    .btn_box2 li button { width:300px;}
+    .item1 .txt_box{top: 600px; left: 50px;}
+    .vs_lst li.item1{background-position: -1000px center;}
+    .tit_box{top: 250px; text-indent: 100px;}
+    .txt{padding-left: 100px; padding-top: 250px;}
+    .more{top: 740px; left: 100px;}
+    .num_box li{margin-left: 300px; background: rgba(0,0,0,0.5);}
+    .num_box li.item1{left: 0px; width: 50px; height: 5px;}
+    .num_box li.item2{left: 60px; width: 50px; height: 5px;}
+    .num_box li.item3{left: 120px; width: 50px; height: 5px;}
+    .num_box li.on{background: #91ead8;}
+    .vs_lst li.item2{background-position: left center;}
+    .item2 .txt_box1{top: 600px; left: 50px; background-color: rgba(255,255,255,0.5);}
+    .more1{top: 785px; left: 100px;}
+    .item3 .txt_box2{top: 600px; left: 50px;}
+    .more2{top: 730px; left: 100px;}
+    .vs_lst li.item3{background-position: -600px center;}
+    .p2_sub1{padding-left: 10px; margin-right: 40px;}
+    .p2_sub2{height: 100px; width:600px; margin: 0 auto;}
+    .p2_sub2 li{padding-left: 0; width: 300px;}
+    .thum_lst{height: 1000px; box-sizing: border-box;}
+    .ico_box1{left: 53px; top: 380px;}
+    .ico_box2{left: 320px; top: 380px;}
+    .ico_box3{left: 580px; top: 380px;}
+    .thum_tit{padding-top: 550px; padding-left: 10px;}
+    .thum_com{margin-left: 10px;}
+    .ft{clear: both;}
+    .page{height: 100%;}
+@media screen and (min-width:960px) and (max-width:1280px){
+    /* 저해상도 데스크탑 */
+    .gnb { display:block; }
+    .vs_tit { padding-left:35px; }
+    .vs_com { padding-left:35px; }
+    .vs_more { margin-left:35px; }
+    .thum_lst li { width: 33.33333%; height:100%; float:left; clear:none; }
+    .thum_lst .pic_box { left:calc(50% - 60px); }
+    .thum_tit { left:0;   width: 100%; top:35%; }
+    .thum_com { left:0;   width: 100%; }
+    .num_box { width: 80px; height: 80px; font-size:1.3rem; line-height:80px; }
+    .btn_box2 li button { width:300px;}
+   
 }
 @media screen and (min-width:1281px){
     /* 고해상도 데스크탑 */
