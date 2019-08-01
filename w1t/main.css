@@ -198,7 +198,7 @@ line-height: 50px;}
     .p2_sub2{height: 100px; width: 250px;}
     .p2_sub2 li{padding-left: 0; width: 100%;}
     .thum_lst{height: 1000px;}
-    .ico_box{display: none;}
+    .ico_box1,.ico_box2, .ico_box3 {display: none;}
     .thum_tit{padding-top: 130px; padding-left: 18px;}
     .thum_com{margin-left: 20px;}
     .ft{clear: both; margin-top: 332px; }
