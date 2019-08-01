@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+/*    overflow-x: hidden;*/
+}
+/*overflow-x: hidden; 내용이 넘치더라도 x(수평)축의 스크롤바를 숨겨라*/
+body{
+    font: 12px 'Noto Sans KR', sans-serif;
+}
+ul,li {
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+}
+
+#footer {
+    width: 100%;
+    height: 580px;
+    background: #2c2a29;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.ftmenu {
+    position: relative;
+}
+
+#footer .logo1 {
+    width: 204px;
+    height: 117px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#footer.logo1 img {
+    width: 204px;
+    height: 117px;
+    display: block;
+}
+
+.sns {
+    position: absolute;
+    top: 20px;
+    right: 430px;
+    clear: both;
+   
+}
+.sns li {float: left;
+margin-left: 10px;}
+.sns a {
+    color: #fff;
+    font-size: 30px;
+   
+}
+
+#fnb {
+    text-align: center;
+    display: block;
+    margin-left: 12%;
+    margin-top: 60px;
+}
+
+#fnb .ftm {
+    float: left;
+    padding-left: 150px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+#fnb .ftm li {
+    font-size: 12px;
+}
+
+#fnb .ftm li a {
+    color: #fff;
+}
+#fnb .ftm li a:hover {
+    color: #b7274c;
+    text-decoration: underline;
+}
+
+.ftRow2 {
+    clear: both;
+}
+.address {
+    padding-top: 40px;
+    text-align: center;
+    display: block;
+    clear: both;
+    color: #ccc;
+    line-height: 25px;
+}
+.copyright {
+    color: #ccc;
+}
+.ks {
+    float: right;
+    position: absolute;
+    right: 420px;
+    bottom: 20px;
+}
+.ks div{
+    float: left;
+    margin-right: 10px;
+}
