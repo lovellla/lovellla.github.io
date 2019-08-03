@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 </head>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script>
@@ -41,7 +42,41 @@
                 $(".news_box").css("margin-left","0px");
             });
         }
-    });
+        $(".prev_btn").click(function(){ //이전 이미지
+            prevAni();
+        }); 
+        function prevAni() {
+                $(".news_box li").eq(len-1).prependTo($(".news_box"));
+                $(".news_box").css("margin-left",-wd+"px");
+                $(".news_box").not(":animated").animate({"margin-left":"0px"},1000);
+        }
+        $("#lst_btn").click(function(){
+		$("#gnb").toggleClass("on");
+	    });
+        });
+</script>
+<script>
+$(window).resize(function(){
+    var wd = $(window).width();
+    if(wd>=768 && wd<=959){
+        console.log();
+        $(".sub .dp1").click(function(){
+            $(this).find(".sub1 li").slideToggle();
+        });
+
+    } else{
+        console.log();
+        $(".sub .dp1").click(function(){
+            $(this).find(".sub1 li").slideToggle();
+        });
+            });
+            $(document).mousedown(function(){
+                $(".sub1").slideUp(500);
+                $(".sub .dp1").removeClass("on");
+            });
+        };
+    }).resize();
+
 </script>
 <body>
     <header class="hd">
@@ -51,18 +86,26 @@
             <div class="lang">
                 <p class="cur desk"><i class="fas fa-globe"></i>&nbsp;한국어 <span>▼</span></p>
                 <ul class="lang_cel">
-                    <li><a href="">영어</a></li>
-                    <li><a href="">중국어</a></li>
-                    <li><a href="">일본어</a></li>
+                    <li><a href="">English</a></li>
+                    <li><a href="">中国語</a></li>
+                    <li><a href="">日本語</a></li>
                 </ul>
             </div>
+            
             <div id="lst_btn"><button></button></div>
             <div id="search"><button></button></div>
         </nav>
         <nav id="gnb">
-            <ul>
+            <div class="lang1">
+                <ul class="lang_cel">
+                    <li><a href="">English</a></li>
+                    <li><a href="">中国語</a></li>
+                    <li><a href="">日本語</a></li>
+                </ul>
+            </div>
+            <ul class="gnb">
                 <li class="sub">
-                    <a href=""  class="dp1">도청안내</a>
+                    <a href="" class="dp1">도청안내</a>
                     <ul class="sub1">
                         <li class="dp2 fr"><a href="">조직도/직원검색</a></li>
                         <li class="dp2"><a href="">실국안내</a></li>
@@ -90,7 +133,7 @@
                     </ul>
                 </li>
                 <li class="sub">
-                    <a href=""  class="dp1">충남의 현재</a>
+                    <a href="" class="dp1">충남의 현재</a>
                     <ul class="sub1">
                         <li class="dp2 fr"><a href="">일반현황</a></li>
                         <li class="dp2"><a href="">행정구역</a></li>
@@ -139,6 +182,9 @@
             </li>
         </ul>
         <figuare class="banner">
+        <div class="m_box">
+            <img src="./img/m_banner.jpg" alt="">
+        </div>
         <div class="img_box">
             <img src="./img/main_banner.jpg" alt="">
         </div>
@@ -146,33 +192,37 @@
             <img src="./img/mini_banner.jpg" alt="">
         <div class="ban1">
             <div class="but1">
-                <div class="box"><span>도청안내</span>&nbsp;&nbsp;<img src="./img/ico.png" alt="" class="ico"></div>
+                <div class="box"><span>도청안내</span>&nbsp;&nbsp;
+                    <img src="./img/ico.png" alt="" class="ico">
+                <img src="./img/ico2.png" alt="" class="ico_t1"></div>
                 
             </div>
             <div class="but2">
-                <div class="box"><span>오시는길</span>&nbsp;&nbsp;<img src="./img/ico1.png" alt="" class="ico1"></div>
+                <div class="box"><span>오시는길</span>&nbsp;&nbsp;
+                    <img src="./img/ico1.png" alt="" class="ico1">
+                <img src="./img/sch3.png" alt="" class="ico_t2"></div>
         </div>
         </div>
         </figuare>
     </div>
+    <div class="bottom">
     <h2 class="title">오늘의 주요뉴스</h2>
-    <h2 class="title1">SNS</h2>
-  
     <div class="line"></div>
- 
     <div class="main1_b">
-    <div class="new_wrap">
-        <ul class="cir">
-            <li class="cir1"></li>
-            <li class="cir2"></li>
-            <li class="cir3"></li>
-        </ul>   
-        <ul class="new">
-            <li>충남도 공무원 필기시험 합격자 1590명 발표</li>
-            <li>지역 인구정책 점검하고 개선방안 모색</li>
-            <li>충남인재육성재단, 지역인재 지원확대를 위한 장학생 모집</li>
-        </ul>
-    </div>
+            <div class="new_wrap">
+                <ul class="cir">
+                    <li class="cir1"></li>
+                    <li class="cir2"></li>
+                    <li class="cir3"></li>
+                </ul>   
+                <ul class="new">
+                    <li>충남도 공무원 필기시험 합격자 1590명 발표</li>
+                    <li>지역 인구정책 점검하고 개선방안 모색</li>
+                    <li>충남인재육성재단, 지역인재 지원확대를 위한 장학생 모집</li>
+                </ul>
+            </div>
+    <h2 class="title1">SNS</h2>
+    <div class="line2"></div>
     <div class="new_wrap1">
         <ul class="cir4">
             <li></li>
@@ -187,6 +237,7 @@
             <li><img src="./img/tw.png" alt=""></li>
         </ul>
     </div>
+</div>
     </div>
     </div>
 
@@ -199,6 +250,10 @@
                 <a href="" class="vs_more"></a>
             </li>
         </ul>
+        <div class="arrow">
+            <li class="left"><button class="prev_btn"><img src="./img/prev_btn.png" alt=""></button></li>
+            <li class="right"><button class="next_btn"><img src="./img/next_btn.png" alt=""></button></li>
+        </div>
         <div id="vs">
             <ul class="news_box">
                 <li class="item1"><img src="./img/newbox.jpg" alt=""></li>
@@ -208,12 +263,8 @@
                 <li class="item5"><img src="./img/newbox1.jpg" alt=""></li>
                 <li class="item6"><img src="./img/newbox2.jpg" alt=""></li>
             </ul>
-        
-            <div class="arrow">
-                <li class="left"><button class="prev_btn"><img src="./img/prev_btn.png" alt=""></button></li>
-                <li class="right"><button class="next_btn"><img src="./img/next_btn.png" alt=""></button></li>
-            </div>
         </div>
+        
         <div class="line"></div>
         <ul class="cir5">
             <li class="cir6"></li>
@@ -270,7 +321,7 @@
             </ul>
         </div>
     </div>
-       <img src="./img/3.png" alt="" class="v1">
+       <img src="./img/2.png" alt="" class="v1">
 
     <ul class="menu">
         <li><a href="">서비스약관</a></li>
@@ -286,8 +337,13 @@
             </li>
         </ul>
     <p class="copyright">
-        copyright ⓒ 2019 THE PROVINCE OF CHUNGCHEONGNAM-DO J. All Rights Reserved.
+        copyright ⓒ 2019 THE PROVINCE OF CHUNGCHEONGNAM-DO Jiae. All Rights Reserved.
     </p>
+    <div class="to">
+        <a href="">
+        <p class="to_txt">Top</p>
+        <img src="./img/top.png" alt=""></a>
+    </div> 
     </footer>
     </div>
 
