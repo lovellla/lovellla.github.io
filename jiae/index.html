@@ -9,7 +9,7 @@
     <script src="prefixfree.min.js"></script>
     <link rel="stylesheet" type="text/css" href="common.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
 
     <script>
@@ -32,13 +32,12 @@
            $(".rap").eq(t).slideDown(800);
            $(".rap").eq(t).siblings().slideUp(800);
         });
-      $(".btn_box li").click(function(){
+        $(".btn_box li").click(function(){
         var wd = $(".lst li").width();
         var idx = $(this).index(); //index
         $(".lst").not(":animated").animate({"margin-left":idx*-1*wd});
    });
 });
-
     // $(document).ready(function(){
     //     $("#btn1").click(function(){
     //         $(".lst.fr").slideUp(500);
@@ -53,6 +52,7 @@
     //         $(".lst.th").siblings().slideDown(500);
     //     });
     // });
+
     </script>
 </head>
 <body>
