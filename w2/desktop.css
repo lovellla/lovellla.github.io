@@ -89,8 +89,8 @@ box-sizing: border-box;}
 .sns li img{width: 80%;}
 #page2{background-image: url("./img/vs5.jpg"); position: relative;}
 /* .line1{width: 200px; height: 5px; background-color:#f49a25; margin-left: 200px;} */
-#vs { position:relative; width:1200px; height:300px; overflow:hidden; margin-top: 280px; margin-left: 600px;}
-.news_box{ overflow: hidden;  width:2400px; height: 300px; }
+#vs { position:relative; width:1200px; height:330px; overflow:hidden; margin-top: 280px; margin-left: 600px;}
+.news_box{ overflow: hidden;  width:2400px; height: 330px; }
 .news_box li{float: left; width: 400px; }
 .arrow{position: absolute; top: 360px;}
 .arrow li {z-index:80;}
