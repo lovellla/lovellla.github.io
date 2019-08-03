@@ -24,7 +24,7 @@ background-position: center center; float: left; cursor: pointer;}
 #gnb{position: relative; width: 1200px; height: auto; float: right;  padding-top: 40px;
 box-sizing: border-box;}
 #gnb li{float: left; width: 150px; position:relative; }
-#gnb .dp1{color:#fff; text-align: center;}
+#gnb .dp1{color:#ffffff; text-align: center;}
 #gnb .dp1:hover{color:#004B97; font-weight: 700;}
 .sub{height: 30px;}
 .sub .dp1{font-size: 1.4em; }
@@ -162,4 +162,4 @@ font-weight: bold; font-size: 1.1em;}
 .to_txt{float: left; padding-top: 10px; padding-right: 10px;}
 .to a{color:#fff;}
 .to img{float: right;}
-
+}

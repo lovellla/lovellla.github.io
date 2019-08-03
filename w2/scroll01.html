@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    .page { height: 100vh; width: 100vw; } 
+    #quick { width: 100px; height: 240px; position: fixed; top:150px;
+    right:50px; }
+    #quick a { display:block; height: 40px; line-height: 40px; text-align:center;
+    background:#333; color:#fff; }   
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            $("#quick").stop().animate({"top": "170px"}, 10, function(){
+                $("#quick").animate({"top":"200px"}, 600, function(){
+                    //$("#quick").css("top", "150px");
+                });
+            });
+        });
+    });    
+    </script>
+</head>
+<body>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div id="quick">
+        <a href="">명</a>
+        <a href="">지</a>
+        <a href="">애</a>
+        <a href="">♥</a>
+    </div>
+</body>
+</html>
