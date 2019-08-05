@@ -12,7 +12,7 @@
 #gnb{position: fixed;  right: -110%; width: 30%; float: none;
 background-color: #132f85; width: 100%; height: 100%; transition: 0.6s; z-index: 999;}
 .lang_cel{width: 100%; height: 30px; background-color:#585d63;}
-.lang_cel li{float: left; font-weight: bold; height: 30px; width: 105px; text-align: center;padding-left: 10px; padding-top: 5px;}
+.lang_cel li{float: left; font-weight: bold; height: 30px; width: 105px; text-align: center;padding-left: 20px; padding-top: 5px;}
 .lang_cel li a{color:#fff; display: block;}
 .gnb{margin-top: 0px; width: 100%; position: relative;}
 /* .sub:nth-child(1){border-top: 1px solid #fff;} */

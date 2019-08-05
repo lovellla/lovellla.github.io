@@ -23,7 +23,7 @@ background-position: center center; float: left; cursor: pointer;}
 
 #gnb{position: relative; width: 1200px; height: auto; float: right;  padding-top: 40px;
 box-sizing: border-box;}
-#gnb li{float: left; width: 150px; position:relative; }
+#gnb li{float: left; width: 150px; position:relative;cursor: pointer; }
 #gnb .dp1{color:#ffffff; text-align: center;}
 #gnb .dp1:hover{color:#004B97; font-weight: 700;}
 .sub{height: 30px;}
@@ -58,6 +58,8 @@ box-sizing: border-box;}
 .but1{width: 185px; height: 105px; margin-top: 10px; background:#6eb92b; float: left;}
 .ico{clear: both; width: 18px; height: 21px; display: block; position: absolute; top: 52px; left:125px;}
 .ico1{clear: both; width: 18px; height: 21px; display: block; position: absolute; top: 52px; left:315px;}
+.ico_t1{display: none;}
+.ico_t2{display: none;}
 .but2{width: 185px; height: 105px; margin-top: 10px; background: #fb8d1e; float: right;}
 .box{width: 160px; height: 80px; border: 2px solid #fff; margin: 0 auto; margin-top: 10px;}
 .box span{font-size: 1.3em; line-height: 4.5; color:#fff; margin-left: 35px;}
