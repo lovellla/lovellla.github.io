@@ -292,19 +292,19 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
 .lst1 div, .lst2 div, .lst3 div{float: left;}
 .lst li{width: 33.3333%; min-width:33.3333%; height: 790px; float: left; overflow: hidden;}
 .lst .item1{position: relative;}
-.lst1{padding-left: 100px; padding-top: 180px;}
-.lst1 div { width:500px; float:left; height:420px; cursor:pointer; margin-right: 50px; }
-.item1 .text_box { background:rgba(0, 0, 0, 0.6); width: 500px; height: 418px; 
+.lst1{padding-top: 180px; padding-left: 8px;}
+.lst1 div { width:595px; float:left; height:420px; cursor:pointer; margin-right: 10px; }
+.item1 .text_box { background:rgba(0, 0, 0, 0.6); width: 595px; height: 418px; 
   position:absolute; opacity:0; top: 2px; left: 0; transition:0.8s; border-radius: 20px; } 
 .lst1 div:hover .text_box { opacity:1;}
-.lst1 div a { display:block; width:500px; height:420px; overflow:hidden;  } 
-.lst1 div img { width:500px; height:420px;}
+.lst1 div a { display:block; width:595px; height:420px; overflow:hidden;  } 
+.lst1 div img { width:595px; height:420px;}
 .lst_title { color:#fff; text-align:center; line-height: 2.8; } 
 .lst_com { color:#fff; padding: 25px; }
 .blank_item { width:200px; height:150px; background:rgba(128, 128, 0, 0.9); 
     font-size:6em; text-align:center;}
 .lst2 .item2{position: relative;}
-.lst2{padding-top: 180px;}
+.lst2{padding-top: 180px; padding-left: 100px;}
 .lst2 div { width:500px; float:left; height:420px; cursor:pointer; margin-right: 50px; }
 .item2 .text_box { background:rgba(0, 0, 0, 0.6); width: 500px; height: 418px; 
   position:absolute; opacity:0; top: 2px; left: 0; transition:0.8s; border-radius: 20px; } 
