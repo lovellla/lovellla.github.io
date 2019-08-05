@@ -11,28 +11,29 @@
     <style>
     *{margin: 0; padding: 0;}
     body, html{width: 100%; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
-    ul{list-style: none;}
+    ul, li{list-style: none;}
     a{text-decoration: none;}
     button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
 
     #container{padding-left: 300px;}
     #container:after{content: ""; display: block; clear: both;}
     #content{float: right; width: 100%;}
-    #aside{position: fixed;  left: 0; top: 0; z-index: 99; float: left;}
+    #aside{position: fixed;  left: 0; top: 0; z-index: 99; float: left; width: 300px; box-sizing: border-box;}
     #ft{ position: fixed;  z-index: 100; width: 100%; height: 100px; background: #000; bottom: 0; font-weight: 100;}
     
     /* .hd{width: 300px; height: 850px; background: #000;} */
-    #find_nav{}
+    #find_nav{height:70px;}
     .frm1{position: absolute; width: 180px; height: 30px; border: 1px solid #333; border-radius: 20px; margin-left: 60px; margin-top: 20px; overflow: hidden;}
     .frm_btn{width: 50px;float: right;}
     .in_data{width: 130px; height: 30px; line-height: 30px; text-align: center;}
     .frm_btn{width: 50px; height: 32px; background-color: #000;}
 
-    .logo{display: block; margin-left: 50px; margin-top: 70px; width: 300px;}
+    .logo{display: block; padding-left: 50px; margin-top: 70px;}
     .logo img{width: 200px; height: 36px; margin: 0 auto;}
     .gnb{width: 300px; height: auto; padding-top: 80px; font-size: 16px;}
     .sub{text-align: center; line-height: 30px;}
     .sub a{color:#000;}
+    .content{position: relative;}
     .vs{width: 100%; height: 4560px;}
     .vs_lst li{clear: both; width: 100%; height: 760px;}
     .vs_lst .item1{background: url("./img/vs1.jpg");}
@@ -41,8 +42,12 @@
     .vs_lst .item4{background: url("./img/vs4.jpg");}
     .vs_lst .item5{background: url("./img/vs5.jpg");}
     .vs_lst .item6{background: url("./img/vs6.jpg");}
+    .btn_box{position: fixed; top: 400px; left: 320px;}
+    .btn_box li{width: 5px; height: 10px; border-radius: 2px; background-color: #fff; margin-bottom: 5px;}
+    .btn_box li.on{height: 20px;}
+    
 
-    .sns{width: 300px; height: 50px; margin-top: 360px; text-align: center; margin-left: 60px;}
+    .sns{height: 50px; margin-top: 290px; text-align: center; padding-left: 60px;}
     .sns li{float: left; padding-left: 10px;}
     .sns li img{width: 30px; height: 30px;}
     
@@ -55,7 +60,47 @@
     .top img{padding-top: 5px;}
     </style>
     <script>
-
+    $(document).ready(function(){
+    var wd_s = $(window).width();
+    var wd = $(".vs_lst li").height();
+    var sl = $(".vs_lst");
+    var btn1 = $(".btn_box .btn");
+    var len = $(".vs_lst li").length;
+    sl.css("margin-top", -wd+55+"px");
+    if(wd_s>=960){
+        function nextSlideAni(){
+            sl.not(":animated").animate({"margin-top":wd*-2+55+"px"}, 1200, function(){
+                sl.find("li").eq(0).appendTo(sl);
+                sl.css("margin-top", -wd+55+"px");
+                btn1.find("li").eq(0).appendTo(btn1);
+                btn1.find("li").removeClass("on");
+                btn1.find("li").eq(0).addClass("on");
+            });
+        }
+        function prevSlideAni(){
+            sl.find("li").eq(len-1).prependTo(sl);
+            sl.css("margin-top", wd*-2+55+"px");
+            sl.not(":animated").animate({"margin-top":-wd+55+"px"}, 1200, function(){
+                btn1.find("li").eq(len-1).prependTo(btn1);
+                btn1.find("li").removeClass("on");
+                btn1.find("li").eq(0).addClass("on");
+            });
+        }
+        var intv1 = setInterval(function(){ 
+            nextSlideAni();
+        }, 3000);
+        $(".btn_box li").click(function(){
+            clearInterval(intv1);
+            var ix = $(this).index();
+            for(var i=0;i<ix-1;i++){
+                sl.find("li").eq(0).appendTo(sl);
+                btn1.find("li").eq(0).appendTo(btn1);
+            }
+            nextSlideAni();
+            intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+        }).resize();
+    }
+});
     </script>
 </head>
 <body>
@@ -92,16 +137,23 @@
         <div id="content">
             <figure class="vs">
                 <ul class="vs_lst">
-                    <li class="item1"><a href=""></a></li>
-                    <li class="item2"><a href=""></a></li>
-                    <li class="item3"><a href=""></a></li>
-                    <li class="item4"><a href=""></a></li>
-                    <li class="item5"><a href=""></a></li>
-                    <li class="item6"><a href=""></a></li>
+                    <li class="item1"></li>
+                    <li class="item2"></li>
+                    <li class="item3"></li>
+                    <li class="item4"></li>
+                    <li class="item5"></li>
+                    <li class="item6"></li>
                 </ul>
             </figure>
+            <ul class="btn_box">
+                <li class="btn fr on"><button></button></li>
+                <li class="btn tw"><button></button></li>
+                <li class="btn th"><button></button></li>
+                <li class="btn fo"><button></button></li>
+                <li class="btn fi"><button></button></li>
+                <li class="btn si"><button></button></li>
+            </ul>
         </div>
-        
     </div>
     <footer id="ft">
             <div class="footer">
