@@ -294,19 +294,19 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
 .lst .item1{position: relative;}
 .lst1{padding-top: 180px; padding-left: 8px;}
 .lst1 div { width:595px; float:left; height:420px; cursor:pointer; margin-right: 10px; }
-.item1 .text_box { background:rgba(0, 0, 0, 0.6); width: 595px; height: 418px; 
+.item1 .text_box { background:rgba(0, 0, 0, 0.8); width: 595px; height: 418px; 
   position:absolute; opacity:0; top: 2px; left: 0; transition:0.8s; border-radius: 20px; } 
 .lst1 div:hover .text_box { opacity:1;}
 .lst1 div a { display:block; width:595px; height:420px; overflow:hidden;  } 
 .lst1 div img { width:595px; height:420px;}
-.lst_title { color:#fff; text-align:center; line-height: 2.8; } 
-.lst_com { color:#fff; padding: 25px; }
+.lst_title { color:#fff; text-align:center; line-height: 2.8; padding-top: 100px; font-size: 2.0em;} 
+.lst_com { color:#fff; padding: 25px; font-size: 1.4em; line-height: 30px; text-align: center;}
 .blank_item { width:200px; height:150px; background:rgba(128, 128, 0, 0.9); 
     font-size:6em; text-align:center;}
 .lst2 .item2{position: relative;}
 .lst2{padding-top: 180px; padding-left: 100px;}
 .lst2 div { width:500px; float:left; height:420px; cursor:pointer; margin-right: 50px; }
-.item2 .text_box { background:rgba(0, 0, 0, 0.6); width: 500px; height: 418px; 
+.item2 .text_box { background:rgba(0, 0, 0, 0.8); width: 500px; height: 418px; 
   position:absolute; opacity:0; top: 2px; left: 0; transition:0.8s; border-radius: 20px; } 
 .lst2 div:hover .text_box { opacity:1;}
 .lst2 div a { display:block; width:500px; height:420px; overflow:hidden;  } 
@@ -318,7 +318,7 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
 .lst3{padding-top: 50px; padding-left: 350px;}
 .lst3 .item3{position: relative;}
 .lst3 div { width:350px; float:left; height:682px; cursor:pointer; margin-right: 100px; }
-.item3 .text_box { background:rgba(0, 0, 0, 0.6); width: 350px; height: 680px; 
+.item3 .text_box { background:rgba(0, 0, 0, 0.8); width: 350px; height: 680px; 
   position:absolute; opacity:0; top: 0; left: 0; transition:0.8s; border-radius: 50px; } 
 .lst3 div:hover .text_box { opacity:1;}
 .lst3 div a { display:block; width:350px; height:682px; overflow:hidden;  } 
