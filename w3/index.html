@@ -20,7 +20,7 @@
     .tnb li:after{content:"|"; color:#fff; padding-left: 5px;}
     .tnb li:last-child::after{content:"";}
     .tnb li a{color:#fff;}
-    .top{width: 200px; height: 50px;float: left; padding-right:50px; padding-top: 50px;}
+    .top{width: 200px; height: 50px;float: left; padding-right:5px; padding-top: 50px;}
     .top li{float: left; padding-right: 5px;}
     .tog{position: absolute; width: 70px; height: 70px; right: 0; background-color: teal;
     text-align: center;}
@@ -48,9 +48,9 @@
     .vs{clear: both; width: 1920px; height: 685px;}
     .vs_lst{width: 300%; height: 100%; position: relative;}
     .vs_lst li{width: 33.3333%; height: 685px; float: left;}
-    .vs1{background-image: url("./img/vs1.jpg"); background-repeat: no-repeat;}
-    .vs2{background-image: url("./img/vs2.jpg");background-repeat: no-repeat;}
-    .vs3{background-image: url("./img/vs3.jpg"); background-repeat: no-repeat;}
+    .vs1{background-image: url("./img/vs2.jpg"); background-repeat: no-repeat;}
+    .vs2{background-image: url("./img/vs3.jpg");background-repeat: no-repeat;}
+    .vs3{background-image: url("./img/vs1.jpg"); background-repeat: no-repeat;}
     
     .num_box{width: 1200px; position: relative; margin-left: 600px;}
     .num_box li{position: absolute; bottom: 30px;}
@@ -84,8 +84,8 @@
     .page_title span{font-size: 1.5em;}
     .field{width: 100%; height: 60px;}
     
-     .field label{line-height: 40px; display:block; width: 100px; float: left; text-indent: 2em;}
-     .field .data_f{display: block; height: 32px; border: 1px solid #fff; width: 200px; 
+    .field label{line-height: 40px; display:block; width: 100px; float: left; text-indent: 2em;}
+    .field .data_f{display: block; height: 32px; border: 1px solid #fff; width: 200px; 
         text-indent: 1em; background: rgba(255,255,255,0.8);}
     .field .data_f2{display: block; width: 120px; height: 32px; float: left; border: 1px solid #fff;
     background: rgba(255,255,255,0.8);}
@@ -115,6 +115,15 @@
     .copyright{line-height: 20px; font-size: 0.9em; color: #333;}
     .copy{font-size: 0.8em;}
     .copy span{font-weight: bold;}
+    .quick{position: fixed; z-index: 999; top: 0; right: 70px;}
+    .quick li{width: 100px; height: 100px; margin: 0 auto; margin-top: 10px; text-align: center;border: 1px solid #555;
+    background-color: rgba(255,255,255,0.8); font-size: 1.1em;}
+    .q1{width: 50px; height: 50px; display: block; margin: 0 auto;}
+    .q2{width: 50px; height: 50px; display: block; margin: 0 auto; margin-top: 12px;}
+    .q3{width: 50px; height: 50px; display: block; margin: 0 auto; margin-top: 12px;}
+    .q4{width: 50px; height: 50px; display: block; margin: 0 auto; margin-top: 12px;}
+    .q5{width: 50px; height: 50px; display: block; margin: 0 auto; margin-top: 12px;}
+    .q6{width: 50px; height: 50px; display: block; margin: 0 auto; margin-top: 12px;}
     </style>
     <script>
     $(document).ready(function(){
@@ -143,9 +152,9 @@
 //    });
 // });
 $(document).ready(function(){
-    var intv = setInterval(function() { nextAni(); }, 2800);
+    var intv = setInterval(function() { nextAni(); }, 5000);
     function nextAni() {
-        $(".vs_lst").not(":animated").animate({"margin-left":"-1920px"}, 800, function(){
+        $(".vs_lst").not(":animated").animate({"margin-left":"-1920px"}, 1700, function(){
             $(".vs_lst li").eq(0).appendTo($(".vs_lst"));
             $(".vs_lst").css("margin-left", "0px");
             $(".num_box li").eq(0).appendTo($(".num_box"));            
@@ -156,23 +165,31 @@ $(document).ready(function(){
     function prevAni(){
         $(".vs_lst li").eq(2).prependTo($(".banFrame"));
         $(".vs_lst").css("margin-left", "-1920px");
-        $(".vs_lst").not(":animated").animate({"margin-left":"0px"}, 800);
+        $(".vs_lst").not(":animated").animate({"margin-left":"0px"}, 1700);
         $(".num_box li").eq(2).appendTo($(".num_box"));            
         $(".num_box li").removeClass("on");
         $(".num_box li").eq(0).addClass("on");
     }
-    var intv=setInterval(function(){nextAni();},2900);
+    var intv=setInterval(function(){nextAni();},5000);
     $(".num_box li").click(function(){
-            clearInterval(intv);
-            var idx = $(this).index()-1;
-            for(var i=0;i<idx;i++){
-                $(".vs_lst li").eq(0).appendTo($(".vs_lst"));
-                $(".num_box li").eq(0).appendTo($(".num_box"));
-            }
-            nextAni();
-            intv=setInterval(function(){nextAni();},2900);
+        clearInterval(intv);
+        var idx = $(this).index()-1;
+        for(var i=0;i<idx;i++){
+            $(".vs_lst li").eq(0).appendTo($(".vs_lst"));
+            $(".num_box li").eq(0).appendTo($(".num_box"));
+        }
+        nextAni();
+        intv=setInterval(function(){nextAni();},5000);
+    });
+        //퀵메뉴
+    $(window).scroll(function(){ 
+        $(".quick").stop().animate({"top": "170px"}, 10, function(){
+            $(".quick").animate({"top":"200px"}, 600, function(){
+                //$("#quick").css("top", "150px");
+            });
         });
-});
+    });
+});    
    </script>
 </head>
 <body>
@@ -186,9 +203,9 @@ $(document).ready(function(){
                 <li><a href="">전후사진</a></li>
                 <li><a href="">이벤트</a></li>
             </ul>
-            <ul class="tog">
+            <!-- <ul class="tog">
                 <li><a href=""><img src="./img/tog.png" alt="">전체메뉴</a></li>
-            </ul>
+            </ul> -->
         </div>
         
         <nav id="gnb">
@@ -381,5 +398,15 @@ $(document).ready(function(){
                 COPYRIGHT © 2019 <span>MJA DESIGN.</span> ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+    <div id="quick">
+        <ul class="quick">
+            <li class="item1"><img src="./img/q1.png" alt="" class="q1"> 실시간 <br> 비용상담</li>
+            <li class="item2"><img src="./img/q2.png" alt="" class="q2">온라인상담</li>
+            <li class="item3"><img src="./img/q3.png" alt="" class="q3">전후사진</li>
+            <li class="item4"><img src="./img/q4.png" alt="" class="q4">인스타그램</li>
+            <li class="item5"><img src="./img/q5.png" alt="" class="q5">오시는 길</li>
+            <li class="item6"><img src="./img/q6.png" alt="" class="q6">카카오톡 상담</li>
+        </ul>
+    </div>
 </body>
 </html>
