@@ -1,0 +1,20 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; }
+body, html { width:100%; }
+ul { list-style:none; }
+img { border:0; }
+a { text-decoration:none; }
+label, input, button { border:0; outline:0; background-image:none;
+background-color:transparent; }
+table { display:table; }
+tr { display:table-row; }
+th, td { display:table-cell;}
+
+@font-face{
+    font-family: 'NanumBarunGothicUltraLight';
+    src: local("NanumBarunGothicUltraLight"),url("./font/NanumBarunGothicUltraLight.eot#iefix"), 
+    url("./font/NanumBarunGothicUltraLight.ttf") format("truetype"),
+    url("./font/NanumBarunGothicUltraLight.eot") format("opentype"),
+    url("./font/NanumBarunGothicUltraLight.woff") format("woff")
+  }
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache">  <!-- 메모리에 용량 남기지 않게 처리하기위해 처리함  -->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>SBS아카데미 뷰티스쿨</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicon.png">
+    <!-- 메타정보 -->
+    <meta name="title" content="SBS ACADEMY">
+    <meta name="description" content="SBS아카데미뷰티스쿨">
+    <meta name="keywords" content="뷰티스쿨, 메이크업, 네일아트, 헤어, 에스테틱">
+    <meta name="auther" content="JiAe">
+    <script src="./jquery.min.js"></script>
+    <script src="/jquery.flexslider.js"></script>
+
+    <script src="./all.min.js"></script>
+    <link rel="stylesheet" href="./all.css">
+
+    <link rel="stylesheet" href="./normalize.css">
+    <style>
+     body,html{width: 100%; height: 100%;}
+     /* */
+     .hd{width: 100%; height: 50px; position: absolute;}
+     .logo{display: block; width: 160px; height: 40px; position: absolute; top:5px; margin: 10px;
+        background-image: url("./img/logo.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        z-index: 100;}
+    /* #gnb{width: 100%; height:617px; margin-top: 50px; text-align: center; background:rgba(0, 0, 0,0.7); right: 0;  position: absolute;}
+    .gnb_tab{color:#fff;} */
+    /* .nav {width: 100%; height: 100vh;  position: absolute; top: 0; left: 0 ;} */
+    #gnb{position: fixed; top: 0; right: -80%; width:100%; height: 100%;background:rgba(0,0,0,0.8); color:#fff; z-index: 999;
+        transition: all 0.5s ease;}
+    .tog_btn{display: block; width: 12%; height: 41px; background: #e61721; color:#fff; text-align: center;
+             font-size: 20px; box-sizing: border-box; margin-top: 5px; position: fixed; right: 15px;}
+    .ra_item{display: none; float: right;}
+    .gnb_tab{width:20%;}
+    .gnb_tab .tab_btn{display: block; width: 100%; height: 73px; padding-top: 50px;
+    color: #fff; text-align: center; border-bottom: 1px solid #000; }
+    .gnb_tab .tab_btn:hover{color:salmon;}
+    
+    /*  transition: all 0.5s ease;  z-index: 999;*/
+    .tog_btn1{display: block; width: 100%; height: 50px; background: #e61721; color:#fff; text-align: center;
+             font-size: 20px; box-sizing: border-box; padding-top: 10px;  right: 0;}
+    .sub_menu{width:80%; height: 100vh; background: rgba(255, 255, 255); position:absolute; right:0; top:0;}
+    .sub_menu .top{width: 100%; height:35px; position: relative; padding-top: 15px; padding-left: 160px; background: #fff;
+                   font-size: 0.9em;}
+    .sub_menu .sub1, .sub_menu .sub2, .sub_menu .sub3, .sub_menu .sub4, .sub_menu .sub5{text-align: center; display: none;}
+    .sub1 a, .sub2 a, .sub3 a, .sub4 a, .sub5 a{color:#333;}
+    #ra1:checked ~ .sub_menu .sub1{display: block;}
+    #ra2:checked ~ .sub_menu .sub1{display: block;}
+    #ra3:checked ~ .sub_menu .sub2{display: block;}
+    #ra4:checked ~ .sub_menu .sub3{display: block;}
+    #ra5:checked ~ .sub_menu .sub4{display: block;}
+    #ra6:checked ~ .sub_menu .sub5{display: block;}
+    .top a{color:#333;}
+    .sub1 .txt{width:250px; color:#000; line-height: 100px; padding-top: 100px;  margin: 0 auto; border-bottom: 1px solid #000;
+                margin-bottom: 20px;}
+    .sub1 li{line-height: 50px;}
+    .sub2 .txt{width:250px; color:#000; line-height: 100px; padding-top: 30px;  margin: 0 auto; border-bottom: 1px solid #000;
+                margin-bottom: 20px;}
+    .sub2 li{line-height: 50px;}
+    .sub2 .item1 li{line-height: 30px; font-size: 0.8em;}
+    .sub2 .item1 .sub2_1{display: block;}
+    .sub3 .txt{width:250px; color:#000; line-height: 100px; padding-top: 70px;  margin: 0 auto; border-bottom: 1px solid #000;
+                 margin-bottom: 20px;}
+    .sub3 li{line-height: 50px;}
+    .sub4 .txt{width:250px; color:#000; line-height: 100px; padding-top: 30px;  margin: 0 auto; border-bottom: 1px solid #000;
+                 margin-bottom: 20px;}
+    .sub4 li{line-height: 50px;}
+    .sub5 .txt{width:250px; color:#000; line-height: 80px; margin: 0 auto; border-bottom: 1px solid #000;}
+    .sub5 li{line-height: 50px;}
+    .sub_menu a{color:#000;}
+
+    
+    /* #vs{width: 100%; height: 100vh; overflow: hidden;}
+    .img_box{width: 500%; height: auto;}
+    .img_box li{width: 20%;} */
+    #vs{width: 100%; height: 100vh; overflow: hidden;}
+    .img_box { width:500%; min-width:1875px; }
+    .img_box li { float:left; width: 375px; height:667px; }
+    
+    .numBtn li {position:absolute; bottom:40px; z-index:91; width:20px; height:20px; cursor:pointer; float: left; margin-left: 130px;}
+    .numBtn li.item1 {left:10px; }
+    .numBtn li.item2 {left:30px; }
+    .numBtn li.item3 {left:50px; }
+    .numBtn li.item4 {left:70px; }
+    .numBtn li.item5 {left:90px; }
+    .numBtn li button {display:block; margin:0 auto; width: 12px; height: 12px; border-radius:9px; background: #eee;
+       cursor:pointer; }
+    .numBtn li.on button {background:#e61721;}
+
+    .content{width: 100%; height: 300px; margin-top: 20px;}
+    .content h3{text-align: center; margin-bottom: 20px;}
+    .content .ban1{width: 50%; float: left; margin-bottom: 10px;}
+    .content .ban2{width: 50%; float: left; margin-bottom: 10px;}
+    .content .ban3{width: 50%; float: left; margin-bottom: 10px;}
+    .content .ban4{width: 50%; float: left; margin-bottom: 10px;}
+    .content .ban5{width: 50%; float: left; }
+    .content .ban6{width: 50%; float: left; }
+    .imag1 {width:100%; height: auto; display: block; }
+    .ft{background: #333; width: 100%; margin-top: -5px; padding-top: 15px; text-align: center; font-size: 0.8em; color:#fff; padding-bottom: 15px;}
+    .sns{width: 100%; overflow: hidden; margin-left: 130px; margin-bottom: 10px;}
+    .sns li img{width: 20px; height: 20px; float: left; margin-right: 10px;}
+    .menu{margin-left: 110px;}
+    .menu a{float: left; color:#fff; text-align: center;}
+    .copyright{clear: both;}
+    </style>
+    <script>
+        $(function(){
+            var ht=parseInt($(window).height())-300;
+            $(window).scroll(function(){
+            var sc=parseInt($(window).scrollTop());
+            if(sc>=ht){
+                $("#gnb").css("right","-120%");
+            } else{
+                $("#gnb").css("right","-80%");
+            }
+        });
+        var sw1=true;
+        $(".tog_btn,.tog_btn1").click(
+            function(){
+                if(sw1){
+                    $("#gnb").stop().animate({"right":"0px"},300);
+                }else{
+                    $("#gnb").stop().animate({"right":"-80%"},300);
+                }
+                sw1=!sw1;
+            });
+            $(".tab_btn").click(function(){
+                $("#gnb").stop().animate({
+                    "right":"0px"},500);
+                });
+            });
+    </script>
+    <script> 
+    $(document).ready(function(){   
+    var intv = setInterval(function(){ nextAni(); }, 2950);
+    function nextAni(){
+        $(".img_box").not(":animated").animate({"margin-left":"-367px"}, 800, function(){
+            $(".img_box li").eq(0).appendTo($(".img_box"));
+            $(".img_box").css("margin-left", "0px");
+            $(".numBtn li").eq(0).appendTo($(".numBtn"));
+            $(".numBtn li").eq(0).addClass("on");
+            $(".numBtn li").not(":first-child").removeClass("on");
+        });
+    }
+    function prevAni(){
+        $(".img_box li").eq(2).prependTo($(".img_box"));
+        $(".img_box").css("margin-left", "-367px");
+        $(".img_box").not(":animated").animate({"margin-left":"0px"}, 800);
+        $(".numBtn li").eq(2).prependTo($(".numBtn"));
+        $(".numBtn li").eq(0).addClass("on");
+        $(".numBtn li").not(":first-child").removeClass("on");
+    }
+    $(".numBtn li").click(function(){
+        clearInterval(intv);
+        var idx = $(this).index()-1;
+        for(var i=0;i<idx;i++){
+            $(".img_box li").eq(0).appendTo($(".img_box"));
+            $(".numBtn li").eq(0).appendTo($(".numBtn"));
+        }
+        nextAni();
+        intv = setInterval(function(){ nextAni(); }, 2950);
+    });
+});
+    </script>
+          
+
+</head>
+<body>
+    <header class="hd">
+        <a href="index.html" class="logo"></a>
+        <button class="tog_btn"><i class="fas fa-bars"></i></button>
+    </header>
+        <nav id="gnb">
+                <input type="radio" name="rdo1" id="ra1" class="ra_item" checked>
+                <input type="radio" name="rdo1" id="ra2" class="ra_item">
+                <input type="radio" name="rdo1" id="ra3" class="ra_item">
+                <input type="radio" name="rdo1" id="ra4" class="ra_item">
+                <input type="radio" name="rdo1" id="ra5" class="ra_item">
+                <input type="radio" name="rdo1" id="ra6" class="ra_item">
+            <div class="gnb_tab">
+                <label for="ra1" class="tog_btn1" id="tog_btn1"><i class="fas fa-bars"></i></label>
+                <label for="ra2" class="tab_btn" id="tab_btn1">아카데미</label>
+                <label for="ra3" class="tab_btn" id="tab_btn2">교육과정</label>
+                <label for="ra4" class="tab_btn" id="tab_btn3">취업/진로</label>
+                <label for="ra5" class="tab_btn" id="tab_btn4">아카데미<br>광장</label>
+                <label for="ra6" class="tab_btn" id="tab_btn4">고객센터</label>
+            </div>
+            <div class="sub_menu">
+                <div class="top">
+                        <a href=""><i class="fas fa-user"></i>&nbsp;로그인</a>
+                        <a href="">| 회원가입</a>
+                </div>
+                <ul class="sub1">
+                    <h3 class="txt">아카데미</h3>
+                    <li class="item1"><a href="">아카데미 소개</a></li>
+                    <li class="item2"><a href="">강사진 소개</a></li>
+                    <li class="item3"><a href="">캠퍼스 위치</a></li>
+                </ul>
+                <ul class="sub2">
+                    <h3 class="txt">교육과정</h3>
+                    <li class="item1"><a href="">메이크업</a>
+                        <!-- <ul class="sub2_1">
+                            <li>메이크업 국가자격증</li>
+                            <li>메이크업 정규과정</li>
+                            <li>웨딩실무과정</li>
+                            <li>방송분장연구과정</li>
+                            <li>분장바디아트</li>
+                            <li>에어브러쉬</li>
+                        </ul> -->
+                    </li>
+                    <li class="item2"><a href="">네일아트</a></li>
+                    <li class="item3"><a href="">헤어</a></li>
+                    <li class="item4"><a href="">에스테틱</a></li>
+                    <li class="item5"><a href="">스타일리스트</a></li>
+                    <li class="item6"><a href="">단과</a></li>
+                    <li class="item7"><a href="">라오나토뷰티마스터</a></li>
+                </ul>
+                <ul class="sub3">
+                    <h3 class="txt">취업/진로안내</h3>
+                    <li class="item1"><a href="">채용/취업정보</a></li>
+                    <li class="item2"><a href="">합격자 현황</a></li>
+                    <li class="item3"><a href="">유학정보</a></li>
+                    <li class="item4"><a href="">대학정보</a></li>
+                    <li class="item5"><a href="">자격증정보</a></li>
+                </ul>
+                <ul class="sub4">
+                    <h3 class="txt">아카데미 광장</h3>
+                    <li class="item1"><a href="">아카데미 뉴스</a></li>
+                    <li class="item2"><a href="">수강생Interview</a></li>
+                    <li class="item3"><a href="">수업/실습후기</a></li>
+                    <li class="item4"><a href="">수강생작품</a></li>
+                    <li class="item5"><a href="">이벤트</a></li>
+                    <li class="item6"><a href="">방송국견학/행사일정</a></li>
+                    <li class="item7"><a href="">자료실</a></li>
+                </ul>
+                <ul class="sub5">
+                    <h3 class="txt">고객센터</h3>
+                    <li class="item1"><a href="">수강료조회</a></li>
+                    <li class="item2"><a href="">1:1문의</a></li>
+                    <li class="item3"><a href="">내일배움카드</a></li>
+                    <li class="item3"><a href="">가맹/제휴문의</a></li>
+                    <li class="item4"><a href="">자주묻는질문</a></li>
+                    <li class="item5"><a href="">질문과답변</a></li>
+                    <li class="item6"><a href="">무료상담</a></li>
+                    <li class="item7"><a href="">전화상담</a></li>
+                    <li class="item8"><a href="">재료비조회</a></li>
+                    <li class="item9"><a href="">온라인상담</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <figure id="vs">
+            <ul class="img_box">
+                    <li><img src="./img/vs1.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/vs2.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/vs3.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/vs4.jpg" alt="메인이미지"></li>
+                    <li><img src="./img/vs5.jpg" alt="메인이미지"></li>
+            </ul>
+            <ul class="numBtn">
+                    <li class="item1 on"><button></button></li>
+                    <li class="item2"><button></button></li>
+                    <li class="item3"><button></button></li>
+                    <li class="item4"><button></button></li>
+                    <li class="item5"><button></button></li>
+                </ul>
+        </figure>
+           
+        <div class="content">
+            <h3> CURRICULUM</h3>
+                <a href=""><img src="./img/banner1.jpg" alt="" class="ban1"></a>
+                <a href=""><img src="./img/banner2.jpg" alt="" class="ban2"></a>
+                <a href=""><img src="./img/banner3.jpg" alt="" class="ban2"></a>
+                <a href=""><img src="./img/banner4.jpg" alt="" class="ban2"></a>
+                <a href=""><img src="./img/banner5.jpg" alt="" class="ban2"></a>
+                <a href=""><img src="./img/banner6.jpg" alt="" class="ban2"></a>
+            </div>
+        <img src="./img/img.jpg" alt="" class="imag1">
+        <footer class="ft">
+            <nav class="fnb">
+                <ul class="sns">
+                    <li><img src="./img/face.png" alt=""></li>
+                    <li><img src="./img/you.png" alt=""></li>
+                    <li><img src="./img/insta.png" alt=""></li>
+                    <li><img src="./img/blog.png" alt=""></li>
+                </ul>
+                <ul class="menu">
+                    <li class="item1"><a href="">이용약관</a></li>
+                    <li class="item2"><a href="">개인정보처리방침</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">
+                02-599-9393<br>
+                서울시 서초구 서초동 1305-5번지 주류성 빌딩 10층<br> 
+                COPYRIGHT 2019 ⓒ SBS 아카데미 뷰티스쿨. <br> ALL RIGHTS RESERVED.
+            </p>
+        </footer>
+
+</body>
+</html>
