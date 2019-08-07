@@ -1,0 +1,16 @@
+@charset "utf-8";
+@media all and (max-width:767px){
+.logo{padding-top: 80px;}
+.menu{right: 30px; top: 20px;}
+#gnb{top: 60px; right: 30px; z-index: 10;}
+.close img{margin-top: 50px; right: 50px;}
+.main{margin-bottom: 0;}
+.main li{margin: 30px; width: 50%; float: left;}
+.main .lt{float: none; margin-left: 12px;}
+
+.list{margin-left: 80px;}
+#ft{padding-bottom: 150px; height: 0; padding-top: 10px;}
+}
+@media screen and (min-width:768px) and (max-width:959px){
+
+}
