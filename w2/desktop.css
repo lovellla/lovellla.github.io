@@ -122,7 +122,17 @@ box-sizing: border-box;}
 .new_txt.fo:hover .new_img{opacity: 1;}
 .new_txt:hover h2{color:#f49a25;}
 #page3{background-image: url("./img/vs3.jpg"); position: relative;}
-.img_box3{width: 45%; margin-top: 225px; height: 294px; border-bottom: 2px solid #fff; margin-left: 170px;}
+.he_gal{position: relative;}
+.he_txt{position: absolute; top: 260px; font-size: 2.0em; left: 140px; color:#fff;}
+.he_gal1 {position: absolute; float: left; top: 322px; left: 130px;}
+.he_gal1 li { width:250px; float:left; height:300px; background-color: #fff; margin-right: 10px;
+text-align: center; }
+.he_gal1 li a { display:block; width:250px; height:200px; overflow:hidden;}
+.do1 h3,.do2 h3,.do3 h3{margin-top: 25px; font-weight: 700;}
+.he_gal1 li img { width:250px; height:200px;  transform:scale(1); 
+    transition:0.8s; }
+.he_gal1 li:hover img { transform:scale(1.5);}
+.img_box3{width: 45%; margin-top: 225px; height: 294px; border-bottom: 2px solid #fff; float: right; margin-right: 100px;}
 .title2{font-size: 2.0em; color:#fff; font-family: 'Noto Serif KR', serif; font-weight: 100;
     text-shadow: #333 2px 2px 2px;}
 .title2 span{font-size: 1.5em;}
@@ -137,8 +147,8 @@ font-weight: bold; font-size: 1.1em;}
     font-weight: bold; font-size: 1.1em;}
 .his a{color:#000;}
 .he_img{padding-top: 50px;}
-.img_box4{width: 100%;}
-.ico_box{width: 45%; height: 100px; background-color: royalblue; margin-left: 170px;}
+.img_box4{width: 100%; float: right;}
+.ico_box{width: 45%; height: 100px; background-color: royalblue; float: right; margin-right: 100px;}
 .ico_box h2{display: block; color:#fff; padding-top: 20px; margin-left: 30px; 
     width: 120px; height: 50px; text-align: center;}
 .chart{margin-left: 150px; margin-top: -50px; position: relative;}
@@ -150,10 +160,10 @@ font-weight: bold; font-size: 1.1em;}
 .chart .ch2{right: 405px;}
 .chart .ch3{right: 185px;}
 .chart li:hover{border-bottom: 2px solid #fff;}
-.menu {display: block; margin-top: 220px; margin-left: 50px;}
+.menu {display: block; margin-top: 820px; margin-left: 50px;}
 .menu li{float: left; padding-right: 20px; margin-left: 50px; padding-bottom: 10px;}
 .menu li a{color:#fff;}
-.v1{ margin-left: 1050px; position: absolute; top: 250px;}
+/* .v1{ margin-left: 1050px; position: absolute; top: 250px;} */
 .ft{clear: both; height: 100px; position: relative; bottom: 0; 
     border-top: 1px solid #fff; color:#fff; padding-left: 100px;}
 .company{margin-top: 10px; }

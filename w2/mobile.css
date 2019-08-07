@@ -22,9 +22,8 @@ background-color: #132f85; width: 100%; height: 100%; transition: 0.6s; z-index:
 .sub li{float: left;}
 #gnb.on{right: 0px;}
 .sub .dp1{display: block; color:#fff; font-size: 1.4em; line-height: 3; padding-left: 50px;}
-.sub1{display: none;}
-.sub1 li{float: none;}
-.sub1 li.on{display: block;}
+.sub1{ display:none; }
+.sub1 li{float: none; line-height:40px; }
 
 .sub1 li a{color:#fff;}
 .logo{display: block; background-image: url("./img/logom.png"); width: 160px; height: 60px; top: 10px;}
@@ -38,7 +37,7 @@ background-size: cover; height: 100%;}
 #page1{background-image: url("./img/vs1.jpg");}
 #page2{background-image: url("./img/vs5.jpg"); height: 300px;}
 #page3{background-image: url("./img/vs3.jpg"); background-position: center center;
-height: 100vh; clear: both;}
+height: 100%; clear: both;}
 .txt_box{text-shadow: #333 2px 2px 2px; text-align: center; padding-top: 20px;}
 .vs_tit{color:#fff; font-size: 20px; 
     font-family: 'Noto Serif KR', serif; font-weight: 100;}
@@ -98,6 +97,13 @@ margin-bottom: 5px;}
 /* position: fixed, absolute (위치지정)right,top 등으로 포지션 */
 
 /* page3 */
+.he_gal{margin-top: 120px; text-align: center;}
+.he_txt{color:#fff; font-weight: 100; margin-bottom: 20px; text-shadow: #333 3px 3px 3px;}
+.he_gal1{width: 300px; height: 150px; position: relative; margin-top: 80px; margin: 0 auto;}
+.he_gal1 li{float: left; height: 100px; width: 100px;}
+.do1 img, .do2 img,.do3 img{width: 80px;}
+.he_gal1 h3{font-size: 1.0em; color:#fff; font-weight: 100; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.he_gal1 p{font-size: 0.8em; color:#fff;} 
 .title2{padding-top: 50px; text-align: center; padding-bottom: 20px; }
 .title2 span{font-size: 1.5em; font-family: 'Noto Serif KR', serif;}
 .pro{margin-left: 50px; text-align: center; font-weight: 600;}
@@ -120,9 +126,9 @@ color:#fff; font-weight: 200;}
 .ch1,.ch2,.ch3{width: 40px; height: 40px;}
 .chart li h3{font-size: 0.9em; color: #fff; font-weight: 200;}
 .v1{display: none;}
-.menu{clear: both; padding-top: 110px; margin-left: 10px}
+.menu{clear: both; margin-left: 10px}
 .menu li{float: left;}
-.menu li a{color:#fff;}
+.menu li a{color:#fff; font-size: 0.9em; }
 .ft{clear: both; position: relative; color:#fff;}
 .company{font-size: 12px; margin-left: 10px;}
 .copyright{font-size: 12px; margin-left: 10px;}

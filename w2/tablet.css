@@ -48,9 +48,9 @@ clear: both; position: relative;}
 .img_box img{width: 100%; display: block;}
 .m_box{display: none;}
 .img_box{cursor: pointer;}
-.img_box1{width: 50%; margin: 0 auto; float: left; margin-left: 30px;}
-.img_box1 img{ display: block; margin-top: 20px;}
-.ban1{position: absolute; top: 20px; left: 430px;}
+.img_box1{margin: 0 auto; float: left; padding-left: 30px;}
+.img_box1 img{ margin-top: 20px;}
+.ban1{float: right;height:220px; position: relative; margin-top: 20px; margin-left: 20px;}
 .ban1 div{margin-bottom: 15px;}
 .box{position: absolute; width: 270px; height:70px; border: 2px solid #fff; 
     top: 14px; left: 14px;}
@@ -104,6 +104,14 @@ margin-bottom: 5px;}
 /* position: fixed, absolute (위치지정)right,top 등으로 포지션 */
 
 /* page3 */
+.he_gal{width: 900px; text-align: center; margin-top: 300px;}
+.he_txt{color:#fff; font-weight: 100; line-height: 2; text-shadow: #333 3px 3px 3px; position: absolute;
+top: 400px; left: 320px; font-size: 2.0em;}
+.he_gal1{margin: 0 auto; margin-left: 25px;}
+.he_gal1 li{float: left; padding-left: 30px;}
+.do1 img, .do2 img,.do3 img{width: 200px; margin: 0 auto;}
+.he_gal1 h3{font-size: 1.0em; color:#fff; font-weight: 100; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.he_gal1 p{font-size: 0.8em; color:#fff;} 
 .title2{padding-top: 50px; text-align: center; padding-bottom: 20px; font-size: 1.5em;}
 .title2 span{font-size: 2.0em; font-family: 'Noto Serif KR', serif;}
 .pro{margin-left: 180px; text-align: center; font-weight: 600; font-size: 1.8em;}
@@ -115,9 +123,9 @@ padding-top: 8px; box-sizing: border-box; }
     padding-top: 8px; box-sizing: border-box;}
 .his a{color:#000; }
 .bot2{width: 302px; height: 234px; float: right;}
-.he_img{position: absolute; top: 291px; clear: both; z-index: 1;}
-.img_box4{clear: both;  position: relative;}
-.ico_box{position: absolute; background-color: royalblue; width: 100%; height: 120px; top: -40px;}
+.he_img{position: absolute; top: 150px; clear: both; z-index: 1;}
+.img_box4{position: relative;}
+.ico_box{position: absolute; background-color: royalblue; width: 100%; height: 120px; top: 112px;}
 .ico_box h2{text-align: center; width: 20%; font-size: 1.8em; padding-top: 22px;
 color:#fff; font-weight: 200;}
 .chart{width: 80%; position: absolute; right: 0; top: 0;}
@@ -126,7 +134,7 @@ color:#fff; font-weight: 200;}
 .ch1,.ch2,.ch3{width: 60px; height: 60px;}
 .chart li h3{font-size: 1.2em; color: #fff; font-weight: 200;}
 .v1{display: none;}
-.menu{clear: both; margin-top: 110px; margin-left: 210px; font-size: 1.3em;}
+.menu{clear: both; padding-top: 110px; margin-left: 210px; font-size: 1.3em;}
 .menu li{float: left; margin-right: 20px;}
 .menu li a{color:#fff; }
 .ft{clear: both; position: relative; color:#fff; text-align: center; padding-bottom: 130px;}

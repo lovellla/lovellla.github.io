@@ -29,48 +29,47 @@
 </head>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script>
-    $(document).ready(function(){
-        var wd = $(".news_box li").width();
-        var len = $(".news_box li").length;
-        console.log(wd);
-        $(".next_btn").click(function(){ //이전 이미지
-            nextAni();
-        }); 
-        function nextAni() {
-            $(".news_box").not(":animated").animate({"margin-left":-wd+"px"},1000, function(){
-                $(".news_box li").eq(0).appendTo($(".news_box"));
-                $(".news_box").css("margin-left","0px");
-            });
-        }
-        $(".prev_btn").click(function(){ //이전 이미지
-            prevAni();
-        }); 
-        function prevAni() {
-                $(".news_box li").eq(len-1).prependTo($(".news_box"));
-                $(".news_box").css("margin-left",-wd+"px");
-                $(".news_box").not(":animated").animate({"margin-left":"0px"},1000);
-        }
-        $("#lst_btn").click(function(){
-		$("#gnb").toggleClass("on");
-	    });
+$(document).ready(function(){
+    var wd = $(".news_box li").width();
+    var len = $(".news_box li").length;
+    $(".next_btn").click(function(){ //이전 이미지
+        nextAni();
+    }); 
+    function nextAni() {
+        $(".news_box").not(":animated").animate({"margin-left":-wd+"px"},1000, function(){
+            $(".news_box li").eq(0).appendTo($(".news_box"));
+            $(".news_box").css("margin-left","0px");
         });
+    }
+    $(".prev_btn").click(function(){ //이전 이미지
+        prevAni();
+    }); 
+    function prevAni() {
+            $(".news_box li").eq(len-1).prependTo($(".news_box"));
+            $(".news_box").css("margin-left",-wd+"px");
+            $(".news_box").not(":animated").animate({"margin-left":"0px"},1000);
+    }
+    $("#lst_btn").click(function(){
+        $("#gnb").toggleClass("on");
+    });
+    if(wd<=959){
+        $("#gnb .sub .dp1").click(function(){
+            $(this).parents(".sub").find(".sub1").slideToggle();
+            $(this).parents(".sub").siblings().find(".sub1").slideUp();
+        });
+    }
+});
 </script>
 <script>
-$(window).resize(function(){
-    var wd = $(window).width();
-    if(wd>=768 && wd<=959){
-        console.log();
-        $(".sub .dp1").click(function(){
-            $(this).find(".sub1 li").slideToggle();
-        });
-
-    } else{
-        console.log();
-        $(".sub .dp1").click(function(){
-            $(this).find(".sub1 li").slideToggle();
-        });
-        };
-    }).resize();
+// $(window).resize(function(){
+//     var wd2 = $(window).width();
+//     console.log(wd2);
+//     if(wd2<=959){
+//         $("#gnb .sub .dp1").click(function(){
+//             $(this).next(".sub1").slideToggle();
+//         });
+//     }
+// }).resize();
 
 </script>
 <body>
@@ -268,7 +267,7 @@ $(window).resize(function(){
             <li class="cir9"></li>
         </ul>
         <div class="new_txt fr">
-                <li class="cir6"></li>
+            <li class="cir6"></li>
             <div><img src="./img/pop_img1.png" alt="" class="new_img"></div>
             <h2>포토뉴스</h2>
             <p>도민들과 함께 나누는 포토뉴스</p>
@@ -294,6 +293,7 @@ $(window).resize(function(){
         </div>
     </div>
     <div class="page" id="page3">
+   
     <div class="img_box3">
         <div class="bot1">
         <h3 class="title2">안녕하세요. <br><span>충청남도지사 양승조</span>입니다.</h3>
@@ -316,8 +316,33 @@ $(window).resize(function(){
             </ul>
         </div>
     </div>
-       <img src="./img/2.png" alt="" class="v1">
-
+       <!-- <img src="./img/2.png" alt="" class="v1"> -->
+       <div class="he_gal">
+            <h2 class="he_txt">활동사진첩</h2>
+            <ul class="he_gal1">
+                <li class="do1">
+                    <a href="">
+                        <img src="./img/do1.jpg" alt="이미지1">
+                    </a>
+                    <h3>복지시설 돼지고기 나눔행사</h3>
+                    <p>2019.08.06</p>
+                </li>
+                <li class="do2">
+                    <a href="">
+                        <img src="./img/do2.jpg" alt="이미지2">
+                    </a>
+                    <h3>피스로드 2019충남도 통일대장정</h3>
+                    <p>2019.08.06</p>
+                </li>
+                <li class="do3">
+                    <a href="">
+                        <img src="./img/do3.jpg" alt="이미지3">
+                    </a>
+                    <h3>실국원장회의</h3>
+                    <p>2019.08.05</p>
+                </li>
+                </ul>
+        </div>
     <ul class="menu">
         <li><a href="">서비스약관</a></li>
         <li><a href="">개인정보처리방침</a></li>
