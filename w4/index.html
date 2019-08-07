@@ -24,7 +24,8 @@
     /* .hd{width: 300px; height: 850px; background: #000;} */
     #find_nav{height:70px;}
     .frm1{position: absolute; width: 180px; height: 30px; border: 1px solid #333; border-radius: 20px; margin-left: 60px; margin-top: 20px; overflow: hidden;}
-    .frm_btn{width: 50px;float: right;}
+    .frm_btn{width: 50px;float: right; background-image: url("./img/search.png");
+    background-repeat: no-repeat; background-position: 10px 3px; text-indent: -9999px;}
     .in_data{width: 130px; height: 30px; line-height: 30px; text-align: center;}
     .frm_btn{width: 50px; height: 32px; background-color: #000;}
 
@@ -34,17 +35,27 @@
     .sub{text-align: center; line-height: 30px;}
     .sub a{color:#000;}
     .content{position: relative;}
-    .vs{width: 100%; height: 4560px;}
+    .vs{width: 100%; height: 4560px; overflow: hidden; height: 100vh;}
     .vs_lst li{clear: both; width: 100%; height: 760px;}
-    .vs_lst .item1{background: url("./img/vs1.jpg");}
-    .vs_lst .item2{background: url("./img/vs2.jpg");}
-    .vs_lst .item3{background: url("./img/vs3.jpg");}
-    .vs_lst .item4{background: url("./img/vs4.jpg");}
-    .vs_lst .item5{background: url("./img/vs5.jpg");}
+    .vs_lst .item1{background: url("./img/vs7.jpg");}
+    .vs_lst .item2{background: url("./img/vs1.jpg");}
+    .vs_lst .item3{background: url("./img/vs2.jpg");}
+    .vs_lst .item4{background: url("./img/vs3.jpg");}
+    .vs_lst .item5{background: url("./img/vs4.jpg");}
     .vs_lst .item6{background: url("./img/vs6.jpg");}
-    .btn_box{position: fixed; top: 400px; left: 320px;}
-    .btn_box li{width: 5px; height: 10px; border-radius: 2px; background-color: #fff; margin-bottom: 5px;}
-    .btn_box li.on{height: 20px;}
+
+    .vs_lst .title{font-size: 2.0em; margin-left: 200px;}
+    .btn{position: absolute; left: 350px;}
+    .btn_box li{border-radius: 2px; transition: 0.6s;}
+    .btn_box li.on{width:10px; background-color: #000;}
+    .btn{width: 5px; background-color: #fff; margin-bottom: 5px;
+    margin-top: 350px;}
+    .btn.fr{top: 0;}
+    .btn.tw{top: 30px;}
+    .btn.th{top: 60px;}
+    .btn.fo{top: 90px;}
+    .btn.fi{top: 120px;}
+    .btn.si{top: 150px;}
     
 
     .sns{height: 50px; margin-top: 290px; text-align: center; padding-left: 60px;}
@@ -64,9 +75,9 @@
     var wd_s = $(window).width();
     var wd = $(".vs_lst li").height();
     var sl = $(".vs_lst");
-    var btn1 = $(".btn_box .btn");
+    var btn1 = $(".btn_box");
     var len = $(".vs_lst li").length;
-    sl.css("margin-top", -wd+55+"px");
+    sl.css("margin-top",-wd+55+"px");
     if(wd_s>=960){
         function nextSlideAni(){
             sl.not(":animated").animate({"margin-top":wd*-2+55+"px"}, 1200, function(){
@@ -137,7 +148,10 @@
         <div id="content">
             <figure class="vs">
                 <ul class="vs_lst">
-                    <li class="item1"></li>
+                    <li class="item1">
+                        <!-- <h2 class="title">마리끌레르 x 에스티로더</h2>
+                        <p class="txt">새로운 것을 탐험하듯 삶을 나아가는 설리</p> -->
+                    </li>
                     <li class="item2"></li>
                     <li class="item3"></li>
                     <li class="item4"></li>
