@@ -204,12 +204,12 @@ z-index: 99;}
     }
     
     .txt_box{position: relative;}
-    .cat_tit{position: absolute; left: 62px; top: 70px; text-align: center; width: 120px;}
-    .cat_tit1{position: absolute; left: 220px; top: 70px; text-align: center; width: 120px;}
-    .cat_tit2{position: absolute; left: 380px; top: 70px; text-align: center;width: 120px;}
-    .cat_tit3{position: absolute; left: 62px; top: 235px; text-align: center; width: 120px;}
-    .cat_tit4{position: absolute; left: 222px; top: 235px; text-align: center; width: 120px;}
-    .cat_tit5{position: absolute; left: 380px; top: 230px; text-align: center; width: 120px;}
+    .cat_tit{position: absolute; left: 62px; top: 50px; text-align: center; width: 120px;}
+    .cat_tit1{position: absolute; left: 220px; top: 50px; text-align: center; width: 120px;}
+    .cat_tit2{position: absolute; left: 380px; top: 50px; text-align: center;width: 120px;}
+    .cat_tit3{position: absolute; left: 62px; top: 215px; text-align: center; width: 120px;}
+    .cat_tit4{position: absolute; left: 222px; top: 215px; text-align: center; width: 120px;}
+    .cat_tit5{position: absolute; left: 380px; top: 215px; text-align: center; width: 120px;}
     .txt_box span{font-family: 'Noto Sans KR', sans-serif; font-weight: 500;}
     /* .txt:after{content:attr(data-val); font-size: 1.0em; display: block; width: 120px; height: 40px; position: absolute; left: 10px; top: 110px;
     text-align: center; color:#000;} */
@@ -417,7 +417,7 @@ border: 1px solid #000;}
 .con_box.th img{margin-top: 130px;}
 
 
-.drawsvg, svg {width: 100%; margin-top: 90px; margin-left: 40px;}
+.drawsvg, svg {width: 100%; margin-top: 50px; margin-left: 20px;}
 .stroke { stroke: #7262ab;  stroke-width: 2px;  stroke-dasharray: 0 250;
     stroke-opacity: 1;   fill: none;
     animation: stroke_offset 5s infinite;
