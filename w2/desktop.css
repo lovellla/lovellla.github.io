@@ -155,11 +155,13 @@ font-weight: bold; font-size: 1.1em;}
 .chart li{float: left; margin-left: 115px;}
 .chart li a{color:#fff; font-size: 1.2em;}
 .chart li h3{padding-top: 15px; font-weight: 100;}
+.chart li a h3:hover{border-bottom: 2px solid #fff;}
+.chart .ch1{right: 600px;}
+.chart .ch2{right: 410px;}
+.chart .ch3{right: 190px;}
+
 .chart img{position: absolute;}
-.chart .ch1{right: 595px;}
-.chart .ch2{right: 405px;}
-.chart .ch3{right: 185px;}
-.chart li:hover{border-bottom: 2px solid #fff;}
+
 .menu {display: block; margin-top: 820px; margin-left: 50px;}
 .menu li{float: left; padding-right: 20px; margin-left: 50px; padding-bottom: 10px;}
 .menu li a{color:#fff;}
