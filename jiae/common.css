@@ -175,22 +175,22 @@ z-index: 99;}
 #circle6{animation-name: mov6;}
     @keyframes mov1{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:62;}
+        100%{stroke-dashoffset:31.4;}
     }
  
     @keyframes mov2{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:78;}
+        100%{stroke-dashoffset:62.8;}
     }
 
     @keyframes mov3{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:47;}
+        100%{stroke-dashoffset:78.5;}
     }
 
     @keyframes mov4{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:78;}
+        100%{stroke-dashoffset:62.8;}
     }
 
     @keyframes mov5{
@@ -200,7 +200,7 @@ z-index: 99;}
 
     @keyframes mov6{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:94;}
+        100%{stroke-dashoffset:62.8;}
     }
     
     .txt_box{position: relative;}
@@ -222,15 +222,15 @@ z-index: 99;}
 #wrap3{width: 100%; height: 100vh; position: relative;}
 #page3{width: 95%; height: 92vh; background-color: #fff; top: 35px; left: 2.5%;
 box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
-.btn_box{height: 100px; padding-top: 40px; z-index: 500; padding-left: 100px;}
+.btn_box{height: 100px; padding-top: 40px; z-index: 500; padding-left: 50px;}
 
 .btn_box li{
   margin:0;	
   float: left;
   margin-right: 50px;
- 
+  cursor: pointer;
 }
-.btn_box li button{font-size: 1.3em;  line-height: 50px;}
+.btn_box li button{font-size: 1.3em;  line-height: 50px; cursor: pointer;}
 
 
 .btn_box li{
@@ -409,8 +409,10 @@ border: 1px solid #000;}
 .con2{margin-left: 200px; box-sizing: border-box; margin-top: 120px;}
 .con_box{width: 400px; height: 400px; background-color:#eee; border-radius: 50px;
  float: left;margin-right: 100px; text-align: center;}
+.con_box:hover{background-color: #937bbd;}
 .con_box.fr img{margin-top: 130px;}
 .con_box h2{margin-top: 20px; color:#333;}
+.con_box .tel:hover{color:#fff;}
 .line{width: 30px; height: 3px; background-color: #333; margin: 0 auto; margin-top: 10px;}
 .tel{font-size: 1.4em; color:#333; font-weight: 600; margin-top: 20px;}
 .con_box.tw img{margin-top: 130px;}
