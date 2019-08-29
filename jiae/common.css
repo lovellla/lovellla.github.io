@@ -8,12 +8,12 @@ ul{list-style: none;}
 a{text-decoration: none;}
 button, input, a, img{outline: 0; border:0; background-image: none; background-color: transparent;}
 #wrap1{width: 100%; height: 100vh; position: relative;}
-#page1{width: 95%; height: 92vh; background-color: #fff; top: 35px; left: 2.5%;
+#page1{width: 95%; height: 92vh; background-color: #fff; top: 35px; left: 2.5%; position: relative;
 box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute; display: flex; align-items: center; justify-content: center;}
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 @import url("https://fonts.googleapis.com/css?family=Abril\+Fatface");
-h1 { color: #333;  font-family: source sans pro;  font-size: 3rem;
+h1 { color: #333; font-size: 3rem;
   font-weight: 100;  line-height: 1.5;  text-transform: uppercase;
   white-space: nowrap;  overflow: hidden;  position: relative;  width: 600px;
   padding-left: 20px;}
@@ -41,9 +41,9 @@ h1 { color: #333;  font-family: source sans pro;  font-size: 3rem;
   100% {    text-indent: 0;    top: 0;    width: 0;  }
 }
 .intro1{text-align: center; margin-top: 20px; font-size: 1.2em; font-weight: 600;}
-.side{position: absolute; width: 7%; height: 92vh; right: 0px; background-color: #937bbd;}
+.side{position: absolute; width: 7%; height: 92vh; right: 0px; top: 0; background-color: #937bbd;}
 
-.nav li{font-size: 1.5em; margin-left: 0px; margin-top: 20px; color:#fff;}
+.nav li{font-size: 1.5em; margin-left: 0px; margin-top: 20px; color:#fff; cursor: pointer;}
 .nav li a {
     position: relative;
     overflow: hidden;
@@ -222,7 +222,7 @@ z-index: 99;}
 #wrap3{width: 100%; height: 100vh; position: relative;}
 #page3{width: 95%; height: 92vh; background-color: #fff; top: 35px; left: 2.5%;
 box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute;}
-.btn_box{height: 100px; padding-top: 40px; z-index: 500; padding-left: 20px;}
+.btn_box{height: 100px; padding-top: 40px; z-index: 500; padding-left: 30px;}
 
 .btn_box li{
   margin:0;	
