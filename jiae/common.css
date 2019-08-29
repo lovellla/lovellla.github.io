@@ -2,7 +2,8 @@
 *{margin: 0; padding: 0;  box-sizing: border-box;}
 body,html{width: 1920px; background-color: #c5bbd6;}
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-body, html{width: 100%; font-family: 'NanumSquare', sans-serif; font-size: 14px;}
+body, html{width: 100%; font-family: 'NanumSquare', sans-serif; font-size: 14px;
+  -ms-overflow-style: none;}
 ::-webkit-scrollbar{display: none;}
 ul{list-style: none;}
 a{text-decoration: none;}
