@@ -1,32 +1,29 @@
 $(document).ready(function(){
-    $(".tog_close").click(function(){
-        $("#tog_gnb").toggleClass("on");
-    });
-    $(".tog_close").click(function(){
-        $("#tog_gnb").removeClass("on");
+    $(".tog_close,.sub_tog_close").click(function(){
+        $("#tog_gnb,#sub_tog_gnb").toggleClass("on");
     });
         // 태블릿,모바일 토글메뉴 효과
         var ht=parseInt($(window).height())-600;
         $(window).scroll(function(){
         var sc=parseInt($(window).scrollTop());
         if(sc>=ht){
-            $("#tog_gnb").css("right","-110%");
+            $("#tog_gnb,#sub_tog_gnb").css("right","-110%");
         }
     });
     var sw1=true;
-    $(".tog_btn").click(
+    $(".tog_btn,.sub_tog_btn").click(
         function(){
             if(sw1){
-                $("#tog_gnb").stop().animate({"right":"0px"},300);
+                $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"0px"},300);
             }
             sw1=!sw1;
         });
-        $(".tog_close").click(function(){
-            $("#tog_gnb").stop().animate({"right":"-110%"},600);
+        $(".tog_close,.sub_tog_close").click(function(){
+            $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"-110%"},600);
         });
         
  // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
- $(".menu>a").click(function(){
+ $(".menu>a,.sub_menu>a").click(function(){
     var submenu = $(this).next("ul");
     // submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
     if( submenu.is(":visible") ){
