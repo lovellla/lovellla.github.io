@@ -186,7 +186,7 @@ background-image: url("./img/vs1.png");}
 
 
 }
-@media screen and (min-width:1024px) and (max-width:1918px){
+@media screen and (min-width:1024px) and (max-width:1200px){
 /* 고해상도 태블릿의 경우 */
 /* 메인 */
 .wrap{height: 100%;}
