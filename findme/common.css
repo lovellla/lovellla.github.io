@@ -489,7 +489,7 @@ background-image: url("./img/vs1.png");}
 .sub3_text1.left{width: 50%; float: left;}
 .sub3_text1 h1{font-size: 1.7em;}
 .sub3_text1 h2{font-size: 1.3em;}
-.sub3_text1 p{font-size: 0.9em;}
+.sub3_text1 p{font-size: 0.85em;}
 .sub3_text1.left h2{margin: 10px;}
 .sub3_text1.left p{line-height: 22px;}
 .sub3_text1.right{width: 50%; float: right; height: 200px;}
@@ -498,7 +498,7 @@ background-image: url("./img/vs1.png");}
 .sub3_text2{width: 96%; height: 250px; box-sizing: border-box; margin: 0 auto; text-align: center;}
 .sub3_text2 h1{font-size: 1.7em;}
 .sub3_text2 h2{font-size: 1.3em;}
-.sub3_text2 p{font-size: 0.9em;}
+.sub3_text2 p{font-size: 0.85em;}
 .sub3_text2.left{width: 50%; float: left;}
 .sub3_text2.left h2{margin: 10px;}
 .sub3_text2.left p{line-height: 22px;}
