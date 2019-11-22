@@ -183,8 +183,6 @@ background-image: url("./img/vs1.png");}
 /* 서브2 */
 .sub_content{margin-bottom: 20px;}
 .sub2_txt1{padding-bottom: 50px;}
-
-
 }
 @media screen and (min-width:1024px) and (max-width:1200px){
 /* 고해상도 태블릿의 경우 */
