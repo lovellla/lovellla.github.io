@@ -447,7 +447,7 @@ background-image: url("./img/vs1.png");}
 .sub_tog_gnb .sub_menu:first-of-type{margin-top: 150px;}
 .sub_menu{margin-top: 15px;}
 .sub_tog_gnb a{color:#333; font-size: 0.9em; }
-.vm_sub{font-size: 0.8em;}
+.sub_m_sub{font-size: 0.8em;}
 .sub_hide_sub{display: none; height: auto; margin-top: 10px; z-index: 1001;}
 .sub_gnb_img{position: absolute; width: 100%; bottom: 0; left: 0;}
 
