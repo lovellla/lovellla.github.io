@@ -547,7 +547,7 @@ background-image: url("./img/vs1.png");}
 #tog_gnb.on{right: 0; top: 0;}
 .tog_gnb{position: relative; text-align: center; font-size: 1.2em; z-index: 1001;}
 .tog_close{position: absolute; font-size: 2.2em; right: 30px; top: 20px;}
-.tog_gnb .menu:first-of-type{margin-top: 100px;}
+.tog_gnb .menu:first-of-type{margin-top: 120px;}
 .menu{margin-top: 10px;}
 .tog_gnb a{color:#333; font-size: 0.9em; }
 .m_sub{font-size: 0.8em;}
@@ -587,7 +587,7 @@ background-image: url("./img/vs1.png");}
 #sub_tog_gnb.on{right: 0; top: 0;}
 .sub_tog_gnb{position: relative; text-align: center; font-size: 1.2em; z-index: 1001;}
 .sub_tog_close{position: absolute; font-size: 2.2em; right: 20px; top: 20px;}
-.sub_tog_gnb .sub_menu:first-of-type{margin-top: 100px;}
+.sub_tog_gnb .sub_menu:first-of-type{margin-top: 120px;}
 .sub_menu{margin-top: 10px;}
 .sub_tog_gnb a{color:#333; font-size: 0.9em; }
 .sub_m_sub{font-size: 0.8em;}
