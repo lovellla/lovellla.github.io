@@ -285,6 +285,7 @@ background-image: url("./img/vs1.png");}
 /* sub5 오시는길 */
 .sub_content5 h3{text-align: center;}
 .sub_content5 .map{width:60%; height:500px;}
+.sub_content5 .tel{color:#000;}
 }
 @media screen and (min-width:768px) and (max-width:1023px){
 /* 태블릿의 경우 */
