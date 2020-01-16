@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>돌봄찾기</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="common.js"></script>
+    <script src="datepicker.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        var currentDate = new Date();/*오늘날짜 가지고 오는거*/ /*월은 하나 적게 가져와서 +1로 해야함*/
+        var startdate = currentDate.getFullYear()/*년도*/ + "-01-01";
+        var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1)/*월*/ + "-" + currentDate.getDate();
+        $(".calendar1,.calendar2").each(function(index, item){
+        $(item).val(calendar);
+        });
+        /*val 은 폼에서 사용하는 인풋등이 들어간다*/
+        $(".sDt").val(startdate);
+        $(".eDt").val(calendar);
+        $(function(){
+	$(".calendar1").datepicker({
+		trigger : '.date_btn1',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+    $(".calendar2").datepicker({
+		trigger : '.date_btn2',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+  });
+    });
+</script>
+<body>
+<div class="wrap">
+<header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="">관심돌봄</a></li>
+                <li><a href="">관심돌보미</a></li>
+                <li><a href="">마이페이지</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">돌봄찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu">
+                <a href="sub3.html">돌보미찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu">
+                <a href="sub4.html">돌봄등록</a>
+                <!-- <ul class="sub three">
+                    <li class="s_sub"><a href="sub4.html">문의사항</a></li>
+                </ul> -->
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="content_top">
+        <h1 class="sub1_tit"><img src="./img/cat.png" alt="">&nbsp;돌봄찾기</h1>
+<div class="date_total">
+    <div class="date">
+        <div class="date_box first">
+            <input type="text" class="calendar1">
+            <button class="date_btn1"><i class="fas fa-calendar-alt"></i></button>
+        </div>
+        <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+        <div class="date_box two">
+            <input type="text" class="calendar2">
+            <button class="date_btn2"><i class="fas fa-calendar-alt"></i></button>
+    </div>
+    </div>
+    <div class="select_box">
+       <select name="" id="select_sub1">
+           <option value="">요청구분</option>
+           <option value=""></option>
+       </select>
+    </div>
+    <form action="" class="search">
+        <input type="text" id="keyword" class="search_form" placeholder="검색어 입력">
+        <input type="submit" value="검색" class="search_btn">
+</form>
+</div>
+</div>
+<div class="content_mid">
+    <div class="sit_list first">
+        <a href="">
+        <img src="http://placehold.it/200x150/333" alt="">
+        <div class="sit_box">
+            <h2 class="sit_tit">명칭</h2>
+            <p class="sit_txt">자기소개 or 대표키워드</p>
+            <p class="sit_money">비용</p>
+            <p class="sit_address">주소</p>
+            <p class="sit_score">평점&nbsp;<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+        </div>
+        </a>
+        <div class="favorite"><i class="fas fa-heart"></i><span>관심</span></div>
+    </div>
+    <div class="sit_list two">
+        <a href="">
+        <img src="http://placehold.it/200x150/333" alt="">
+        <div class="sit_box">
+            <h2 class="sit_tit">명칭</h2>
+            <p class="sit_txt">자기소개 or 대표키워드</p>
+            <p class="sit_money">비용</p>
+            <p class="sit_address">주소</p>
+            <p class="sit_score">평점&nbsp;<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+        </div>
+        </a>
+        <div class="favorite"><i class="fas fa-heart"></i><span>관심</span></div>
+    </div>
+    
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href=""><img src="http://placehold.it/200x50/333" alt=""></a></li>
+        <li class="family_ban2"><a href=""><img src="http://placehold.it/200x50/333" alt=""></li>
+        <li class="family_ban3"><a href=""><img src="http://placehold.it/200x50/333" alt=""></li>
+        <li class="family_ban4"><a href=""><img src="http://placehold.it/200x50/333" alt=""></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="">공지사항</a></li>
+        <li class="ft_menu2"><a href="">이용안내</a></li>
+        <li class="ft_menu3"><a href="">이용약관</a></li>
+        <li class="ft_menu4"><a href="">개인정보정책</a></li>
+        <li class="ft_menu5"><a href="">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="">제휴문의</a></li>
+        <li class="ft_menu7"><a href="">마이페이지</a></li>
+    </ul>
+</div>
+<footer class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
