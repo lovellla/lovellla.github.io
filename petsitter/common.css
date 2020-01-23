@@ -305,8 +305,8 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; backg
 .select_box{display: inline; margin-right: 10px;}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
-.search{display: inline-block; border:1px solid #ccc; margin-top: 3px; margin-right: 5px;}
-.search_form{width:150px; line-height:25px; text-indent: 10px;  }
+.search{display: inline-block; border:1px solid #ccc; height: 32px; box-sizing: border-box;}
+.search_form{width:150px; text-indent: 10px; height: 32px;}
 .search_btn{width: 32px; height:30px; background-color: #333; background-image:url("./img/search_btn.png"); background-position:center center; background-repeat:no-repeat;  margin-left: 10px; text-indent:-9999px;}
 
 .content_mid{width: 60%; margin:0 auto 50px; border: 1px solid #e0e0e0; padding: 20px 50px 50px; box-sizing: border-box;}
