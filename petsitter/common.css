@@ -358,6 +358,7 @@ hr,legend,caption{font-size:0;height:0px}
 .page_navi a{display: inline; margin:0 4px;padding:0 5px;font-size:12px;color:#333;line-height:23px; font-size: 14px;}
 .num_btn{display: inline-block;}
 .num_btn li{float: left; height: 18px; margin-top: 20px;}
+.num_btn li:first-child{text-decoration: underline;}
 .page_navi a:hover,.num_btn li:hover, .num_btn li:active{font-weight: 700;}
 .notice_write{width: 100%;}
 .notice_write td, .notice_write th{border:1px solid #e0e0e0; border-right: none; border-left: none; border-bottom: none; padding: 20px;}
