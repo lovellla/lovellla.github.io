@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $(".main_tog_btn,.tog_btn").click(function(){
+        $(".main_toggle").addClass("on");
+    });
+        $(".main_toggle .main_tog_close").click(function(){
+        $(".main_toggle").removeClass("on");
+    });
     var wd = $("#vs").width();
     var sl = $(".img_box");
     var btn1 = $("#btn_box");
@@ -43,15 +49,15 @@ $(document).ready(function(){
         }
     });
     var sw1=true;
-    $(".tog_btn,.sub_tog_btn").click(
+    $(".sub_tog_btn").click(
         function(){
             if(sw1){
-                $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"0px"},300);
+                $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"0px"},200);
             }
             sw1=!sw1;
         });
         $(".tog_close,.sub_tog_close").click(function(){
-            $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"-110%"},600);
+            $("#tog_gnb,#sub_tog_gnb").stop().animate({"right":"-110%"},200);
         });
         
  // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
@@ -89,7 +95,8 @@ $(window).scroll(function(){
             slideMargin:0, // 슬라이드 간의 간격을 설정한다.
             auto:true,         // 자동으로 흐를지 여부를 설정한다.
             autoHover:true, // 마우스오버 시 정지할지를 설정한다.
-            controls:false    // 이전 버튼, 다음 버튼 노출 여부를 설정한다.
+            controls:false,    // 이전 버튼, 다음 버튼 노출 여부를 설정한다.
+            touchEnabled : (navigator.maxTouchPoints > 0)
         });
         
         // 이전 버튼을 클릭하면 이전 슬라이드로 전환된다.
