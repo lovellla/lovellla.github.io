@@ -107,6 +107,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
 #nextBtn{position:absolute; right:0;top:35px;}
 .info{height: 369px;}
 .info img{width: 100%; height: auto;}
+.m_info{display: none;}
 
 /* 이용후기 부분 */
 .review_page{width: 100%; height: 500px; margin: 0 auto; position: relative;}
