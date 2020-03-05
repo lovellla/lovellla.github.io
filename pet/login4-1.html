@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반려동물 정보</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".join_btn").click(function(){
+            $("#home_pop").addClass("on");
+        });
+        // 출생년도 셀렉트박스
+        setDateBox();
+    });
+    // select box 연도 , 월 표시
+    function setDateBox(){
+        var dt = new Date();
+        var year = "";
+        var com_year = dt.getFullYear();
+        // 발행 뿌려주기
+        $("#year1").append("<option value=''>년도</option>");
+        // 올해 기준으로 -80년부터 +1년을 보여준다.
+        for(var y = (com_year-80); y <= (com_year+1); y++){
+        $("#year1").append("<option value='"+ y +"' "+(y==2000?'selected':'')+">"+ y + " 년" +"</option>");
+        }
+//  파일첨부
+    var fileTarget = $('.filebox .upload-hidden'); 
+    fileTarget.on('change', function(){ // 값이 변경되면 
+    if(window.FileReader){ // modern browser 
+    var filename = $(this)[0].files[0].name; 
+    } 
+    else { // old IE 
+    var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+    } // 추출한 파일명 삽입 
+    $(this).siblings('.upload-name4').val(filename); 
+    });
+    // 프리뷰(썸네일)이미지
+    var imgTarget = $('.preview-image4 .upload-hidden');
+        imgTarget.on('change', function(){ 
+        var parent = $(this).parent(); 
+        parent.children('.upload-display').remove(); 
+    if(window.FileReader){ //image 파일만 
+        if (!$(this)[0].files[0].type.match(/image\//)) return; 
+            var reader = new FileReader();
+            reader.onload = function(e){ 
+            var src = e.target.result; 
+    } 
+        reader.readAsDataURL($(this)[0].files[0]);
+    } 
+        else { $(this)[0].select(); $(this)[0].blur(); 
+            var imgSrc = document.selection.createRange().text; 
+            var img = $(this).siblings('.upload-display').find('img'); 
+            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")"; 
+        }
+
+});
+var fileTarget1 = $('.filebox4 .upload-hidden4'); 
+fileTarget1.on('change', function(){ // 값이 변경되면 
+if(window.FileReader){ // modern browser 
+var filename1 = $(this)[0].files[0].name; } 
+else { // old IE 
+var filename1 = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+} // 추출한 파일명 삽입 
+$(this).siblings('.upload-name4').val(filename1); 
+});
+    };
+    </script>
+    <script>
+    $(document).ready(function(){
+        var currentDate = new Date();/*오늘날짜 가지고 오는거*/ /*월은 하나 적게 가져와서 +1로 해야함*/
+        var startdate = currentDate.getFullYear()/*년도*/ + "-01-01";
+        var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1)/*월*/ + "-" + currentDate.getDate();
+        $(".pet_birth1").each(function(index, item){
+        $(item).val(calendar);
+        });
+        /*val 은 폼에서 사용하는 인풋등이 들어간다*/
+        $(".sDt").val(startdate);
+        $(".eDt").val(calendar);
+        $(function(){
+	$(".pet_birth1").datepicker({
+		trigger : '.birth_btn1',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+    });
+    });
+    </script>
+    
+</head>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <nav class="toggle">
+        <div class="mtog_btn"><i class="fas fa-bars"></i></div>
+        <div id="tog_gnb">
+                <div class="tog_close"><i class="fas fa-times"></i></div>
+        <ul class="tog_gnb">
+            <li class="menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a>홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>문의사항</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</header>
+<div class="login4-1_content">
+    <div class="login4-1_top">
+        <h1 class="log_tit"><img src="./img/cat1.png" alt="">&nbsp;반려동물정보</h1>
+        <p class="log_txt">반려동물에 대한 상세사항을 입력해주세요.</p>
+</div>
+<div class="login4-1_mid">
+        <div class="login4-1_form">
+        <h3 class="login4-1_tit"><i class="fas fa-user"></i>&nbsp;&nbsp;반려동물 정보입력</h3>
+        <div class="login4-1_box">
+            <div class="login4-1_label">
+                <label for="pet_name">반려동물의 이름을 알려주세요</label>
+                <p class="pet_name1">구름이</p>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_birth">반려동물의 생일을 알려주세요</label>
+                <p class="pet_birth">3월</p>
+                <div class="pet_date">
+                        <input type="text" class="pet_birth1">
+                        <button class="birth_btn1"><i class="fas fa-calendar-alt"></i></button>
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_gender">반려동물의 성별을 알려주세요</label>
+                <p class="pet_gender1">&nbsp;수컷
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_kg">반려동물의 무게정보를 알려주세요</label>
+                <p class="pet_less">&nbsp;15kg미만</p>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_species">반려동물의 종류를 알려주세요</label>
+                <p class="pet_species">강아지</p>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_breed">반려동물의 품종을 알려주세요</label>
+                <p class="pet_breed">말티즈</p>
+            </div>
+            <div class="login4-1_label1 file">
+                <label style="vertical-align: top;">사진을 업로드해주세요</label>
+                <div class="filebox4 preview-image4">
+                    <input class="upload-name4" value="파일선택" disabled="disabled">
+                    <label for="input_file4"><span>업로드</span></label> 
+                  <input type="file" id="input_file4" class="upload-hidden4">
+                  <p>※파일첨부는 최대 5개까지 가능합니다.</p>
+                  <div class="view_box">
+                    
+                </div>
+                </div>
+            </div>
+            <div class="login4-1_label self">
+                <label for="self_intro4">관리 지침 및 요청사항</label>
+                <textarea name="self_intro4" id="self_intro4" cols="40" rows="50" maxlength="700" placeholder="펫케어에 필요한 요청사항 및 주의할 사항들을 입력해주세요"></textarea>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_registration"><span class="registration">반려동물 등록을 하였습니까?</span> </label>
+                <div class="pet_registrationbox">
+                    <input type="radio" name="pet_registration" value="내장형" id="pet_registration1">&nbsp;내장형 무선식별장치 개체삽입
+                    <input type="radio" name="pet_registration" value="외장형" id="pet_registration2">&nbsp;외장형 무선식별장치
+                    <div>
+                    <input type="radio" name="pet_registration" value="해당없음" id="pet_registration3">&nbsp;<span> 안함(※강아지의 경우 등록이 안되어 있을 시 서비스 이용이 제한됩니다.)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_operation">중성화 수술 여부</label>
+                <div class="pet_operation">
+                    <input type="radio" name="pet_operation" value="네" id="pet_operation1">&nbsp;네, 했습니다
+                    <input type="radio" name="pet_operation" value="아니요" id="pet_operation2">&nbsp;아니요, 하지않았습니다
+                    <input type="radio" name="pet_operation" value="해당없음" id="pet_operation3">&nbsp;해당사항없음
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_oldspells">다쳤던 적이나 알고있는 지병이 있나요?</label>
+                <div class="pet_oldspellsbox">
+                    <input type="radio" name="pet_oldspells" value="네" id="pet_oldspells1">&nbsp;네
+                    <input type="radio" name="pet_oldspells" value="아니요" id="pet_oldspells2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_oldspellstxt">다쳤던 내용이나 지병에 대해서 적어주세요</label>
+                <input type="text" name="pet_oldspellstxt" id="pet_oldspellstxt" size="30" placeholder="ex)골절수술한적있음, 심장병 등" required>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_medicine">현재 복용하는 약이 있나요? <br>(해당되는 경우에 입력해주세요)</label>
+                <input type="text" name="pet_medicine" id="pet_medicine" size="30" placeholder="복용하는 약에 대해 입력해주세요" require>
+            </div>
+            <h4 class="pet_etc"><img src="./img/pet.png">&nbsp;&nbsp;<span>기타 - 반려견에 해당(나머지 질문에 답해주세요)</span>&nbsp;&nbsp;<img src="./img/pet.png"></h4>
+            <div class="login4-1_label">
+                <label for="pet_friendship">다른 개와 친화적인가요?</label>
+                <div class="pet_friendshipbox">
+                    <input type="radio" name="pet_friendship" value="네" id="pet_friendship1">&nbsp;네
+                    <input type="radio" name="pet_friendship" value="아니요" id="pet_friendship2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_training">당신의 반려견은 대소변을 잘 가리는 편입니까?</label>
+                <div class="pet_trainingbox">
+                    <input type="radio" name="pet_training" value="네" id="pet_training1">&nbsp;네 &nbsp;<input type="text" name="pet_medicine" id="pet_trainingtxt" size="30" placeholder="ex)패드, 화장실" require>&nbsp;
+                    <input type="radio" name="pet_training" value="아니요" id="pet_training2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_marking">반려견은 실내에서 마킹(영역표시)를 하나요?</label>
+                <div class="pet_markingbox">
+                    <input type="radio" name="pet_marking" value="네" id="pet_marking1">&nbsp;네 &nbsp;<input type="text" name="pet_medicine" id="pet_markingtxt" size="30" placeholder="ex)다른 아이들이 마킹했던 곳, 집에서는 마킹x" require>&nbsp;
+                    <input type="radio" name="pet_marking" value="아니요" id="pet_marking2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_separation">평소 분리불안증이 있는 편인가요?<br> 있다면 이에 대처할 수 있는 방법은 무엇인가요?</label>
+                <div class="pet_separationbox">
+                    <input type="radio" name="pet_separation" value="네" id="pet_separation1">&nbsp;네 <input type="text" name="pet_medicine" id="pet_separationtxt" size="30" placeholder="ex)대처방법을 입력해주세요" require>
+                    <input type="radio" name="pet_separation" value="아니요" id="pet_separation2">&nbsp;아니요
+                </div>
+            </div>
+            <h4 class="login4-1_warning"><img src="./img/medi.png">&nbsp;&nbsp;<span>예방접종 - 반려견에 해당(아래 사항 중 한가지라도 접종(복용)이 안 될 경우 산책이 금지됩니다.)</span>&nbsp;&nbsp;<img src="./img/medi.png"></h4>
+            <div class="login4-1_label">
+                <label for="pet_heart"><span class="heart">"심장사상충"</span> 약을 복용하였습니까?<br> &nbsp;&nbsp;(월1회/미 복용시 산책 금지)</label>
+                <div class="pet_heartbox">
+                    <input type="radio" name="pet_heart" value="네" id="pet_heart1">&nbsp;네
+                    <input type="radio" name="pet_heart" value="아니요" id="pet_heart2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_vaccine"><span class="vaccine">"종합7종 백신"</span> 접종을 하였습니까?&nbsp;(연1회)</label>
+                <div class="pet_vaccine">
+                    <input type="radio" name="pet_vaccine" value="네" id="pet_vaccine1">&nbsp;네
+                    <input type="radio" name="pet_vaccine" value="아니요" id="pet_vaccine2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_corona"><span class="corona">"코로나장염"</span> 접종을 하였습니까?&nbsp;(연1회)</label>
+                <div class="pet_corona">
+                    <input type="radio" name="pet_corona" value="네" id="pet_corona1">&nbsp;네
+                    <input type="radio" name="pet_corona" value="아니요" id="pet_corona2">&nbsp;아니요
+                </div>
+            </div>
+            <div class="login4-1_label">
+                <label for="pet_kennel"><span class="kennel">"켄넬코프"</span> 접종을 하였습니까?&nbsp;(연1회)</label>
+                <div class="pet_kennel">
+                    <input type="radio" name="pet_kennel" value="네" id="pet_kennel1">&nbsp;네
+                    <input type="radio" name="pet_kennel" value="아니요" id="pet_kennel2">&nbsp;아니요
+                </div>
+            </div>
+        </div>
+
+        <div class="login4-1_btn">
+            <input type="button" value="등록완료" class="login4-1_btn button" onclick="location.href='mypage.html' ">
+        </div>
+    </div>
+</div>
+</form>
+</div>
+<div id="home_pop">
+    <div class="home_box">
+        <img src="./img/cat1.png" alt="">
+        <p class="home_txt">홈케어 2단계 인증가입을 진행하시겠습니까?</p>
+        <div class="home_btn">
+            <button class="home_btn1" onclick="location.href='login1.html' ">네</button>
+            <button class="home_btn2" onclick="location.href='login3.html' ">다음에</button>
+            </div>
+    </div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

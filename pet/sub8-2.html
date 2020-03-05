@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공지사항</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="notice_top">
+        <h1 class="notice_tit">공지사항</h1>
+
+</div>
+<div class="notice_mid">
+    <table class="notice_view">
+        <tbody>
+            <tr>
+                <td>
+                    <span class="notice_bold">중요</span>
+                    <span class="notice_tit1">&nbsp;공지사항입니다.</span>
+                </td>
+                <td class="notice_data">2020.01.22</td>
+            </tr>
+            <tr>
+                <td class="notice_textus" colspan="2">
+                    <p class="notice_txt1">국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 모성의 보호를 위하여 노력하여야 한다. 정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다. 국회의 정기회는 법률이 정하는 바에 의하여 매년 1회 집회되며, 국회의 임시회는 대통령 또는 국회재적의원 4분의 1 이상의 요구에 의하여 집회된다. 모든 국민은 직업선택의 자유를 가진다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 형사피의자 또는 형사피고인으로서 구금되었던 자가 법률이 정하는 불기소처분을 받거나 무죄판결을 받은 때에는 법률이 정하는 바에 의하여 국가에 정당한 보상을 청구할 수 있다.
+                        대통령의 선거에 관한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국무총리·국무위원 또는 정부위원은 국회나 그 위원회에 출석하여 국정처리상황을 보고하거나 의견을 진술하고 질문에 응답할 수 있다. 훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에 따르지 아니한다. 예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다. 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.
+                        대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여한다. 군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 탄핵결정은 공직으로부터 파면함에 그친다. 그러나, 이에 의하여 민사상이나 형사상의 책임이 면제되지는 아니한다. 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다. 모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다. 대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 국가안전보장에 관련되는 대외정책·군사정책과 국내정책의 수립에 관하여 국무회의의 심의에 앞서 대통령의 자문에 응하기 위하여 국가안전보장회의를 둔다.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="notice_list">
+        <a href="sub8.html">목록보기</a>
+    </div>
+
+    
+</div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

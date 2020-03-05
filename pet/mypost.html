@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>내 게시물</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+</head>
+<script>
+ $(document).ready(function(){
+        $(".mate_just").click(function(){
+        $(".just_pop").addClass("on");
+    });
+        $(".just_btn").click(function(){
+        $(".just_pop").removeClass("on");
+    });
+});
+</script>
+<body>
+<div class="wrap">
+<header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="">관심홈케어</a></li>
+                <li><a href="">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn mate">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="#">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="">홈케어등록</a></li>
+                    <li class="s_sub"><a href="">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <nav class="toggle">
+        <div class="mtog_btn"><i class="fas fa-bars"></i></div>
+        <div id="tog_gnb">
+                <div class="tog_close"><i class="fas fa-times"></i></div>
+        <ul class="tog_gnb">
+            <li class="menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a>홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>문의사항</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</header>
+<div class="mypost_content">
+    <div class="mypost_top">
+        <h1 class="mypost_tit">내 게시물</h1>
+    </div>
+<div class="mypost_mid">
+        <input type="radio" name="mypost" id="post1" class="post_radio" checked>
+        <input type="radio" name="mypost" id="post2" class="post_radio">
+    <div class="mypost_box">
+        <div class="mypost_tab">
+            <label class="tab_tit" id="post1-1" for="post1">내가 작성한 글</label>
+            <label class="tab_tit" id="post2-1" for="post2">합격 메이트 관리</label>
+        </div>
+        <ul class="memo_search">
+            <li><input type="text" title="검색어를 입력하세요" placeholder="검색어입력" class="mypost_search">
+                <input type="submit" value="검색" class="mypost_btn"></li>
+        </ul>
+    </div>
+            <div id="my_memo1" class="my_board first">
+                <table summary="공지사항을 나타낸 표" class="my_board1" cellspacing="0" cellpadding="0">
+                    <caption>공지사항</caption>
+                    <colgroup>
+                        <col style="width:10%">
+                        <col style="width:40%">
+                        <col style="width:20%">
+                        <col style="width:10%">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">조회수</th>
+                            <th scope="col">설정</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="my_list">
+                            <td>6</td>
+                            <td class="my_list_tit"><a href="homecare.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify" OnClick="location.href ='login1-1.html'"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                    <a href="">지원자 <span>2</span>명</a> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="my_list">
+                            <td>5</td>
+                            <td class="my_list_tit"><a href="sub8-2.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                    <a href="">지원자 <span>2</span>명</a> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="my_list">
+                            <td>4</td>
+                            <td class="my_list_tit"><a href="sub8-2.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                    <a href="">지원자 <span>2</span>명</a> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="my_list">
+                            <td>3</td>
+                            <td class="my_list_tit"><a href="sub8-2.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                    <a href="">지원자 <span>2</span>명</a> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="my_list">
+                            <td>2</td>
+                            <td class="my_list_tit"><a href="homecare.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                    <a href="">지원자 <span>2</span>명</a> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="my_list">
+                            <td>1</td>
+                            <td class="my_list_tit"><a href="sub8-2.html">글의 제목이 들어갈 부분입니다.</a></td>
+                            <td>2020-01-22</td>
+                            <td>1</td>
+                            <td>
+                                <div class="list_modify"><span>수정</span></div>
+                                <div class="list_end"><span>마감</span></div>
+                                <div class="list_delete"><span>삭제</span></div>
+                                <div class="mate_support">
+                                지원자 <span>2</span>명 
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="my_read">
+                    <div class="myread_btn" OnClick="location.href ='sub8-1.html'"><span>등록</span></div>
+                    <div class="mymodify_btn"><span>수정</span></div>
+                    <div class="mydelete_btn"><span>삭제</span></div>
+                </div>
+
+                <!-- page_navi start -->
+                <div class="mypost_navi">
+                    <a href="#" class="first">처음</a>
+                    <a href="#" class="prev">이전</a>
+                    <ul class="mynum_btn">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>                    
+                    <a href="#" class="next">다음</a>
+                    <a href="#" class="last">마지막</a>
+                </div>
+             </div>
+            <div id="my_memo2" class="my_board two">
+                <table summary="공지사항을 나타낸 표" class="my_board1" cellspacing="0" cellpadding="0">
+                    <caption>공지사항</caption>
+                    <colgroup>
+                        <col style="width:10%">
+                        <col style="width:10%">
+                        <col style="width:10%">
+                        <col style="width:15%">
+                        <col style="width:10%">
+                        <col style="width:10%">
+                        <col style="width:10%">
+                        <col style="width:10%">
+                        <col style="width:15%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">프로필사진</th>
+                            <th scope="col">성별/나이</th>
+                            <th scope="col">케어종류</th>
+                            <th scope="col">위치</th>
+                            <th scope="col">케어가격</th>
+                            <th scope="col">현재 반려중인 동물</th>
+                            <th scope="col">반려기간</th>
+                            <th scope="col">승인/거절</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="mate_list">
+                            <td><a href="caremate.html"><img src="./img/mate_pro.png" alt=""></a></td>
+                            <td><a href="caremate.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                                <div class="mate_just"><span>조정하기</span></div>
+                            </td>
+                        </tr>
+                        <tr class="mate_list">
+                            <td><img src="./img/mate_pro.png" alt=""></td>
+                            <td><a href="sub8-2.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                            </td>
+                        </tr>
+                        <tr class="mate_list">
+                            <td><img src="./img/mate_pro.png" alt=""></td>
+                            <td><a href="sub8-2.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                            </td>
+                        </tr>
+                        <tr class="mate_list">
+                            <td><img src="./img/mate_pro.png" alt=""></td>
+                            <td><a href="sub8-2.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                            </td>
+                        </tr>
+                        <tr class="mate_list">
+                            <td><img src="./img/mate_pro.png" alt=""></td>
+                            <td><a href="sub8-2.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                            </td>
+                        </tr>
+                        <tr class="mate_list">
+                            <td><img src="./img/mate_pro.png" alt=""></td>
+                            <td><a href="sub8-2.html">이지은/여자</a></td>
+                            <td>방문케어</td>
+                            <td>대전광역시 서구 월평동</td>
+                            <td>20,000원 <br>(2마리 1회기준)</td>
+                            <td>강아지/고양이</td>
+                            <td>3년</td>
+                            <td>
+                                <div class="mate_ok"><span>승인</span></div>
+                                <div class="mate_cancel"><span>거절</span></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mymate_read">
+                    <div class="myread_btn1" OnClick="location.href ='sub8-1.html'"><span>등록</span></div>
+                    <div class="mymodify_btn1"><span>수정</span></div>
+                    <div class="mydelete_btn1"><span>삭제</span></div>
+                </div>
+                <!-- page_navi start -->
+                <div class="mypost_navi">
+                    <a href="#" class="first">처음</a>
+                    <a href="#" class="prev">이전</a>
+                    <ul class="mynum_btn">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>                    
+                    <a href="#" class="next">다음</a>
+                    <a href="#" class="last">마지막</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+</footer>
+</div>
+<div class="just_pop">
+    <div class="just_box">
+        <div class="just_cont">
+            <div class="just_tit"><img src="./img/cat.png"><span>상세조건설정</span><img src="./img/cat.png"></div>
+            <div class="just_num">안심번호를 확인해주세요
+            </div>
+            <div></div>
+            <div class="just_label">
+                <label>조정할 시간을 선택해주세요</label>
+                <div class="sel_time">
+                    <select name="time" id="sel_time1">
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <select name="time" id="sel_time2">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="sel_time3">
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                    <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+                    <select name="time" id="sel_time1">
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <select name="time" id="sel_time2">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="sel_time3">
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                </div>
+            </div>
+            <div class="just_label">
+                <label for="home_sel">금액을 설정해주세요</label>
+            <select id="home_sel"> 
+                <option selected>선택</option>
+                <option>10000원</option>
+                <option>15000원</option>
+                <option>20000원</option>
+                <option>25000원</option>
+                <option>30000원</option>
+                <option>35000원</option>
+                <option>40000원</option>
+                <option>45000원</option>
+                <option>50000원</option>
+                <option>선택안함</option>
+                </select>
+                <span class="hsel_txt">※ 방문 1회당</span>
+            </div>
+            <div class="just_label">
+                <label for="walk_sel">산책 케어 금액을 알려주세요</label>
+            <select id="walk_sel"> 
+                <option selected>선택</option>
+                <option>10000원</option>
+                <option>15000원</option>
+                <option>20000원</option>
+                <option>25000원</option>
+                <option>30000원</option>
+                <option>35000원</option>
+                <option>40000원</option>
+                <option>45000원</option>
+                <option>50000원</option>
+                <option>선택안함</option>
+                </select>
+                <span class="wsel_txt">※ 30분당</span>
+            </div>
+            <div class="just_label self">
+                <label for="control_intro"><span>상세조건을 입력해주세요</span></label>
+                <textarea name="control_intro" id="control_intro" cols="40" rows="100" maxlength="700" placeholder="상세조건 입력칸입니다."></textarea>
+            </div>
+            <div class="just_btn">
+                <input type="button" value="문의하기" class="just_btn button">
+            </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

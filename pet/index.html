@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>파인드미</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="./slider/jquery.bxslider.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+  <script> 
+    function setCookie( name, value, expiredays ) {
+        var todayDate = new Date(); 
+            todayDate.setDate( todayDate.getDate() + expiredays ); 
+            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+        }
+    function closeWin() { 
+        if ( document.notice_form.chkbox.checked ){ 
+            setCookie( "maindiv", "done" , 1 ); 
+        } 
+        document.all['pop'].style.visibility = "hidden";
+    }
+    $(document).ready(function(){
+        $(".review > li").click(function(){
+        $("#rv_pop").addClass("on");
+    });
+        $("#rv_pop .rv_close").click(function(){
+        $("#rv_pop").removeClass("on");
+    });
+});
+    </script>
+<body>
+<div class="wrap">
+<header class="hd">
+        <div class="logo_box">
+            <a href="index.html" class="logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="tnb">
+            <ul class="top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my1"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop1">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn mate">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="gnb">
+        <ul class="gnb">
+            <li class="menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="main_tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <nav class="toggle">
+        <div class="mtog_btn"><i class="fas fa-bars"></i></div>
+        <div id="tog_gnb">
+                <div class="tog_close"><i class="fas fa-times"></i></div>
+        <ul class="tog_gnb">
+            <li class="menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a>홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>문의사항</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</header>
+<figure id="vs">
+    <ul class="img_box">
+        <li class="item1"><a href=""><img src="./img/mainbanner1.png" alt=""></a></li>
+        <li class="item2"><a href=""><img src="./img/mainbanner2.png" alt=""></a></li>
+        <li class="item3"><a href=""><img src="./img/vs1.png" alt=""></a></li>
+    </ul>
+    <ul id="btn_box">
+        <li class="left"><img src="./img/vs_prev.png" alt="이전 버튼"></li>
+        <li class="right"><img src="./img/vs_next.png" alt="이전 버튼"></li>
+    </ul>
+</figure>
+<div class="quick">
+    <p class="quick_text">
+        <img src="./img/cat.png" alt="" class="q_img1"> 
+        <span class="quick_tit">Quick 메뉴</span>
+        <img src="./img/dog.png" alt="" class="q_img2"> 
+    </p>
+<div id="quick">
+    <ul id="quick_menu">
+       <li>
+           <a href="sub1.html"><img src="./img/quick_icon1.png" alt="돌봄찾기"><br><span class="quick_txt">돌봄찾기</span></a>
+       </li>
+       <li>
+            <a href="sub3.html"><img src="./img/quick_icon2.png" alt="사진2"><br><span class="quick_txt">돌보미찾기</span></a>
+       </li>
+       <li>
+            <a href="sub5.html"><img src="./img/quick_icon3.png" alt="사진3"><br><span class="quick_txt">관심돌봄</span></a>
+       </li>
+       <li>
+            <a href="sub6.html"><img src="./img/quick_icon4.png" alt="사진4"><br><span class="quick_txt">관심돌보미</span></a>
+       </li>
+       <li>
+            <a href="sub8.html"><img src="./img/quick_icon5.png" alt="사진5"><br><span class="quick_txt">공지사항</span></a>
+       </li>
+    </ul>
+    <div class="review_btn">
+    <div>
+        <a href="#" id="prevBtn"><img src="./img/prev.png" alt="이전 버튼"></a>
+    </div>
+    <div>
+        <a href="#" id="nextBtn"><img src="./img/next.png" alt="다음 버튼"></a>
+    </div>
+    </div>
+</div>
+</div>
+<div class="info">
+    <a href="guide.html"><img src="./img/info.jpg" alt="이용안내"></a>
+</div>
+<div class="review_page">
+    <h2 class="review_tit"><img src="./img/cat.png" alt="고양이" class="rv_img1">이용후기
+        <img src="./img/dog.png" alt="강아지" class="rv_img2">
+    </h2>
+    <ul class="review">
+        <li class="review1">
+                <div class="lineAni">
+                    <div class="lineFrame">
+                        <span class="line_top"></span>
+                        <span class="line_bottom"></span>
+                        <span class="line_left"></span>
+                        <span class="line_right"></span>
+                    </div><!--lineFrame-->
+                </div><!--lineAni-->    
+            <img src="http://placehold.it/200x150/333" alt="">
+            <p>대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다.</p>
+        </li>
+        <li class="review2">
+                <div class="lineAni">
+                    <div class="lineFrame">
+                        <span class="line_top"></span>
+                        <span class="line_bottom"></span>
+                        <span class="line_left"></span>
+                        <span class="line_right"></span>
+                    </div><!--lineFrame-->
+                </div><!--lineAni-->    
+            <img src="http://placehold.it/200x150/333" alt="">
+            <p>대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다.</p>
+        </li>
+        <li class="review3">
+                <div class="lineAni">
+                    <div class="lineFrame">
+                        <span class="line_top"></span>
+                        <span class="line_bottom"></span>
+                        <span class="line_left"></span>
+                        <span class="line_right"></span>
+                    </div><!--lineFrame-->
+                </div><!--lineAni-->    
+            <img src="http://placehold.it/200x150/333" alt="">
+            <p>정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+        </li>
+        <li class="review4">
+                <div class="lineAni">
+                    <div class="lineFrame">
+                        <span class="line_top"></span>
+                        <span class="line_bottom"></span>
+                        <span class="line_left"></span>
+                        <span class="line_right"></span>
+                    </div><!--lineFrame-->
+                </div><!--lineAni-->    
+            <img src="http://placehold.it/200x150/333" alt="">
+            <p>감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수 있다.</p>
+        </li>
+    </ul>
+    <div class="review_btn">
+        <div>
+            <a href="#" id="review_prev"><img src="./img/prev.png" alt="이전 버튼"></a>
+        </div>
+        <div>
+            <a href="#" id="review_next"><img src="./img/next.png" alt="다음 버튼"></a>
+        </div>
+        </div>
+</div>
+<div id="rv_pop">
+    <div class="rv_box">
+        <div class="img_review">
+            <img src="http://placehold.it/528x550/333" alt="상품8이미지">
+        </div>
+        <div class="txt_review">
+            <div class="rv_close"><i class="fas fa-times"></i></div>
+            <textarea class="rv_txt1"  readonly="readonly" rows="12" cols="66">
+            모든 국민은 인간다운 생활을 할 권리를 가진다. 체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+            모든 국민은 인간다운 생활을 할 권리를 가진다. 체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+            </textarea>
+            <div class="help_box">
+                이 리뷰에 대해 아직 도움이 된다고 <br> 평가한 사람이 없습니다.
+            </div>
+            <div class="rv_help">이 리뷰가 도움이 되었나요?
+                <div class="rv_btn">
+                <button class="rv_btn1">네</button>
+                <button class="rv_btn2">아니요</button>
+                </div>
+                <div class="rv_comment">
+                    <input type="text" class="rv_comment1" placeholder="댓글을 작성해주세요:)" required><button class="rv_cbtn">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="insta">
+    <div class="insta_box">
+        <p class="insta_tit"><img src="./img/insta.png" alt=""><span class="insta_txt">INSTAGRAM</span></p>
+        <p class="ex">인스타그램계정자리 <br>(계정의 최상의 8개를 가져와서 보여줌, 4개씩 2줄로 구성)</p>
+    </div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<!-- POPUP --> 
+<div id="pop">
+<div class="pop_box">
+    <a href=""><img src="./img/pop.png" alt=""></a>
+    <form name="notice_form" class="pop_txt"> 
+        <input type="checkbox" name="chkbox" value="checkbox"><span>오늘 하루 이 창을 열지 않음</span>
+        <div class="pop_btn">
+        <a href="javascript:closeWin();" class="pop_close"><i class="far fa-times-circle"></i>&nbsp;&nbsp;CLOSE</a>
+        </div>
+    </form> 
+</div>
+</div>
+<script> 
+    cookiedata = document.cookie;    
+    if ( cookiedata.indexOf("maindiv=done") < 0 ){      
+        document.all['pop'].style.visibility = "visible"; 
+        } 
+        else { 
+            document.all['pop'].style.visibility = "hidden"; 
+    } 
+    </script>
+</div>
+</body>
+</html>

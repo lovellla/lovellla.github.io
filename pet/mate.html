@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>케어메이트정보수정</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".join_btn").click(function(){
+            $("#home_pop").addClass("on");
+        });
+        // 출생년도 셀렉트박스
+        setDateBox();
+    });
+    // select box 연도 , 월 표시
+    function setDateBox(){
+        var dt = new Date();
+        var year = "";
+        var com_year = dt.getFullYear();
+        // 발행 뿌려주기
+        $("#year1").append("<option value=''>년도</option>");
+        // 올해 기준으로 -80년부터 +1년을 보여준다.
+        for(var y = (com_year-80); y <= (com_year+1); y++){
+        $("#year1").append("<option value='"+ y +"' "+(y==2000?'selected':'')+">"+ y + " 년" +"</option>");
+        }
+//  파일첨부
+    var fileTarget = $('.filebox .upload-hidden'); 
+    fileTarget.on('change', function(){ // 값이 변경되면 
+    if(window.FileReader){ // modern browser 
+    var filename = $(this)[0].files[0].name; 
+    } 
+    else { // old IE 
+    var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+    } // 추출한 파일명 삽입 
+    $(this).siblings('.upload-name').val(filename); 
+    });
+    // 프리뷰(썸네일)이미지
+    var imgTarget = $('.preview-image .upload-hidden');
+        imgTarget.on('change', function(){ 
+        var parent = $(this).parent(); 
+        parent.children('.upload-display').remove(); 
+    if(window.FileReader){ //image 파일만 
+        if (!$(this)[0].files[0].type.match(/image\//)) return; 
+            var reader = new FileReader();
+            reader.onload = function(e){ 
+            var src = e.target.result; 
+    } 
+        reader.readAsDataURL($(this)[0].files[0]);
+    } 
+        else { $(this)[0].select(); $(this)[0].blur(); 
+            var imgSrc = document.selection.createRange().text; 
+            var img = $(this).siblings('.upload-display').find('img'); 
+            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")"; 
+        }
+
+});
+var fileTarget1 = $('.filebox1 .upload-hidden1'); 
+fileTarget1.on('change', function(){ // 값이 변경되면 
+if(window.FileReader){ // modern browser 
+var filename1 = $(this)[0].files[0].name; } 
+else { // old IE 
+var filename1 = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+} // 추출한 파일명 삽입 
+$(this).siblings('.upload-name1').val(filename1); 
+});
+    };
+    </script>
+    
+</head>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <nav class="toggle">
+        <div class="mtog_btn"><i class="fas fa-bars"></i></div>
+        <div id="tog_gnb">
+                <div class="tog_close"><i class="fas fa-times"></i></div>
+        <ul class="tog_gnb">
+            <li class="menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a>홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>문의사항</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</header>
+<div class="login2_content">
+    <div class="login4_top">
+        <h1 class="log_tit"><img src="./img/cat1.png" alt="">&nbsp;회원가입</h1>
+        <p class="log_txt">케어메이트회원 상세사항을 입력해주세요.</p>
+</div>
+<div class="login2_mid">
+        <div class="login2_form">
+        <h3 class="login2_tit"><i class="fas fa-user"></i>&nbsp;&nbsp;케어메이트 인증 회원가입</h3>
+        <form name="registerform" method="post" class="login1_box">
+            <div class="login2_label">
+                <label for="ad_home2">주소를 선택해주세요</label>
+                <input type="text" name="ad_home2" id="ad_home2" size="30" required>
+                <input type="button" id="ad_btn2" value="검색">
+            </div>
+            <div class="login2_label">
+                <label for="ad_home2-1">상세주소</label>
+                <input type="text" name="ad_home2-1" id="ad_home2-1" size="60" placeholder="상세주소를 입력해주세요"  required>
+            </div>
+            <div class="login2_label">
+                <label for="nicname2">닉네임설정</label>
+                <input type="text" id="nicname2" name="nicname2" maxlength="10" placeholder="닉네임을 입력해주세요" required>
+                <input type="button" id="nic_btn2" value="중복확인">
+            </div>
+            <div class="login2_label">
+                <label for="gender2">성별</label>
+                <input type="radio" name="gender2" value="남" id="man2">&nbsp;남
+                <input type="radio" name="gender2" value="여" id="woman2">&nbsp;여 
+            </div>
+            <div class="login2_label">
+                <label for="year2">출생연도</label>
+                <select name="year2" id="year2" title="년도"></select>
+            </div>
+            <div class="login2_label">
+                <label for="care_pet">케어가 가능한 반려동물을 알려주세요</label>
+                <input type="text" name="care_pet" id="care_pet" size="60" maxlength="60" placeholder="ex)고양이, 강아지, 새, 고슴도치 등"  required>
+            </div>
+            <div class="login2_label">
+                <label for="care_kg">케어가 가능한 크기를 정보를 알려주세요</label>
+                <input type="radio" name="care_kg" value="15kg미만" id="kg_less">&nbsp;15kg미만
+                <input type="radio" name="care_kg" value="15kg이상" id="kg_plus">&nbsp;15kg이상
+            </div>
+            <div class="login2_label">
+                <label>케어 옵션을 선택해 주세요 <br>
+                *복수체크가능</label>
+            <div id="ck-button">
+                <label class="kg_box">
+                   <input type="checkbox" value="강아지"><span>노령견</span>
+                </label>
+                <label class="kg_box">
+                    <input type="checkbox" value="1"><span>성견</span>
+                 </label>
+                 <label class="kg_box">
+                    <input type="checkbox" value="1"><span>강아지</span>
+                 </label>
+                 <label class="kg_box">
+                    <input type="checkbox" value="1"><span>대형견</span>
+                 </label>
+                 <label class="kg_box">
+                    <input type="checkbox" value="1"><span>노령묘</span>
+                 </label>
+                 <label class="kg_box">
+                    <input type="checkbox" value="1"><span>고양이</span>
+                 </label>
+             </div>
+            </div>
+            <div class="login2_label">
+                <label for="home_sel">방문 케어 금액을 알려주세요</label>
+               <select id="home_sel"> 
+                   <option selected>선택</option>
+                   <option>10000원</option>
+                   <option>15000원</option>
+                   <option>20000원</option>
+                   <option>25000원</option>
+                   <option>30000원</option>
+                   <option>35000원</option>
+                   <option>40000원</option>
+                   <option>45000원</option>
+                   <option>50000원</option>
+                </select>
+                <span class="hsel_txt">※ 1회당</span>
+            </div>
+            <div class="login2_label">
+                <label for="walk_sel">산책 케어 금액을 알려주세요</label>
+               <select id="walk_sel"> 
+                   <option selected>선택</option>
+                   <option>10000원</option>
+                   <option>15000원</option>
+                   <option>20000원</option>
+                   <option>25000원</option>
+                   <option>30000원</option>
+                   <option>35000원</option>
+                   <option>40000원</option>
+                   <option>45000원</option>
+                   <option>50000원</option>
+                </select>
+                <span class="wsel_txt">※ 30분당</span>
+            </div>
+            <div class="login2_label self">
+                <label for="self_intro"><span>상세정보를 입력해주세요</span></label>
+                <textarea name="self_intro" id="self_intro" cols="40" rows="100" maxlength="700" placeholder="상세정보 입력칸입니다."></textarea>
+            </div>
+            <div class="login2_label file">
+                <label>본인확인용 자료를 업로드해주세요</label>
+                <div class="filebox preview-image">
+                    <input class="upload-name" value="파일선택" disabled="disabled">
+                    <label for="input_file"><span>업로드</span></label> 
+                    <input type="file" id="input_file" class="upload-hidden">
+                    <p>※본인얼굴과 신분증사진이 함께 나오는 사진을 첨부해주세요(셀카가능). 단순 확인용으로 인증 후 <span class="red">즉각 폐기</span>됩니다.</span></p>
+                  <p>1. 개인정보 보호를 위해 신분증의 생년(앞 두자리), 성별(뒤 한자리)를, 사진을 제외한 부분은 모두 가립니다.</p>
+                  <p>2. 불러다옹에서는 원칙적으로 이용자의 개인정보를 본인확인 목적으로만 확인 후 제3자에게 제공하거나 보유하지 않고 지체없이 파기하고 있습니다.</p>
+                  <div class="view_box">
+                    
+                </div>
+                </div>
+            </div>
+            <div class="login2_label1 file1">
+                <label style="vertical-align: top;">프로필사진을 업로드해주세요</label>
+                <div class="filebox1 preview-image1">
+                    <input class="upload-name1" value="파일선택" disabled="disabled">
+                    <label for="input_file1"><span>업로드</span></label> 
+                  <input type="file" id="input_file1" class="upload-hidden1">
+                  <p>※파일첨부는 최대 5개까지 가능합니다.</p>
+                  <div class="view_box">
+                    
+                </div>
+                </div>
+            </div>
+            
+            <!-- <div class="fieldlabel"><label for="profile">프로필사진</label></div>
+            <div class="formfield">
+                <input type="file" id="profile" name="profile" required>
+            </div> -->
+        </form>
+        <div class="login1_btn">
+            <input type="button" value="등록완료" class="login1_btn button" onclick="location.href='login3.html' ">
+        </div>
+    </div>
+</div>
+</form>
+</div>
+<div id="home_pop">
+    <div class="home_box">
+        <img src="./img/cat1.png" alt="">
+        <p class="home_txt">홈케어 2단계 인증가입을 진행하시겠습니까?</p>
+        <div class="home_btn">
+            <button class="home_btn1" onclick="location.href='login1.html' ">네</button>
+            <button class="home_btn2" onclick="location.href='login3.html' ">다음에</button>
+            </div>
+    </div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

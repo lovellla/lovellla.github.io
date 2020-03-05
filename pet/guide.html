@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이용안내</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+</head>
+<script>
+    // 게시판 전체체크여부 스크립트
+$( document ).ready( function() {
+    var Accordion = function(el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            var links = this.el.find('.guide_title');
+            links.on('click', {
+                    el: this.el,
+                    multiple: this.multiple
+            }, this.dropdown)
+    }
+
+    Accordion.prototype.dropdown = function(e) {
+            var $el = e.data.el;
+            $this = $(this),
+                    $next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                    $el.find('.guide_conts').not($next).slideUp().parent().removeClass('open');
+            };
+    }
+    var accordion = new Accordion($('.guide_list'), false);
+});
+</script>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+</header>
+<div class="guide_content">
+    <div class="guide_top">
+        <h1 class="guide_tit">이용안내</h1>
+
+</div>
+<div class="guide_mid">
+    <ul class="board_search">
+        <li><input type="text" title="검색어를 입력하세요" placeholder="검색어입력" class="notice_search">
+            <input type="submit" value="검색" class="notice_btn"></li>
+	</ul>
+    <div class="guide_list">
+        <ul>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                        [이용안내] 펫시터 비용은 어느정도가 적당한가요?
+                        <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            펫시터 비용은 정해진 금액이 없습니다. 의뢰자와 펫시터간에 상호협의하에 결정하시면 됩니다. <br>
+                            통상적으로 방문돌봄 1회 1시간 1만원~3만원선, 위탁돌봄 1박 3만원부터 형성되어 있습니다. <br>
+                            펫시터의 이동거리, 강아지가 특별한 경우(목욕, 노령견, 대형견 등)에는 비용이 추가 될수 있으며 기본적으로 비용은 상호협의하여 결정됩니다.
+
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 펫시터 신원검증을 어떻게 해야 할까요?
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            불러다옹은 펫시터와 의뢰자의 신뢰를 바탕으로 이루워집니다. <br>
+                            기본적으로 펫시터의 후기나 평점을 참고하시어 선택하시는게 좋고, 상호간에 돌봄 약속이 이루어진경우 펫시터분의 신분증이나, 주민등록등본등의 서류를 받고 <br>
+                            간단하게나마 계약서 또는 약정서를 작성하는것이 좋습니다.
+                            표준계약서양식은 이용안내에 올려져 있습니다.
+
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 펫시터 의뢰 표준계약서 양식
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            펫시터 의뢰 계약은 마이페이지에서 온라인 계약(전자 계약)이 가능합니다. 가능하면 불러다옹의 온라인 계약을 이용하시기 바랍니다. <br>
+                            첨부된 파일은 부득이 오프라인 계약을 해야할 경우 활용가능한 펫시터 의뢰 표준계약서 양식입니다. <br>
+                            아래 파일명 클릭하시면 다운로드하여 사용하실수 있습니다. <br>
+                        <a class="contract" href="상대경로/test.pdf" download>[계약서 양식 다운로드]</a>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 펫시터 활동시 회사에 내는 수수료가 있나요?
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            불러다옹은 사이트 이용에 따른 소정의 수수료가 부과됩니다.
+                            수수료에 대한 부분은 추후 업데이트 될 예정입니다.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 급한데 펫시터가 확인 안하면 어쩌나요?
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            펫시터 의뢰가 접수되면 해당 펫시터에게 문자로 의뢰 접수 사실이 실시간으로 발송됩니다.<br>
+                            급하게 찾으시는분들도 걱정 안하셔도 됩니다. 다만 시간적 여유를 가지고 펫시터를 구하시는것이 좋습니다.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 펫시터란 어떤일을 하는 사람인가요?
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            펫시터는 반려동물을 대신 맡아서 돌봐주는 사람을 말합니다.<br>
+                            여행이나 출장, 명절등 사유가 있어 반려동물을 일정기간 돌봐줄 사람이 필요할때 펫시터에게 의뢰하게되며, 펫시터는 소정의 비용을 받고 돌봐주게됩니다. <br>
+                            펫시터 활동은 기본적으로, 사료급식, 배변처리, 산책, 놀아주기 등이 있으며, 추가로 목욕시키기, 미용맡기기 등등은 협의하여 진행됩니다.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="guide_open">
+                <p class="guide_title">
+                    <span><i class="fas fa-paw"></i></span>
+                    [이용안내] 펫시터 교육을 받아야 펫시터가 가능하나요?
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+                <ul class="guide_conts">
+                    <li>
+                        <p class="guide_answer">
+                            펫시터 교육을 반드시 받아야할 필요는 없습니다.<br>
+                            하지만, 처음 펫시터를 하시는 분이거나, 반려동물을 길러본 경험이 없으신분들은 필히 펫시터 교육을 받으실것을 권해드립니다. <br>
+                            펫시터를 하면서 발생할수 있는 여러 상황에 대한 대처, 반려동물에 대한 기본적인 지식을 알고 펫시터를 하시는것과 모른 상태에서 하는것은 차이가 있을수 밖에 없습니다. <br>
+                            페티안에서는 펫시터교육을 진행하고 있으므로 페티안에서 진행하는 펫시터 교육을 받으시는것을 추천드립니다. 감사합니다.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

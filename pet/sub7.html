@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이용후기</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $(".review_box").click(function(){
+        $("#review_pop").addClass("on");
+    });
+        $("#review_pop .review_close").click(function(){
+        $("#review_pop").removeClass("on");
+    });
+    $(".rv_cbtn").click(function(){
+    if($.trim($(".rv_comment1").val())==''){
+      alert("입력해주세요.");
+      return false;
+    } 
+    $("").submit();
+  });
+    });
+</script>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="content_top">
+        <h1 class="sub1_tit"><img src="./img/cat.png" alt="">&nbsp;이용후기</h1>
+<div class="date_total">
+    <form action="" class="search">
+        <input type="text" id="keyword" class="search_form" placeholder="검색어입력">
+        <input type="submit" value="검색" class="search_btn">
+</form>
+</div>
+</div>
+<div class="content_mid sub7">
+        <ul class="review_thum">
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품1이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품2이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품3이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품4이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품5이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품6이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품7이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품8이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품8이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품8이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+            <li class="review_box">
+                <img src="http://placehold.it/200x150/333" alt="상품8이미지">
+                <h4 class="review1_tit">제목:이용후기</h4>
+                <p class="review1_txt">이용후기에 대한 본문내용이 들어갈 자리입니다.</p>
+            </li>
+        </ul>
+</div>
+<div id="review_pop">
+    <div class="rv_box">
+        <div class="img_review">
+            <img src="./img/mainbanner2.png" alt="이미지자리">
+        </div>
+        <div class="txt_review">
+            <div class="review_close"><i class="fas fa-times"></i></div>
+            <textarea class="rv_txt1"  readonly="readonly" rows="12" cols="66">
+모든 국민은 인간다운 생활을 할 권리를 가진다. 체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+모든 국민은 인간다운 생활을 할 권리를 가진다. 체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+            </textarea>
+            <div class="help_box">
+                이 리뷰에 대해 아직 도움이 된다고 <br> 평가한 사람이 없습니다.
+            </div>
+            <div class="rv_help">이 리뷰가 도움이 되었나요?
+                <div class="rv_btn">
+                <button class="rv_btn1">네</button>
+                <button class="rv_btn2">아니요</button>
+                </div>
+                <div class="rv_comment">
+                    <input type="text" class="rv_comment1" placeholder="댓글을 작성해주세요:)" required><button class="rv_cbtn">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

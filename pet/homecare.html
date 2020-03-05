@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>홈케어정보</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/datepicker.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        var currentDate = new Date();/*오늘날짜 가지고 오는거*/ /*월은 하나 적게 가져와서 +1로 해야함*/
+        var startdate = currentDate.getFullYear()/*년도*/ + "-01-01";
+        var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1)/*월*/ + "-" + currentDate.getDate();
+        $(".calendar1,.calendar2,.calendar3,.calendar4").each(function(index, item){
+        $(item).val(calendar);
+        });
+        /*val 은 폼에서 사용하는 인풋등이 들어간다*/
+        $(".sDt").val(startdate);
+        $(".eDt").val(calendar);
+        $(function(){
+	$(".calendar1").datepicker({
+		trigger : '.date_btn1',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+    $(".calendar2").datepicker({
+		trigger : '.date_btn2',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+    $(".calendar3").datepicker({
+		trigger : '.date_btn3',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+	});
+    $(".calendar4").datepicker({
+		trigger : '.date_btn4',    	
+		days : ['일요일','월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+		daysMin : ['일','월', '화', '수', '목', '금', '토'], 
+		months :['1월','2월','3월','4월','5월','6월','7','8월','9월','10월','11월','12월'],
+		monthsShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		mode : 'range',
+		language: "ko-kr",
+		format: 'yyyy.MM.dd',
+		yearFirst : true,
+		yearRange : "-1:+1",
+		autoHide: true
+    });
+  });
+  $(".homecare_fa3").click(function(){
+        $("#home_report").addClass("on");
+    });
+        $("#home_report .report_cancel, #home_report .report_ok").click(function(){
+        $("#home_report").removeClass("on");
+    });
+    $(".homecare_fa1").click(function(){
+        $(".just_pop").addClass("on");
+    });
+        $(".just_btn").click(function(){
+        $(".just_pop").removeClass("on");
+    });
+    });
+</script>
+<body>
+<div class="wrap">
+    <header class="sub_hd">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <ul class="sub_top">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="sub5.html">관심홈케어</a></li>
+                <li><a href="sub6.html">관심케어메이트</a></li>
+                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                    <ul class="my_pop">
+                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                        <li class="my_popline"></li>
+                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                        <li  class="my_out"><a href="">로그아웃</a></li>
+                    </ul>
+                </li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
+    <nav id="sub_gnb">
+        <ul class="sub_gnb">
+            <li class="sub_menu short">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a href="sub1.html">홈케어찾기</a>
+                <!-- <ul class="sub first">
+                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="s_sub"><a href="sub2.html">CI</a></li>
+                </ul> -->
+            </li>
+            <li class="sub_menu long">
+                <a href="sub3.html">케어메이트찾기</a>
+                <!-- <ul class="sub two">
+                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                </ul> -->
+            </li>
+            <!-- 로그인 시에만 이용가능메뉴 -->
+            <li class="sub_menu long1">
+                <a href="mypage.html">홈케어.메이트 등록</a>
+                <ul class="sub three">
+                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="sub_toggle">
+        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
+        <div id="sub_tog_gnb">
+                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
+        <ul class="sub_tog_gnb">
+            <li class="sub_menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sub_menu">
+                <a>회사소개</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
+                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>사업영역</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>문의사항</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
+                </ul>
+            </li>
+            <li class="sub_menu">
+                <a>오시는길</a>
+                <ul class="sub_hide_sub">
+                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+    </div>
+    </nav>
+    <!-- 전체메뉴바 -->
+    <div class="tog_btn"><i class="fas fa-bars"></i></div>
+    <nav class="main_toggle">
+        <div class="main_tog">
+        <div id="main_tog_gnb">
+            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+        <ul class="main_tog_gnb">
+            <li class="main_menu">
+                <a class="main_menu1" href="index.html">Home</a>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">관심홈케어</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1 long">관심케어메이트</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">FAQ</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="main_menu">
+                <a class="main_menu1">Q&A</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+            <!-- <li class="main_menu">
+                <a class="main_menu1">위치확인</a>
+                <ul class="main_hide_sub">
+                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    </div>
+    </nav>
+</header>
+<div class="home_content">
+    <div class="home_content_top">
+        <h1 class="sub1_tit"><img src="./img/cat.png" alt="">&nbsp;홈케어</h1>
+<div class="date_total">
+    <div class="date">
+        <div class="date_box first">
+            <input type="text" class="calendar1">
+            <button class="date_btn1"><i class="fas fa-calendar-alt"></i></button>
+        </div>
+        <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+        <div class="date_box two">
+            <input type="text" class="calendar2">
+            <button class="date_btn2"><i class="fas fa-calendar-alt"></i></button>
+    </div>
+    </div>
+    <div class="select_box">
+       <select name="" id="select_sub1">
+           <option value="">요청구분</option>
+           <option value=""></option>
+       </select>
+    </div>
+    <form class="search">
+        <input type="text" title="검색어를 입력하세요" placeholder="검색어입력" class="search_form">
+        <input type="submit" value="검색" class="search_btn">
+</form>
+</div>
+</div>
+<div class="home_content_mid">
+    <div class="home_content_box">
+        <p class="homecare_tit"><i class="fas fa-paw"></i>&nbsp;행복한 구름이네</pp>
+        <ul class="home_img">
+            <li><img src="http://placehold.it/200x150/333" alt=""></li>
+            <li><img src="http://placehold.it/200x150/333" alt=""></li>
+            <li><img src="http://placehold.it/200x150/333" alt=""></li>
+            <li><img src="http://placehold.it/200x150/333" alt=""></li>
+            <li><img src="http://placehold.it/200x150/333" alt=""></li>
+        </ul>
+        <div class="homecare_box">
+            <p class="homecare_ad">주소</p>
+            <div class="homecare_ad1">
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div id="daumRoughmapContainer1582680058130" class="root_daum_roughmap root_daum_roughmap_landing" ></div>
+            <!-- 2. 설치 스크립트
+                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1582680058130",
+                    "key" : "x8iy",
+                    "mapWidth" : "660",
+                    "mapHeight" : "360"
+                }).render();
+            </script>
+            </div>
+            <div class="care_left">
+                <div class="homecare_label">
+                    <label for="caretype"><i class="fas fa-paw"></i> 케어형태</label>
+                    <div class="caretype">
+                        <input type="checkbox" name="caretype" value="방문케어" id="caretype1"><sepan>&nbsp;방문케어</span>
+                        <input type="checkbox" name="caretype" value="산책케어" id="caretype2"><span>&nbsp;산책케어</span>
+                    </div>
+                </div>
+            <div class="homecare_label">
+                <label for="caretype"><i class="fas fa-paw"></i> 케어기간</label>
+                <div class="care_date">
+                <div class="care_date_box first">
+                    <input type="text" class="calendar3">
+                    <button class="date_btn3"><i class="fas fa-calendar-alt"></i></button>
+                </div>
+                <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+                <div class="care_date_box two">
+                    <input type="text" class="calendar4">
+                    <button class="date_btn4"><i class="fas fa-calendar-alt"></i></button>
+            </div>
+                <div class="homecare_time">
+                    <select name="time" id="homecare_time1">
+                        <option value="">선택</option>
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <!-- <input type="radio" name="gender2" value="am" id="mate_am">&nbsp;AM
+                    <input type="radio" name="gender2" value="pm" id="mate_pm">&nbsp;PM  -->
+                    <select name="time" id="homecare_time2">
+                        <option value="">시작</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="homecare_time3">
+                        <option value="">시간</option>
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                    <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+                    <select name="time" id="homecare_time4">
+                        <option value="">선택</option>
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <select name="time" id="homecare_time5">
+                        <option value="">종료</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="homecare_time6">
+                        <option value="">시간</option>
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="homecare_fa1"><span>홈케어지원</span></button>
+        <button class="homecare_fa2"><span>관심</span></button>
+        <button class="homecare_fa3"><span>신고</span></button>
+    </div>
+        <div class="care_right">
+            <p class="care_price"><i class="fas fa-paw"></i> 금액&nbsp;:&nbsp;50000원(1회당)</p>
+            <p class="care_price"><i class="fas fa-paw"></i> 케어반려동물&nbsp;:&nbsp;강아지</p>
+        </div>
+    </div>
+        <div class="care_info">
+            <p class="care_info_tit"><i class="fas fa-paw"></i> 상세정보</p>
+            <ul class="home_img">
+                <li><img src="http://placehold.it/200x150/333" alt=""></li>
+                <li><img src="http://placehold.it/200x150/333" alt=""></li>
+                <li><img src="http://placehold.it/200x150/333" alt=""></li>
+                <li><img src="http://placehold.it/200x150/333" alt=""></li>
+                <li><img src="http://placehold.it/200x150/333" alt=""></li>
+            </ul>
+            <p class="care_info_txt">여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다. 국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. 대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다. 국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 위원은 정당에 가입하거나 정치에 관여할 수 없다.
+
+                군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다. 헌법재판소는 법률에 저촉되지 아니하는 범위안에서 심판에 관한 절차, 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</p>
+        </div>
+        
+    </div>
+    <div class="care_btn">
+        <input type="button" value="목록" class="care_btn button" onclick="location.href='sub1.html' ">
+    </div>
+</div>
+
+<div id="home_report">
+    <div class="report_box">
+        <h3 class="report_tit"><img src="./img/siren.png" alt=""> 신고하기</h3>
+        <div class="report_label">
+            <label for="report_cont"><i class="fas fa-paw"></i> 신고내용</label>
+            <input type="radio" name="report_cont" value="거짓정보" id="report_cont1">&nbsp;거짓정보
+            <input type="radio" name="report_cont" value="계약사항 틀림" id="report_cont2">&nbsp;계약사항 틀림 
+            <input type="radio" name="report_cont" value="기타" id="report_cont3">&nbsp;기타
+        </div>
+        <div class="report_label file">
+            <label><i class="fas fa-paw"></i> 사진을 업로드해주세요</label>
+            <div>
+                <input class="report_img" value="파일선택" disabled="disabled">
+                <input type="file" class="report_upload">
+                <p class="report_p">※파일첨부는 최대 5개까지 가능합니다.</p>
+                <div class="pop_view">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="report_label">
+            <label for="url_txt"><i class="fas fa-paw"></i> URL입력</label>
+            <input type="text" id="url_txt" name="url_txt" placeholder="해당 페이지의 URL을 입력하세요">
+        </div>
+            <p class="report_area"><i class="fas fa-paw"></i> <span>내용입력</span></p>
+            <textarea class="report_area1" rows="12" cols="66" placeholder="내용을 입력해주세요"></textarea>
+            <div class="report_popbtn">
+                <button class="report_cancel">취소</button>
+                <button class="report_ok" onclick="location.href='reportlist.html' ">입력</button>
+            </div>
+        </div>
+    </div>
+<footer class="bottom">
+<div class="family_box">
+    <ul class="family_site">
+        <li class="family_ban1"><a href="http://www.f-m.co.kr/" target="new"><img src="./img/banner1.png"  alt="파인드미홈페이지" ></a></li>
+        <li class="family_ban2"><a href="" target="new"><img src="./img/banner2.png" alt="불러다옹쇼핑몰"></li>
+        <li class="family_ban3"><a href="" target="new"><img src="./img/banner3.png" alt="파인드미인스타그램"></li>
+        <li class="family_ban4"><a href="" target="new"><img src="./img/banner4.png" alt="파인드미블로그"></li>
+        <li class="family_ban5"><a href="http://www.l-k.kr/" target="new"><img src="./img/banner5.png" alt="엘케이홈페이지"></li>
+    </ul>
+</div>
+<div class="foot_menu">
+    <ul class="ft_menu">
+        <li class="ft_menu1"><a href="sub8.html">공지사항</a></li>
+        <li class="ft_menu2"><a href="guide.html">이용안내</a></li>
+        <li class="ft_menu3"><a href="terms.html">이용약관</a></li>
+        <li class="ft_menu4"><a href="privacypolicy.html">개인정보취급방침</a></li>
+        <li class="ft_menu5"><a href="safety.html">안전보상제도</a></li>
+        <li class="ft_menu6"><a href="partner.html">제휴문의</a></li>
+        <li class="ft_menu7"><a href="mypage.html">마이페이지</a></li>
+    </ul>
+</div>
+<div class="foot">
+ <div class="footer">
+        <a href="" class="ft_logo"><img src="./img/logo1.png" alt="로고"></a>
+        <div class="ft_content">
+        <h4>CONTACT US</h4>
+        <div class="ft_line"></div>
+        <div class="add_left">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="add_right">
+        <h5>FIND US</h5>
+        <h6>(주)파인드미</h6>
+            <div class="address">대전광역시 서구 대덕대로 325 <br> 
+            스타게이트 7층 38호</div>
+            </div>
+        </div>
+        <div class="ft_copyright">
+        <h4>Copyright<span> © 2019 FindMe Co.,Inc. ALL RIGHTS RESERVED</span></h4>
+        <div class="ft_line"></div>
+        <div class="copyright1">
+        근무시간 <br>
+        월-금 : 09:00-18:00 <br>
+        점심시간 : 12:00-13:30 <br>
+        토/일/공휴일 휴무
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+</div>
+<div class="just_pop">
+    <div class="just_box">
+        <div class="just_cont">
+            <div class="just_tit"><img src="./img/cat.png"><span>홈케어 지원</span><img src="./img/cat.png"></div>
+            <div class="just_num">안심번호를 확인해주세요
+            </div>
+            <div></div>
+            <div class="just_label">
+                <label>조정할 시간을 선택해주세요</label>
+                <div class="sel_time">
+                    <select name="time" id="sel_time1">
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <select name="time" id="sel_time2">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="sel_time3">
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                    <div class="wave">&nbsp;&nbsp;~&nbsp;&nbsp; </div>
+                    <select name="time" id="sel_time1">
+                        <option value="">AM</option>
+                        <option value="">PM</option>
+                    </select>
+                    <select name="time" id="sel_time2">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select name="time" id="sel_time3">
+                        <option value="">00</option>
+                        <option value="">05</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                        <option value="">20</option>
+                        <option value="">25</option>
+                        <option value="">30</option>
+                        <option value="">35</option>
+                        <option value="">40</option>
+                        <option value="">45</option>
+                        <option value="">50</option>
+                        <option value="">55</option>
+                    </select>
+                </div>
+            </div>
+            <div class="just_label">
+                <label for="home_sel">금액을 설정해주세요</label>
+            <select id="home_sel"> 
+                <option selected>선택</option>
+                <option>10000원</option>
+                <option>15000원</option>
+                <option>20000원</option>
+                <option>25000원</option>
+                <option>30000원</option>
+                <option>35000원</option>
+                <option>40000원</option>
+                <option>45000원</option>
+                <option>50000원</option>
+                <option>선택안함</option>
+                </select>
+                <span class="hsel_txt">※ 방문 1회당</span>
+            </div>
+            <div class="just_label">
+                <label for="walk_sel">산책 케어 금액을 알려주세요</label>
+            <select id="walk_sel"> 
+                <option selected>선택</option>
+                <option>10000원</option>
+                <option>15000원</option>
+                <option>20000원</option>
+                <option>25000원</option>
+                <option>30000원</option>
+                <option>35000원</option>
+                <option>40000원</option>
+                <option>45000원</option>
+                <option>50000원</option>
+                <option>선택안함</option>
+                </select>
+                <span class="wsel_txt">※ 30분당</span>
+            </div>
+            <div class="just_label self">
+                <label for="control_intro"><span>상세조건을 입력해주세요</span></label>
+                <textarea name="control_intro" id="control_intro" cols="40" rows="100" maxlength="700" placeholder="상세조건 입력칸입니다."></textarea>
+            </div>
+            <div class="just_btn">
+                <input type="button" value="지원하기" class="just_btn button">
+            </div>
+    </div>
+</body>
+</html>
