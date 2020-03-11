@@ -2756,7 +2756,7 @@ hr,legend,caption{font-size:0;height:0px}
     .login1-1_mid{width:100%;}
     .login1-1_label{display: block; width: 100%;}
     #ad_home1-1{width: 75%; margin-top: 10px;}
-    #sel_time1, #sel_time2, #sel_time3, #sel_time4, #sel_time5, #sel_time6{width: 35px; font-size: 0.7em; text-indent: 0;}
+    #sel_time1, #sel_time2, #sel_time3, #sel_time4, #sel_time5, #sel_time6{width: 43px; font-size: 0.7em; text-indent: 0;}
     #sel_time4{margin-top: 5px;}
     .login1_form{width: 90%;}
     #home_sel,#walk_sel{margin-top: 10px; float: left;}
@@ -2918,13 +2918,13 @@ hr,legend,caption{font-size:0;height:0px}
     .mypost_box{width: 100%;}
     .mypost_top{margin-bottom: 0;}
     .mypost_tit{font-size: 1.5em;}
-    .mypost_mid{width: 90%; position: relative;}
+    .mypost_mid{width: 100%; position: relative;}
     .mypost_navi{width: 100%; text-align: center; margin-top: 30px; clear: both;}
     .mate_just{margin-top: 0;}
     .list_modify, .list_end, .list_delete{height: 20px;}
     .mymate_read{position: absolute; right: 30px; bottom: 40px; margin-top: 0;}
     .mymate_read div{width: 35px; height: 25px;}
-    .just_box{width: 80%; margin: 3rem auto;}
+    .just_box{width: 90%; margin: 3rem auto;}
     .just_cont{width: 90%;} 
     .just_tit{padding-top: 2rem;}
     .just_close{top: 10px; right: 10px;}
