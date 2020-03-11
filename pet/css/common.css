@@ -2198,7 +2198,9 @@ hr,legend,caption{font-size:0;height:0px}
 .review li img{width: 50%;}
 #review_next{right: -20px;}
 #review_prev{left: -20px;}
-.rv_box{width: 70%;}
+.rv_box{width: 70%; height: 580px;}
+.rv_close{top: -10px; font-size: 1.8em;}
+.img_review img{width: 60%;}
 .info{height: auto;}
 .p_info{display: none;}
 .menu{margin-top: 25px;}
@@ -2519,7 +2521,6 @@ hr,legend,caption{font-size:0;height:0px}
 .content_top{width: 70%;}
 .calendar1,.calendar2{width: 80px; text-indent: 5px;}
 .search{width: 145px;}
-.search_form{width: 107.5px;}
 .content_mid{width: 70%; padding: 10px 10px 50px; margin-top: 80px;}
 .sit_tit{font-size: 1.4em; line-height: 40px;}
 .sit_txt, .sit_money, .sit_address, .sit_score{font-size: 1.0em;}
@@ -3001,6 +3002,8 @@ hr,legend,caption{font-size:0;height:0px}
     #homecare_time4{margin-top: 5px;}
     #homecare_time1,#homecare_time2,#homecare_time3,#homecare_time4,#homecare_time5,#homecare_time6{font-size: 0.9em; height: 25px;}
     .board_search li{margin: 0;}
+    .rv_close{top: -10px; font-size: 1.8em;}
+    .img_review img{width: 60%;}
     
     /* 서브 */
     .content{margin-top: 7rem;}
