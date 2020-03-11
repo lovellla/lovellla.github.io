@@ -1132,7 +1132,7 @@ hr,legend,caption{font-size:0;height:0px}
 .select_box{display: inline; margin-right: 10px;}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
-.search{display: inline-block; border:1px solid #ccc; height: 32px; box-sizing: border-box;}
+
 .search_form{width:150px; text-indent: 10px;}
 .search_btn{width: 32px; height:31px; background-color: #333; background-image:url("../img/search_btn.png"); background-position:center center; background-repeat:no-repeat; text-indent:-9999px;}
 
@@ -1167,7 +1167,7 @@ hr,legend,caption{font-size:0;height:0px}
 .select_box{display: inline; margin-right: 10px;}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
-.search{display: inline-block; border:1px solid #ccc; height: 32px; box-sizing: border-box;}
+.search{display: inline-block; height: 32px; box-sizing: border-box;}
 .search_form{width:150px; text-indent: 10px;}
 .search_btn{width: 32px; height:31px; background-color: #333; background-image:url("../img/search_btn.png"); background-position:center center; background-repeat:no-repeat; text-indent:-9999px;}
 .home_content_mid{width: 60%; position: relative; margin:0 auto 50px; border: 1px solid #e0e0e0; padding: 20px 50px 50px; box-sizing: border-box;}
@@ -1252,9 +1252,6 @@ hr,legend,caption{font-size:0;height:0px}
 .select_box{display: inline; margin-right: 10px;}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
-.search{display: inline-block; border:1px solid #ccc; height: 32px; box-sizing: border-box;}
-.search_form{width:150px; text-indent: 10px;}
-.search_btn{width: 32px; height:31px; background-color: #333; background-image:url("../img/search_btn.png"); background-position:center center; background-repeat:no-repeat; text-indent:-9999px;}
 .home_content_mid{width: 60%; position: relative; margin:0 auto 50px; border: 1px solid #e0e0e0; padding: 20px 50px 50px; box-sizing: border-box;}
 
 .homecare_tit{line-height: 50px; text-indent: 5px; font-size: 1.5em;}
