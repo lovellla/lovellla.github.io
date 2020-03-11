@@ -2619,7 +2619,7 @@ hr,legend,caption{font-size:0;height:0px}
     .inner1{display: none;}
     .tnb{display: none;}
     .m_tnb{background-color: #fff; width: 100%; height: 40px; margin-top:70px; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
-    .m_tnb li{display: inline-block; width: 32.6%; text-align: center; line-height: 40px; border-right: 1px solid #ccc;}
+    .m_tnb li{display: inline-block; width: 32%; text-align: center; line-height: 40px; border-right: 1px solid #ccc;}
     .m_tnb li:last-child{border-right: 0;}
     .m_tnb li a{ font-size: 1.0em; color:#000;}
     .main_tog_btn{display: none;}
@@ -2641,8 +2641,7 @@ hr,legend,caption{font-size:0;height:0px}
     .tog_gnb a{color:#333; font-size: 0.7em; line-height: 25px;}
     .m_sub{font-size: 0.8em; line-height: 30px;}
     .hide_sub{display: none; height: auto; margin-top: 10px; z-index: 1001;}
-    .tog_img{margin-top: 80px;}
-    .tog_img img{width: 100vw; height: auto;}
+    .tog_img{display: none;}
     .family_sel1{position:absolute; left:50%; transform:translateX(-50%);}
     .sel_tit{text-align: center; margin-top: 30px;}
     #family_sel2{width: 200px; height: 50px; border-radius: 5px; margin-top: 10px; font-size: 1.2em;}
@@ -3006,11 +3005,11 @@ hr,legend,caption{font-size:0;height:0px}
     
     /* 서브 */
     .content{margin-top: 7rem;}
-    .content_top{width: 70%; margin-top: 10px;}
+    .content_top{width: 80%; margin-top: 10px;}
     .calendar1,.calendar2{width: 80px; text-indent: 5px;}
     .search{width: 145px;}
     .search_form{width: 107.5px;}
-    .content_mid{width: 70%; padding: 10px 10px 10px; margin-top: 80px;}
+    .content_mid{width: 80%; padding: 10px 10px 10px; margin-top: 80px;}
     .sit_tit{font-size: 1.4em; line-height: 40px;}
     .sit_txt, .sit_money, .sit_address, .sit_score{font-size: 1.0em;}
     .sub1_tit{font-size: 1.5em; display: inline-block; margin-top: 5px;}
@@ -3018,8 +3017,8 @@ hr,legend,caption{font-size:0;height:0px}
     .review_mid{width:90%;}
     .date_total{margin-top: 5px;}
     .date{margin-right: 0;}
-    .favorite1{right: 60px; top: 160px; font-size: 0.8em;}
-    .favorite2{right: 10px; top: 160px; font-size: 0.8em;}
+    .favorite1{right: 60px; top: 180px; font-size: 0.8em;}
+    .favorite2{right: 10px; top: 180px; font-size: 0.8em;}
     .sit_list img{display: block; width: 80%; margin: 0 auto;}
     .content_mid.sub7{padding: 10px 0; margin-top: 10px;}
     .sit_list{margin-top: 10px;}
