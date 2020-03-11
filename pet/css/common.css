@@ -1134,8 +1134,7 @@ hr,legend,caption{font-size:0;height:0px}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
 
-.search_form{width:150px; text-indent: 10px;}
-.search_btn{width: 32px; height:31px; background-color: #333; background-image:url("../img/search_btn.png"); background-position:center center; background-repeat:no-repeat; text-indent:-9999px;}
+.search_form{width:120px; height: 29px; color:#808080;border:solid 1px #ccc; text-indent: 10px;}
 
 .content_mid{width: 60%; margin:0 auto 50px; border: 1px solid #e0e0e0; padding: 20px 50px 50px; box-sizing: border-box;}
 .sit_list{position: relative; width: 100%; border-bottom: 1px solid #ccc; margin-top: 40px; cursor: pointer;}
@@ -1168,9 +1167,9 @@ hr,legend,caption{font-size:0;height:0px}
 .select_box{display: inline; margin-right: 10px;}
 #select_sub1{width: 100px; height: 32px; border:1px solid #ccc; text-indent: 5px;}
 
-.search{display: inline-block; height: 32px; box-sizing: border-box;}
-.search_form{width:150px; text-indent: 10px;}
-.search_btn{width: 32px; height:31px; background-color: #333; background-image:url("../img/search_btn.png"); background-position:center center; background-repeat:no-repeat; text-indent:-9999px;}
+.sub_search{display: inline-block; height: 32px; box-sizing: border-box;}
+
+
 .home_content_mid{width: 60%; position: relative; margin:0 auto 50px; border: 1px solid #e0e0e0; padding: 20px 50px 50px; box-sizing: border-box;}
 
 .homecare_tit{line-height: 50px; text-indent: 5px; font-size: 1.5em;}
@@ -3007,7 +3006,7 @@ hr,legend,caption{font-size:0;height:0px}
     .content_top{width: 80%; margin-top: 10px;}
     .calendar1,.calendar2{width: 80px; text-indent: 5px;}
     .search{width: 118px; margin-top: 5px;}
-    .search_form{width: 80px;}
+    .search_form{width: 90px;}
     .content_mid{width: 80%; padding: 10px 10px 10px; margin-top: 80px;}
     .sit_tit{font-size: 1.4em; line-height: 40px;}
     .sit_txt, .sit_money, .sit_address, .sit_score{font-size: 1.0em;}
@@ -3050,7 +3049,7 @@ hr,legend,caption{font-size:0;height:0px}
     .home_img li{width: 18%;}
     .home_img img{width: 100%;}
     .terms_tit{font-size: 1.5em;}
-    .search_btn{width: 32.3px;}
+    .search_btn{height: 30px;width:40px;font-size:12px;color:#fff;border:1px solid #333;background:#333;cursor:pointer}
     .terms_content{margin-top: 8rem;}
     .terms_top{width: 70%; margin-top: 10px; margin-bottom: 5px;}
     .terms_mid{width: 70%; padding: 10px;}
