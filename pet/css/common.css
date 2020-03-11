@@ -3007,8 +3007,8 @@ hr,legend,caption{font-size:0;height:0px}
     .content{margin-top: 7rem;}
     .content_top{width: 80%; margin-top: 10px;}
     .calendar1,.calendar2{width: 80px; text-indent: 5px;}
-    .search{width: 145px;}
-    .search_form{width: 107.5px;}
+    .search{width: 118px; margin-top: 5px;}
+    .search_form{width: 80px;}
     .content_mid{width: 80%; padding: 10px 10px 10px; margin-top: 80px;}
     .sit_tit{font-size: 1.4em; line-height: 40px;}
     .sit_txt, .sit_money, .sit_address, .sit_score{font-size: 1.0em;}
