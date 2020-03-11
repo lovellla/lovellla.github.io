@@ -870,6 +870,7 @@ input.upload_text {/*읽기전용 인풋텍스트*/
 .my_img{display: inline-block; width: 100px; height: 100px; margin-top: 20px; margin-left: 30px;text-align: center;}
 .my_name{font-size: 1.2em;}
 .my_name i{color:#ff7200;}
+.my_number{color:#000;}
 .my_box{display: inline-block; vertical-align: top; margin-top: 30px; margin-left: 20px;}
 .my_info li{line-height: 25px;}
 .my_more{position: absolute; top: 10px; right: 15px; cursor: pointer;}
