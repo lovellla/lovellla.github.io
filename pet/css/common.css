@@ -2955,7 +2955,8 @@ hr,legend,caption{font-size:0;height:0px}
     .request_navi a{font-size: 0.8em; margin: 0;}
     .report_content{margin-top: 7rem;}
     .report_btn1 span{margin-top: 2px; font-size: 0.8em;}
-    .report_box{width: 90%;}
+    .report_box{width: 90%; height: 400px; overflow: scroll;}
+    .report_popbtn{margin-bottom: 20px;}
     .report_label{margin-left: 15px;}
     .report_area1{width: 90%; height: 150px; margin: 10px auto;}
     .report_area{text-indent: 8px;}
