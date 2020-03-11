@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>회원정보 변경</title>
+    <title>불러다옹</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -86,151 +86,128 @@ $(this).siblings('.upload-name1').val(filename1);
             <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
         </div>
         <div class="sub_tnb">
-            <ul class="sub_top">
-                <li><a href="login.html">로그인</a></li>
-                <!-- <li><a href="">로그아웃</a></li> -->
-                <li><a href="sub5.html">관심홈케어</a></li>
-                <li><a href="sub6.html">관심케어메이트</a></li>
-                <li class="gnb_my"><a href="mypage.html">마이페이지</a>
-                    <ul class="my_pop">
-                        <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
-                        <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
-                        <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
-                        <li class="my_popline"></li>
-                        <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
-                        <li  class="my_out"><a href="">로그아웃</a></li>
+            <div class="inner">
+                <ul class="sub_top">
+                    <li><a href="login.html">로그인</a></li>
+                    <!-- <li><a href="">로그아웃</a></li> -->
+                    <li><a href="sub5.html">관심홈케어</a></li>
+                    <li><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="gnb_my"><a href="mypage.html">마이페이지</a>
+                        <ul class="my_pop">
+                            <li>안녕하세요, <span class="my_bold">이지은</span> 님&nbsp;<i class="fas fa-smile"></i></li>
+                            <li><a href="mypost1.html" class="my_popbtn">요청현황</a></li>
+                            <li><a href="mypage.html" class="my_popbtn">마이페이지</a></li>
+                            <li class="my_popline"></li>
+                            <li><a href="login2.html" class="my_popbtn">케어메이트로 가입하기</a></li>
+                            <li  class="my_out"><a href="">로그아웃</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+        </div>
+    </div>
+    <div class="inner1">
+        <nav id="sub_gnb">
+            <ul class="sub_gnb">
+                <li class="sub_menu short">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="sub_menu">
+                    <a href="sub1.html">홈케어찾기</a>
+                    <!-- <ul class="sub first">
+                        <li class="s_sub"><a href="sub1.html">회사소개</a></li>
+                        <li class="s_sub"><a href="sub2.html">CI</a></li>
+                    </ul> -->
+                </li>
+                <li class="sub_menu long">
+                    <a href="sub3.html">케어메이트찾기</a>
+                    <!-- <ul class="sub two">
+                        <li class="s_sub"><a href="sub3.html">솔루션</a></li>
+                    </ul> -->
+                </li>
+                <!-- 로그인 시에만 이용가능메뉴 -->
+                <li class="sub_menu long1">
+                    <a href="mypage.html">홈케어.메이트 등록</a>
+                    <ul class="sub three">
+                        <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
+                        <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
                     </ul>
                 </li>
-                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </nav>
+        <!-- 전체메뉴바 -->
+        <div class="tog_btn"><i class="fas fa-bars"></i></div>
+        <nav class="main_toggle">
+            <div class="main_tog">
+            <div id="main_tog_gnb">
+                <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
+            <ul class="main_tog_gnb">
+                <li class="main_menu">
+                    <a class="main_menu1" href="index.html">Home</a>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1">홈케어</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1">케어메이트</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1">관심홈케어</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1 long">관심케어메이트</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1">FAQ</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                        <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <a class="main_menu1">Q&A</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="main_menu">
+                    <a class="main_menu1">위치확인</a>
+                    <ul class="main_hide_sub">
+                        <li class="m_sub"><a href="sub11.html">기기등록</a></li>
+                        <li class="m_sub"><a href="sub12.html">활동확인</a></li>
+                    </ul>
+                </li> -->
             </ul>
         </div>
-    <nav id="sub_gnb">
-        <ul class="sub_gnb">
-            <li class="sub_menu short">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="sub_menu">
-                <a href="sub1.html">홈케어찾기</a>
-                <!-- <ul class="sub first">
-                    <li class="s_sub"><a href="sub1.html">회사소개</a></li>
-                    <li class="s_sub"><a href="sub2.html">CI</a></li>
-                </ul> -->
-            </li>
-            <li class="sub_menu long">
-                <a href="sub3.html">케어메이트찾기</a>
-                <!-- <ul class="sub two">
-                    <li class="s_sub"><a href="sub3.html">솔루션</a></li>
-                </ul> -->
-            </li>
-            <!-- 로그인 시에만 이용가능메뉴 -->
-            <li class="sub_menu long1">
-                <a href="mypage.html">홈케어.메이트 등록</a>
-                <ul class="sub three">
-                    <li class="s_sub"><a href="login1.html">홈케어등록</a></li>
-                    <li class="s_sub"><a href="login2.html">케어메이트등록</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <nav class="sub_toggle">
-        <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
-        <div id="sub_tog_gnb">
-                <div class="sub_tog_close"><i class="fas fa-times"></i></div>
-        <ul class="sub_tog_gnb">
-            <li class="sub_menu">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="sub_menu">
-                <a>회사소개</a>
-                <ul class="sub_hide_sub">
-                    <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
-                    <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
-                </ul>
-            </li>
-            <li class="sub_menu">
-                <a>사업영역</a>
-                <ul class="sub_hide_sub">
-                    <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
-                </ul>
-            </li>
-            <li class="sub_menu">
-                <a>문의사항</a>
-                <ul class="sub_hide_sub">
-                    <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
-                </ul>
-            </li>
-            <li class="sub_menu">
-                <a>오시는길</a>
-                <ul class="sub_hide_sub">
-                    <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
-                </ul>
-            </li>
-        </ul>
-        <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
+        </div>
+        </nav>
     </div>
-    </nav>
-    <!-- 전체메뉴바 -->
-    <div class="tog_btn"><i class="fas fa-bars"></i></div>
-    <nav class="main_toggle">
-        <div class="main_tog">
-        <div id="main_tog_gnb">
-            <div class="main_tog_close"><span>닫기</span><i class="fas fa-times"></i></div>
-        <ul class="main_tog_gnb">
-            <li class="main_menu">
-                <a class="main_menu1" href="index.html">Home</a>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1">홈케어</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
-                </ul>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1">케어메이트</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
-                </ul>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1">관심홈케어</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
-                </ul>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1 long">관심케어메이트</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
-                </ul>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1">FAQ</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
-                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
-                </ul>
-            </li>
-            <li class="main_menu">
-                <a class="main_menu1">Q&A</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
-                </ul>
-            </li>
-            <!-- <li class="main_menu">
-                <a class="main_menu1">위치확인</a>
-                <ul class="main_hide_sub">
-                    <li class="m_sub"><a href="sub11.html">기기등록</a></li>
-                    <li class="m_sub"><a href="sub12.html">활동확인</a></li>
-                </ul>
-            </li> -->
-        </ul>
-    </div>
-    </div>
-    </nav>
     <nav class="toggle">
         <div class="mtog_btn"><i class="fas fa-bars"></i></div>
         <div id="tog_gnb">
-                <div class="tog_close"><i class="fas fa-times"></i></div>
+            <p class="tog_txt">로그인해주세요</p>
+            <!-- 로그인시 보이는 문구 -->
+            <!-- <p class="tog_txt">OOO님</p> -->
+            <div class="tog_join" onclick="location.href='join.html'">회원가입</div>
+            <ul class="m_tnb">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="guide.html">이용안내</a></li>
+            </ul>
+        <div class="tog_close"><i class="fas fa-times"></i></div>
         <ul class="tog_gnb">
             <li class="menu">
                 <a href="index.html">Home</a>
@@ -265,7 +242,8 @@ $(this).siblings('.upload-name1').val(filename1);
                 </ul>
             </li>
         </ul>
-    </div>
+        <div class="tog_img"><img src="./img/m_vs.png" alt=""></div>
+        </div>
     </nav>
 </header>
 <div class="login2_content">
@@ -383,11 +361,11 @@ $(this).siblings('.upload-name1').val(filename1);
                 </select>
                 <span class="wsel_txt">※ 30분당</span>
             </div>
-            <div class="login2_label self">
+            <div class="login2_label long">
                 <label for="self_intro"><span>상세정보를 입력해주세요</span></label>
                 <textarea name="self_intro" id="self_intro" cols="40" rows="100" maxlength="700" placeholder="상세정보 입력칸입니다."></textarea>
             </div>
-            <div class="login2_label file">
+            <div class="login2_label long">
                 <label>본인확인용 자료를 업로드해주세요</label>
                 <div class="filebox preview-image">
                     <input class="upload-name" value="파일선택" disabled="disabled">

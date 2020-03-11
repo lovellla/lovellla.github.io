@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>홈케어회원가입</title>
+    <title>불러다옹</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -95,10 +95,11 @@
 <body>
 <div class="wrap">
     <header class="sub_hd">
-            <div class="sub_logobox">
-                <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
-            </div>
-            <div class="sub_tnb">
+        <div class="sub_logobox">
+            <a href="index.html" class="sub_logo"><img src="./img/logo.png" alt="로고"></a>
+        </div>
+        <div class="sub_tnb">
+            <div class="inner">
                 <ul class="sub_top">
                     <li><a href="login.html">로그인</a></li>
                     <!-- <li><a href="">로그아웃</a></li> -->
@@ -116,7 +117,9 @@
                     </li>
                     <li><a href="join.html">회원가입</a></li>
                 </ul>
-            </div>
+        </div>
+    </div>
+    <div class="inner1">
         <nav id="sub_gnb">
             <ul class="sub_gnb">
                 <li class="sub_menu short">
@@ -144,43 +147,6 @@
                     </ul>
                 </li>
             </ul>
-        </nav>
-        <nav class="sub_toggle">
-            <div class="sub_tog_btn"><i class="fas fa-bars"></i></div>
-            <div id="sub_tog_gnb">
-                    <div class="sub_tog_close"><i class="fas fa-times"></i></div>
-            <ul class="sub_tog_gnb">
-                <li class="sub_menu">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="sub_menu">
-                    <a>회사소개</a>
-                    <ul class="sub_hide_sub">
-                        <li class="sub_m_sub"><a href="sub1.html">회사소개</a></li>
-                        <li class="sub_m_sub"><a href="sub2.html">CI</a></li>
-                    </ul>
-                </li>
-                <li class="sub_menu">
-                    <a>사업영역</a>
-                    <ul class="sub_hide_sub">
-                        <li class="sub_m_sub"><a href="sub3.html">솔루션</a></li>
-                    </ul>
-                </li>
-                <li class="sub_menu">
-                    <a>문의사항</a>
-                    <ul class="sub_hide_sub">
-                        <li class="sub_m_sub"><a href="sub4.html">문의사항</a></li>
-                    </ul>
-                </li>
-                <li class="sub_menu">
-                    <a>오시는길</a>
-                    <ul class="sub_hide_sub">
-                        <li class="sub_m_sub"><a href="sub5.html">오시는 길</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <img src="./img/intro.png" alt="" class="sub_gnb_img"> 
-        </div>
         </nav>
         <!-- 전체메뉴바 -->
         <div class="tog_btn"><i class="fas fa-bars"></i></div>
@@ -240,47 +206,59 @@
         </div>
         </div>
         </nav>
-        <nav class="toggle">
-            <div class="mtog_btn"><i class="fas fa-bars"></i></div>
-            <div id="tog_gnb">
-                    <div class="tog_close"><i class="fas fa-times"></i></div>
-            <ul class="tog_gnb">
-                <li class="menu">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="menu">
-                    <a>홈케어</a>
-                    <ul class="hide_sub">
-                        <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
-                        <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
-                        <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
-                    </ul>
-                </li>
-                <li class="menu">
-                    <a>케어메이트</a>
-                    <ul class="hide_sub">
-                        <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
-                        <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
-                        <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
-                    </ul>
-                </li>
-                <li class="menu">
-                    <a>문의사항</a>
-                    <ul class="hide_sub">
-                        <li class="m_sub"><a href="sub7.html">이용후기</a></li>
-                        <li class="m_sub"><a href="sub8.html">공지사항</a></li>
-                    </ul>
-                </li>
-                <li class="menu">
-                    <a>Q&A</a>
-                    <ul class="hide_sub">
-                        <li class="m_sub"><a href="guide.html">이용안내</a></li>
-                    </ul>
-                </li>
+    </div>
+    <nav class="toggle">
+        <div class="mtog_btn"><i class="fas fa-bars"></i></div>
+        <div id="tog_gnb">
+            <p class="tog_txt">로그인해주세요</p>
+            <!-- 로그인시 보이는 문구 -->
+            <!-- <p class="tog_txt">OOO님</p> -->
+            <div class="tog_join" onclick="location.href='join.html'">회원가입</div>
+            <ul class="m_tnb">
+                <li><a href="login.html">로그인</a></li>
+                <!-- <li><a href="">로그아웃</a></li> -->
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="guide.html">이용안내</a></li>
             </ul>
+        <div class="tog_close"><i class="fas fa-times"></i></div>
+        <ul class="tog_gnb">
+            <li class="menu">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menu">
+                <a>홈케어</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub1.html">홈케어찾기</a></li>
+                    <li class="m_sub"><a href="sub5.html">관심홈케어</a></li>
+                    <li class="m_sub"><a href="login1-1.html">홈케어등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>케어메이트</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub3.html">케어메이트찾기</a></li>
+                    <li class="m_sub"><a href="sub6.html">관심케어메이트</a></li>
+                    <li class="m_sub"><a href="login2.html">케어메이트등록</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>문의사항</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="sub7.html">이용후기</a></li>
+                    <li class="m_sub"><a href="sub8.html">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a>Q&A</a>
+                <ul class="hide_sub">
+                    <li class="m_sub"><a href="guide.html">이용안내</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="tog_img"><img src="./img/m_vs.png" alt=""></div>
         </div>
-        </nav>
-    </header>
+    </nav>
+</header>
 <div class="join1_content">
     <div class="join1_top">
         <h1 class="log_tit"><img src="./img/cat1.png" alt="">&nbsp;회원가입</h1>
@@ -288,7 +266,7 @@
 </div>
 <div class="join1_mid">
     <form action="writepage.html" method="get" id="form1">
-    <input type="checkbox" name="all" id="all">&nbsp; 이용약관, 개인정보 수집(필수) 이용에 모두 동의합니다.
+    <input type="checkbox" name="all" id="all">&nbsp; <span class="all_txt">이용약관, 개인정보 수집(필수) 이용에 모두 동의합니다.</span>
     <div class="join_ck">
     <p class="accordion">
     <input type="checkbox" name="c1" id="c1"  onclick="myFunction()">&nbsp;이용약관에 동의합니다.
