@@ -1414,7 +1414,7 @@ hr,legend,caption{font-size:0;height:0px}
 #review_pop{position: fixed; left: 0; width: 100%; text-align: center; background-color: rgba(0,0,0,0.6); height: 100%; display: none; z-index: 1000;}
 #review_pop.on{display: block; bottom: 0;}
 .rv_box{position: relative; width: 55%; height: 550px; background-color: #fff; margin: 12.5% auto;}
-.img_review{float: left; width: 50%;}
+.img_review{float: left; width: 50%; margin-top: 8rem; box-sizing: border-box; padding-left: 4%;}
 .img_review img{width: 100%; height: 100%;}
 .txt_review{width: 50%; float: right; position: relative;}
 .help_box{border:1px solid #e5e5e5; width: 50%; margin: 30px auto; color:#555;}
@@ -2200,7 +2200,7 @@ hr,legend,caption{font-size:0;height:0px}
 #review_prev{left: -20px;}
 .rv_box{width: 70%; height: 580px;}
 .rv_close{top: -10px; font-size: 1.8em;}
-.img_review img{width: 60%;}
+.img_review img{width: 100%; height: auto;}
 .info{height: auto;}
 .p_info{display: none;}
 .menu{margin-top: 25px;}
@@ -2545,7 +2545,7 @@ hr,legend,caption{font-size:0;height:0px}
 .rv_btn{display: block; margin-top: 10px;}
 .rv_txt1{margin-top: 5%; height: 100px; font-size: 0.8em;}
 .review_close{font-size: 2.0em; top: -20px; right: 20px;}
-.img_review{float: none; width: 100%;}
+.img_review{float: none; width: 100%; padding-left: 0;}
 .txt_review{width: 100%; float: none;}
 .rv_tit{margin-top: 20px;}
 .notice_tit{font-size: 1.5em;}
@@ -2875,17 +2875,17 @@ hr,legend,caption{font-size:0;height:0px}
     .complete_btn{margin-top: 18px;}
     /* 마이페이지 */
     .my_content,.my2_content{margin-top: 5.5rem;}
-    .my_top{width: 80%; margin-bottom: 0;}
+    .my_top{width: 90%; margin-bottom: 0;}
     .my_tit{font-size: 1.3em;}
     .my_tit img{margin-top: 0;}
-    .my_mid{width: 80%;}
+    .my_mid{width: 90%;}
     .my_img,.my1-1_img{margin-left: 10px;}
     .my_box, .my1-1_info{font-size: 0.8em;}
     .my_matebtn,.my1-1_matebtn,.my1-2_matebtn{width: 70px;}
     .my_page{display: block; width: 100%;}
     .my1-1_page{display: block; width: 100%; margin-top: 10px;}
-    .my1-2_page,.my3_page{width: 80%;}
-    .my_menu{clear: both; width: 80%; margin: 0 auto 50px;}
+    .my1-2_page,.my3_page{width: 90%;}
+    .my_menu{clear: both; width: 90%; margin: 0 auto 50px;}
     .my_menu1{height: 100px;}
     .my_menu1 li{width: 29.5%; height: 100px;}
     .ico_tit{font-size: 0.9em;}
@@ -3003,7 +3003,7 @@ hr,legend,caption{font-size:0;height:0px}
     #homecare_time1,#homecare_time2,#homecare_time3,#homecare_time4,#homecare_time5,#homecare_time6{font-size: 0.9em; height: 25px;}
     .board_search li{margin: 0;}
     .rv_close{top: -10px; font-size: 1.8em;}
-    .img_review img{width: 60%;}
+    .img_review img{width: 100%; height: auto;}
     
     /* 서브 */
     .content{margin-top: 7rem;}
@@ -3037,7 +3037,7 @@ hr,legend,caption{font-size:0;height:0px}
     .rv_btn{display: block; margin-top: 10px;}
     .rv_txt1{margin-top: 5%; height: 100px; font-size: 0.8em;}
     .review_close{font-size: 2.0em; top: -20px; right: 20px;}
-    .img_review{float: none; width: 100%;}
+    .img_review{float: none; width: 100%; padding-left: 0;}
     .txt_review{width: 100%; float: none;}
     .rv_tit{margin-top: 20px;}
     .notice_tit{font-size: 1.5em;}
