@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* reset */
+* {padding: 0; margin: 0;box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{margin:0;padding:0;}
+li {list-style: none;}
+body,html {margin:0; padding:0;-webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; font-smoothing:antialiased; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+/* 폰트 스타일 초기화 */
+em,address {font-style: normal;}
+/* 블릿기호 초기화 */
+ul,li,ol {list-style: none;}
+/* 버튼 초기화 */
+button {border: 0; cursor: pointer; font-size: inherit; font-size: 14px; background-color: inherit; outline: none;}
+/* 반응형 */
+img {max-width: 100%;}
+/* 표 초기화 */
+table {border-spacing: 0; table-layout: fixed;  border-collapse: collapse;}
+
+/* 라이브러리 */
+.clearfix::before, .clearfix::after {content: ""; display: block; clear: both;}
+input[type='text'] {box-sizing: border-box; padding-left: 5px; outline: none;}
+input[type='radio'] {box-sizing: border-box;padding-left: 5px; outline: none;}
