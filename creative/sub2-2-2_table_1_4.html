@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창의영재교육원</title>
+    <link rel="stylesheet" href="./css/common1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="./js/common.js"></script>
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- XEicon 아이콘 불러오기 -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+
+<body>
+
+    <div class="contents">
+        <div class="cont_area">
+            <div class="cont_title circle_tit">
+                <h1 class="lookup_tit">초등학생 진단 검사</h1>
+            </div>
+            <div class="sub2-2-3-tab">
+                <ul class="clearfix">
+                    <li class="on"><a href="sub2-2-2_table_1_1.html">초등</a></li>
+                    <li class=""><a href="sub2-2-2_table_2_1.html">중등</a></li>
+                </ul>
+            </div>
+            
+            <div class="subject_step">
+                    <ul class="clearfix">
+                        <li>
+                            <p>언어분야(5문항)</p>
+                            <span>
+                                 <img src="./images/sub/arrow_g.png" alt="">
+                            </span>
+                        </li>
+                        <li>
+                            <p>수학분야(4문항)</p>
+                            <span>
+                                 <img src="./images/sub/arrow_g.png" alt="">
+                            </span>
+                        </li>
+                        <li>
+                            <p>과학분야(4문항)</p>
+                            <span>
+                                <img src="./images/sub/arrow_g.png" alt="">
+                            </span>
+                        </li>
+                        <li class="on">
+                            <p>공학분야(4문항)</p>
+                            <span>
+                                <img src="./images/sub/arrow.png" alt="">
+                            </span>
+                        </li>
+                         <li>
+                            <p>미술분야(4문항)</p>
+                            <span>
+                                <img src="./images/sub/arrow_g.png" alt="">
+                            </span>
+                        </li>
+                        <li>
+                            <p>음악분야(4문항)</p>
+                        </li>
+                    </ul>
+                </div>
+            
+            
+            <div class="diagnosis_table">
+                <table class="table_2 mb50" style="width:100%;">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 15%;">
+                        <col style="width: 10%;">
+                        <col style="width: 55%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>분야</th>
+                            <th>질문</th>
+                            <th>점수</th>
+                            <th>관찰내용</th>
+                            <th>진단</th>
+                        </tr>
+                    </thead>
+                    <tbody>                   
+                        <!-- 공학  -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_2">공학<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문14 <span style="width:100%;">(공학기술 습득력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>컴퓨터 관련 기술을 습득하는 능력이 또래 집단보다 매우 빠르며 습득한 기술을 활용하여 우수한 결과물을 도출한다.</p>
+                            <p>전자 기계 및 정보기술 등 다양한 분야의 배경지식과 경험이 매우 풍부하다.</p>
+                            <p>초등학생 수준에서 이해하기 어려운 공학 기술에 대해서도 원리나 개념을 매우 잘 이해한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>컴퓨터 및 스마트기 게 관련 기술 습득하는 속도가 또래 집단보다 빠른 편이고 기술 습득 후 결과물을 만들어내곤 한다.</p>
+                            <p>전자 기계 및 정보기술 등 다양한 분야의 배경지식이 또래보다 우위에 있으나 이 기술의 깊은 이해도가 깊진 않다.</p>
+                            <p>초등학생 수준에서 공학 기술에 관한 원리나 개념 파악을 잘하는 편이다.</p>
+                            </td>
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                           
+                            <td>1점</td>
+                            <td class="pd_left"><p>컴퓨터 및 스마트기기와 관련된 기술을 습득하는 능력이 또래 집단과 비슷하다.</p>
+                            <p>전자 기계 및 기술정보 등 다양한 분야의 공학 기술에 대한 배경지식과 경험이 거의 없다.</p>
+                            <p>습득한 공학 기술을 활용하여 결과물을 만드는 능력은 다소 미흡하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문15 <span style="width:100%;">(알고리즘 개발 및 분석)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>주어진 과제의 문제를 해결하기 위하여 수집한 자료를 데이터베이스화하여 이들 간의 논리적 관계를 알고리즘으로 구성할 수 있는 능력이 매우 우수하다.</p>
+                            <p>자신이 원하는 방향으로 새로운 알고리즘을 구성하기를 좋아하고 복잡한 것도 논리적 추론을 통해 정확히 분석해낼 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia15"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>알고리즘의 기본원리를 이해하고 있으며 간단하게 이를 구성할 수 있는 능력이 또래보다 우수하다.</p>
+                            <p>새로운 알고리즘을 만드는 것에 흥미가 있으며, 기본적인 알고리즘은 논리적으로 추론할 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia15"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>알고리즘의 기본 원리를 이해하고 있으나 이를 스스로 구성하는 능력이 부족하다.</p>
+                            <p>알고리즘을 만드는 것에 큰 흥미를 느끼지 못하며 이를 분석하는 데 어려움을 느낀다.</p>
+                            </td>
+                            <td><input type="radio" name="dia15"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문16 <span style="width:100%;">(정보화기기 흥미 및 과제집착)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>정보화 기기를 사용 능력이 또래보다 월등히 뛰어나며(상위 10% 이내) 컴퓨터 기술에 관심이 많아서 새로운 기술을 익히는데 지속적으로 노력한다.</p>
+                            <p>새로운 정보화 관련 과제 수행에도 그 과정을 즐기며 집중하며 끊임없이 연구하여 수준 높게 완성한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia16"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>컴퓨터 사용 관련 프로그램을 다양하게 습득하고 있으며, 컴퓨터 사용 기술이 또래보다 우수한 편이다(상위 30~10%)</p>
+                            <p>정보화 관련 산출물을 성실히 수행하며 시간이 걸리는 경우에도 완수하는 편이다</p>
+                            </td>
+                            <td><input type="radio" name="dia16"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>컴퓨터 사용 기술이 또래와 유사하며 정보화 기기를 이용하여 과제를 수행하는 활동을 선호하지 않으며 게임이나 인터넷에 편중되어 있는 편이다</p>
+                            <p>정보화 관련 산출물을 만들어내기는 하나, 시간이 걸리는 경우 중도에 포기하는 편이다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia16"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문17 <span style="width:100%;">(기계작동 원리분석)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>기계의 움직임과 작동원리에 강한 흥미를 보이며 복잡한 기계의 원리분석을 매우 즐긴다.</p>
+                            <p>로봇, 과학상자 등 기계공학 관련 활동에 매우 흥미를 갖고 참여하는 모습을 지속적으로 관찰할 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia17"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>기계의 단순한 작동원리는 이해하나 복잡한 기계의 원리나 구조를 분석할 때는 지루해하고 포기하곤 한다.</p>
+                            <p>로봇, 과학상자 등 기계공학 관련 활동에 흥미를 갖고 참여하는 모습을 가끔 관찰할 수 있다.
+                            </td>
+                            <td><input type="radio" name="dia17"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>기계의 작동원리에 대해 별로 관심이 없다.</p>
+                            <p>- 기계공학 분야에 관심이 적은 편이며, 기계공학 관련 활동에 참여하는 모습을 관찰하기 어렵다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia17"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                 <div class="sample_btn">
+                       <button class="s_btn_2" onclick="location.href='sub2-2-2_table_1_3.html'" style="margin-right: 7.5px;"><i class="fas fa-chevron-left" style="margin-right: 10px"></i>이전</button>
+                        <button class="s_btn_2" onclick="location.href='sub2-2-2_table_1_5.html'" style="margin-left: 7.5px;">다음<i class="fas fa-chevron-right" style="margin-left:10px; "></i></button>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

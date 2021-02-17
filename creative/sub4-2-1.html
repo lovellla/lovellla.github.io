@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창의영재교육원</title>
+    <link rel="stylesheet" href="./css/common1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="./js/common.js"></script>
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- XEicon 아이콘 불러오기 -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<style type="text/css">
+   
+    </style>
+<script>
+    $(function() {
+        tab('#tab', 0);
+    });
+
+    function tab(e, num) {
+        var num = num || 0;
+        var menu = $(e).children();
+        var con = $(e + '_con').children();
+        var select = $(menu).eq(num);
+        var i = num;
+
+        select.addClass('on');
+        con.eq(num).show();
+
+        menu.click(function() {
+            if (select !== null) {
+                select.removeClass("on");
+                con.eq(i).hide();
+            }
+
+            select = $(this);
+            i = $(this).index();
+
+            select.addClass('on');
+            con.eq(i).show();
+        });
+    }
+</script>
+
+<body>
+    <div class="wrap">
+        <div class="contents">
+            <div class="sub4-2_popup">
+                <!-- <div class="head clearfix">
+                    <div class="btn-close"></div>
+                </div> -->
+                <button class="close_btn" onclick="location.href='sub4-2.html' "><i class="fas fa-times"></i></button>
+                <div class="popup-content">
+                    <div class="pop-img on">
+                        <div class="pop-title">
+                            <div class="top_tit main">2020학년도 영재성검사 모의평가(00차)</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="mid-tit">수학영역 검사지</div>
+                            </div>
+                            <div class="user_box clearfix">
+                                <ul class="name_box">
+                                    <li>성명</li>
+                                    <li>한영재</li>
+                                </ul>
+                                <ul class="tel_box">
+                                    <li>전화번호</li>
+                                    <li>010-1234-4567</li>
+                                </ul>
+                            </div>
+
+                                <div class="paper_box">
+                                    <table class="paper_table">
+                                        <thead>
+                                        <tr>
+                                            <th class="paper_table_tit">유의사항</th>
+                                            <th class="paper_table_txt">
+                                                <ul class="paper_table_ul">
+                                                    <li>· 상기의 "성명 및 접수번호"란을 입력해 주십시오.</li>
+                                                    <li>· 시험시작은 "모의평가 시작" 버튼을 클릭해 주십시오.</li>
+                                                    <li>· 정답표기는 "해당 값의 ○"를 클릭하시면 됩니다.(복수 선택 가능)</li>
+                                                    <li>· 배점은 문항에 따라 다르니 문항의 끝에 표시된 배점을 확인하세요.</li>
+                                                </ul>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="paper_img">
+                                        <img src="./images/sub/sub4-2-1(1).png" alt="">
+                                    </div>
+                             </div>
+                             <button class="test_btn">모의평가 시작</button>
+                           
+                        </div>
+                    </div>
+                    <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">1</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                               <div class="answer">
+                                <form name="select_answer">
+                                    <h3>정답 표기</h3>
+                                    <ul class="answer_try">
+                                        <li>
+                                            <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                        </li>
+                                    </ul>
+                                    <ul class="answer_try">
+                                     <li>
+                                        <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                     </li>
+                                     <li>
+                                        <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                     </li>
+                                     <li>
+                                        <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                     </li>
+                                     <li>
+                                        <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                     </li>
+                                     <li>
+                                        <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                     </li>
+                                    </ul>
+                                  </form>
+                                  <div class="sample_btn sub4-2-1">
+                                    <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                    <button class="text_next_btn">다음 문제</button>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">1 / 7</div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">2</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="text_next_btn">다음 문제</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">2 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">3</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="text_next_btn">다음 문제</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">3 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">4</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="text_next_btn">다음 문제</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">4 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">5</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="text_next_btn">다음 문제</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">5 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">6</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="text_next_btn">다음 문제</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">6 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="pop-img">
+                        <div class="pop-title">
+                            <div class="top_tit">수학문제1</div>
+                        </div>
+                        <div class="sub4-2-1_cont">
+                            <div class="mid-tit-box clearfix">
+                                <div class="number">7</div>
+                                <div class="mid-tit">영재성검사 I</div>
+                            </div>
+                            <div class="matter">
+                                <div class="answer">
+                                    <form name="select_answer">
+                                        <h3>정답 표기</h3>
+                                        <ul class="answer_try">
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄱ">ㄱ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄴ">ㄴ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄷ">ㄷ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㄹ">ㄹ</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="checkbox" name="answer" value="ㅁ">ㅁ</label>
+                                            </li>
+                                        </ul>
+                                        <ul class="answer_try">
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅂ">ㅂ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅅ">ㅅ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅇ">ㅇ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅈ">ㅈ</label>
+                                         </li>
+                                         <li>
+                                            <label><input type="checkbox" name="answer" value="ㅊ">ㅊ</label>
+                                         </li>
+                                        </ul>
+                                      </form>
+                                      <div class="sample_btn sub4-2-1">
+                                        <button class="save_btn"><i class="far fa-save" style="margin-right: 5px; font-size: 15px;"></i>저장하기</button>
+                                        <button class="sub4-2-1_ok">제출하기</button>
+                                    </div>
+                                   </div>
+                            </div>
+                            <div class="bottom-txt-box clearfix">
+                                <div class="page-number">7 / 7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="omr_table">
+                    <table class="omr_table1">
+                        <colgroup>
+                            <col width='20%'>
+                            <col width='20%'>
+                            <col width='60%'>
+                        </colgroup>
+                        <thead>                    
+                            <tr>
+                                <th class="omr_tit"colspan="3">답안지</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first">
+                                <td>번호</td>
+                                <td>배점</td>
+                                <td>정답 표기</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>합계</td>
+                                <td colspan="2">100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <button class="omr_ok">제출하기</button>
+                </div>
+                <div class="side-btn">
+                    <div class="prev_btn"><i class="fas fa-chevron-left"></i></div>
+                    <div class="next_btn"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-bg" style="display: none;"></div>
+        <div class="sub2-2-1_popup sub4-2-1" style="display: none;">
+        <div class="btn-close"></div>
+        <div class="popup-content">
+        <h2>모든 수학영역 검사지의 정답표기가 완료되었습니다.</h2>
+        <p class="result_p">(답안지의 "정답표기"란이 공백이면, 아직 문제를 풀지 않은 것이므로,<br> 문제번호를 클릭하여 해당 문제로 이동하여 정답표기를 해주시기 바랍니다.)</p>
+        <p class="result_ok">모의평가를 완료하고자 하는 경우에는<br>
+        아래의 "모의평가 답안지 제출" 버튼을 클릭해 주십시오.</p>
+        <button class="omr_ok submit">모의평가 답안지 제출</button>
+        </div>
+    </div>
+</body>
+
+</html>

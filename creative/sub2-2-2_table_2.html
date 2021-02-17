@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창의영재교육원</title>
+    <link rel="stylesheet" href="./css/common1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="./js/common.js"></script>
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- XEicon 아이콘 불러오기 -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div class="contents">
+        <div class="cont_area">
+            <div class="cont_title circle_tit">
+                <h1 class="lookup_tit">중학생 진단 검사</h1>
+            </div>
+            <div class="sub2-2-3-tab">
+                <ul class="clearfix">
+                    <li class=""><a href="sub2-2-2_table_1.html">초등</a></li>
+                    <li class="on2"><a href="sub2-2-2_table_2.html">중등</a></li>
+                </ul>
+            </div>
+            <div class="diagnosis_table">
+                <table class="table_2 mb50" style="width:100%;">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 20%;">
+                        <col style="width: 10%;">
+                        <col style="width: 50%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead class="top_color">
+                        <tr>
+                            <th>분야</th>
+                            <th>질문</th>
+                            <th>점수</th>
+                            <th>관찰내용</th>
+                            <th>진단</th>
+                        </tr>
+                    </thead>
+                    <tbody class="second">
+                        <!-- 언어  -->
+                        <tr class="">
+                            <td rowspan="15" class="rowspan_color_1">언어<span>(5문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_3">질문1 <span style="width:100%;">(언어표현)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>전문용어 수준의 어휘를 적절한 문장으로 잘 구사하며 언어표현력이 또래보다 매우 탁월하다.</p>
+                            <p>글 속에 나탄 어휘나 문장의 구성 수준이 또래보다 월등히 높다.</p>
+                            <p>토론 활동이나 대화에서 나타나는 어휘와 문장의 수준이 유창하고 폭넓은 수준의 어휘를 활용하여 자신의 생각을 논리적으로 설득력 있게 표현하는 능력이 탁월하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia1"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>수준 높은 어휘를 많이 알고 있으며 또래보다 높은 어휘 구사력이 있다.</p>
+                            <p>글 속에 나타나는 어휘와 문장의 수준이 또래보다 우수한 편이다.</p>
+                            <p>토론 활동이나 대화에서 나타나는 어휘와 문장의 수준이 다양하고 폭넓은 수준의 어휘를 활용하여 자신의 생각을 논리적으로 표현한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia1"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>어휘구사력이나 글속의 문장 표현력이 또래와 유사한 수준의 어휘를 사용한다.</p>
+                            <p>토론 활동이나 대화에서 나타나는 어휘와 문장의 수준이 또래와비슷한 수준이다.</p>
+                            </td>
+                            
+                            
+                            <td><input type="radio" name="dia1"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문2 <span style="display: block;">(독해력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>글의 핵심 내용을 빠르고 정확히 파악하여 논리적으로 요약하는 능력이 매우 탁월하다.</p>
+                            <p>과학, 경제, 시사 등 다양한 분야의 책을 탐독하며, 내용을 이해하는 능력과 자신의 방식으로 정리하는 능력이 매우 탁월하다.</p>
+                            <p>글 속에 있는 함축적인 의미와 글쓴이의 의도를 파악하는 능력이 매우 탁월하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia2"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>글의 내용을 파악하기는 하나 핵심 내용을 요약하는 능력이 또래보다 우수하다.</p>
+                            <p>학교 권장도서 이외의 다양한 분야의 책을 읽으려고 하며, 내용을 이해하는 능력이 우수하다.</p>
+                            <p>글 속에 있는 함축적인 의미와 글쓴이의 의도를 이해하는 능력이 우수하다</p>
+                            </td>
+                            <td><input type="radio" name="dia2"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>글의 내용을 파악하기는 하나 핵심 내용을 요약하는 능력이 또래와 비슷하다.</p>
+                            <p>학교 권장도서 수준은 읽고 이해하나, 새로운 종류의 책을 읽으려는 노력은 보통이다.</p>
+                            <p>글 속에 있는 함축적인 의미와 글쓴이의 의도를 이해하는 능력이 보통이다.</p>
+                            </td>
+                           
+                           
+                            <td><input type="radio" name="dia2"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문3 <span style="width:100%;">(글쓰기)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>자신의 생각이 나 감정을 글로 표현하는 능력이 또래보다 매우 탁월하다.</p>
+                            <p>글의 문맥과 구성의 짜임새가 매우 우수하며 논리적인 근거를 제시하며 자신의 주장을 설득력 있게 글을 쓰는 능력이 또래보다 매우 탁월하다.</p>
+                            <p>글을 쓰는 능력이 또래보다 우수하며 관련 대회 참여하는 것에 적극적으로 참여한다.</p>
+                            <p>교내외 글쓰기 관련 대회에서 우수한 성적으로 입상을 하며 글을 쓰는 수준이 매우 탁월하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia3"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>자신의 생각이나 감정을 글로 표현하는 능력이 또래보다 우수하다.</p>
+                            <p>글의 문맥과 구성의 짜임새는 있으며 논리적인 근거를 제시하며 글을 쓰는 능력이 또래보다 우수하다.</p>
+                            <p>글을 쓰는 능력이 또래보다 우수하며 관련 대회 참여하는 것에 적극적으로 참여한다.</p>
+                            <p>다양한 용어와 재미있는 표현을 사용할 때도 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia3"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>자신의 생각이 나 감정을 글로 표현하는 능력이 또래 수준이다.</p>
+                            <p>글의 문맥과 구성의 짜임새는 있으나 논리적인 근거가 다소 부족하다.</p>
+                            <p>글을 쓰는 능력이 학급에서 보통 수준이며 관련 대회 참여하는 것에 소극적인 태도를 보인다.</p>
+                            <p>글쓰기의 표현력이 건조한 편이다.</p>
+                            </td>
+                           
+                           
+                            <td><input type="radio" name="dia3"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문4 <span style="width:100%;">(언어습득력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>새로운 용어나 외국어를 배우는 것에 관심이 많으며 습득 및 이해 속도가 매우 빠르다.</p>
+                            <p>새로운 용어나 외국어를 이해하고 여러 상황에 적극적으로 활용하는 능력이 매우 우수하다.</p>
+                            <p>새롭게 습득한 용어나 외국어에 관심을 갖고 언어습득 관련 방과 후 수업이나 외부수업에 적극적으로 꾸준히 참여한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia4"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>새로운 용어나 외국어를 배우는 것에 흥미가 있으며, 습득속도가 또래에 비해 빠른 편이다.</p>
+                            <p>새로운 용어나 외국어를 이해하고 활용하는 능력이 또래보다 우수하다.</p>
+                            <p>새롭게 습득한 용어나 외국어에 관심을 갖고 언어습득 관련 방과 후 수업이나 외부수업에 열심히 참여한다. </p>
+                            </td>
+                            <td><input type="radio" name="dia4"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>새로운 용어나 외국어를 배우는 것에 관심이 있으나, 습득 속도가 또래 수준이다.</p>
+                            <p>새로운 용어나 외국어를 이해해고 활용하는 능력이 또래 수준이다.</p>
+                            <p>새롭게 습득한 용어나 외국어를 수업 시간 이외에 관심을 기울이지 않는다.</p>
+                            </td>
+                         
+                            <td><input type="radio" name="dia4"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문5 <span style="width:100%;">(언어활동: 토론, 연설, 비평)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>언어활동에 매우 강한 흥미와 자신감을 갖고 있으며, 특히 다양한 분야에 걸쳐 토론하는 것을 무척 즐긴다.</p>
+                            <p>어떤 문제에 대한 자신의 생각을 발표할 때 풍부한 배경지식을 활용하여 매우 논리적이고 높은 수준의 발표를 한다.</p>
+                            <p>교내외 토론, 연설 및 비평 등 언어활동이나 관련 행사에 적극적인 흥미를 보이며 적극적으로 참여한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia5"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left">
+                            <p>언어활동에 흥미를 갖고 있으며 자신이 알고 있는 내용이나 생각을 표현하는 활동에 열심히 참여한다.</p>
+                            <p>어떤 문제에 대한 자신의 생각을 발표할 때 논리적 근거를 적절하게 잘 제시한다.</p>
+                            <p>교내외 토론, 연설 및 비평 등 언어활동이나 관련 행사에 흥미를 보이며 적극적으로 참여한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia5"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left">
+                            <p>언어활동에 참여할 때, 별다른 흥미를 느끼지 못하며 발표에 소극적이다.</p>
+                            <p>어떤 문제에 대한 자신의 생각을 발표할 때 논리적 근거나 설득력이 다소 부족하다.</p>
+                            <p>교내외 토론, 연설 및 비평 등 언어활동 및 행사에 흥미를 보이나 참여하는데 소극적이다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia5"></td>
+                        </tr>
+                        
+                        
+                        
+                        <!-- 수학  -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_2">수학<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문6 <span style="width:100%;">(수학연산)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left">
+                            <p>수의 연산속도와 정확성이 또래보다 매우 우수하다.</p>
+                            <p>수의 체계를 바르게 이해하고 계산하는 능력이 매우 탁월하다.</p>
+                            <p>수의 다양한 성질을 이용한 문제의 수학적 패턴, 구조, 관계, 연산 등에 대한 지각 능력도 뛰어나며, 연산식의 플이 과정으로 간결하게 해결하는 능력이 매우 탁월하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia6"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left">
+                            <p>수의 연산속도와 정확성이 또래보다 우수하다.</p>
+                            <p>수의 체계를 이해하고 계산하는 능력이 또래보다 우수하다.</p>
+                            <p>수의 다양한 성질을 이용한 문제를 연산식으로 표현하여 간결하고 깔끔하게 해결하는 능력이 우수하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia6"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>수의 연산속도와 정확성이 또래와 비슷한 수준이다</p>
+                            <p>수의 체계를 이해하고 계산하는 능력이 또래와 비슷한 수준이다.</p>
+                            <p>수의 다양한 성질을 이용한 문제에 대한 파악은 하나 해결하는 능력이 또래와 비슷한 수준이다.</p>
+                            </td>
+                           
+                           <td><input type="radio" name="dia6"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문7 <span style="width:100%;">(수학활동)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>수학의 모든 영역에 강한 흥미와 열정을 보이며, 수학에 대한 열정이 강하며 강한 애착을 갖고 심층학습을 기대한다.</p>
+                            <p>어려운 수학 문제를 해결하는 것을 매우 즐기고 수학 문제의 풀이 과정을 새로운 언어(암호, 기호 등)를 적절히 사용하여 설명하는 것을 매우 즐긴다.</p>
+                            <p>수학 관련 과제를 매우 열심히 수행하며, 방과 후 수학 활동에 참여하는 등 교과 수업이외의 수학 활동에도 매우 적극적으로 참여하는 모습이 지속적으로 관찰된다.</p>
+                            </td>
+                            <td><input type="radio" name="dia7"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>수학 관련 활동이나 문제 풀이에 관심을 보이며 수학 공부를 하는데 또래보다 많은 시간을 들인다.</p>
+                            <p>수학에 대한 관심과 질문을 자주하는 편이며 수학문제풀이 과정을 자신이 학습한 수학적 용어를 사용하여 설명하는 것을 즐긴다.</p>
+                            <p>수업시간에 배우는 내용이나 수학 과제를 열심히 수행하며 방과 후 교과수업이외의 활동에도 참여한다.</p>
+                            </td>
+                           <td><input type="radio" name="dia7"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left">
+                            <p>수학 활동이나 문제 풀이에 관심이나 흥미가 또래 수준이다.</p>
+                            <p>수학에 대한 관심과 질문이 없는 편이며 수학 문제풀이 과정을 설명하는 것에 소극적이다.</p>
+                            <p>수학 관련 과제를 수행하나 별다른 흥미가 없고, 교과 수업이외의 수학 활동에도 잘 참여하지 않는다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia7"></td> 
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문8 <span style="width:100%;">(새로운 수학문제 도전)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>처음 보는 어려운 문제를 해결하는 것을 즐기며 적극적으로 도전하며 매우 자신감이 넘친다.</p>
+                            <p>새로운 유형의 문제를 풀 때 스스로 문제를 찾는 태도가 매우 적극적이며 주도적으로 새로운 유형의 문제에 끊임없이 도전한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia8"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>처음 보는 어려운 문제에는 당황스러워하는 모습을 보이기도 하나, 해결하고자 노력하는 모습을 보인다.</p>
+                            <p>처음 접하는 유형의 문제를 풀 때 해결하려는 노력을 하나 스스로 문제를 찾는데 소극적이다.</p>
+                            </td>
+                            <td><input type="radio" name="dia8"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>처음 보는 어려운 문제에는 난색을 표하며, 짧은 시간 안에 포기해 버리는 경우가 많다.</p>
+                            <p>처음 접하는 유형의 문제를 스스로 궁금해하거나 직접 해결하려는 태도를 보이지 않는다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia8"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문9 <span style="width:100%;">(정보와 아이디어 활용)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>기존에 습득한 내용이나 배경지식을 활용하여 보다 발전된 새로운 방식의 풀이방법을 제시한다.</p>
+                            <p>풍부한 수학적 상상력을 통해 만들어진 새로운 규칙이나 가설을 이용하여 자신만의 창의력으로 제시한 풀이방법을 논리적으로 설명한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia9"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>수업 시간에 배운 내용이나 교과서 이외의 배경지식을 이용하여 새로운 풀이 방법으로 해결하고자 노력한다.</p>
+                            <p>사고를 유연하게 전환하여 다른 풀이 방법을 제시하나 문제를 새로운 상황에 적용하여 논리적으로 설명하지 못한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia9"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>수업 시간에 배운 풀이 방법으로 문제를 해결하는 것으로 만족한다.</p>
+                            <p>수학 문제를 새로운 방법으로 해결하기 위한 노력을 하지 않으며 사고를 전환하여 생각하지 않는다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia9"></td>
+                        </tr>
+                        
+                    
+                        
+                        
+                        <!-- 과학  -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_1">과학<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문10 <span style="width:100%;">(정보와 아이디어 활용)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>다양한 정보나 아이디어를 활용하여 과학적 문제 해결에 활용하는 능력이 우수하며 새로운 상황과 연결 지어 해결하는 능력이 매우 탁월하다.</p>
+                            <p>새로운 과학적 문제에 부딪혔을 때 과학적 배경지식과 아이디어를 적극적으로 활용하며 폭넓은 사고의 확장을 통해 심도 있는 과학적 문제해결능력이 또래집단에 비해 매우 탁월하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia10"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>다양한 방면의 정보나 아이디어를 문제 해결에 활용할 수 있으며 새로운 상황과 연결 지어 해결하는 능력이 또래집단보다 우수하다.</p>
+                            <p>새로운 과학적 문제에 부딪혔을 때 배경지식과 아이디어 사용을 또래집단 보다 우수하게 활용한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia10"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>다방면의 정보를 문제 해결에 활용할 수 있으나 또래집단과 비슷하다</p>
+                            <p>새로운 문제에 부딪혔을 때 아이디어 사용이 또래집단과 비슷하다</p> 
+                            </td>
+                           
+                            <td><input type="radio" name="dia10"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문11 <span style="width:100%;">(탐구활동 흥미)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>과학적 탐구활동에 강한 흥미를 느끼며 적극적으로 참여하고자 한다.</p>
+                            <p>과학적 탐구활동 과제나 행사에 항상 적극적인 관심을 갖고 새로운 과제에 도전하려는 욕구가 강하며 지속적으로 탐구한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia11"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>과학적 탐구활동에 흥미를 보이며 주어진 활동에 적극적이다.</p>
+                            <p>과학적 탐구활동 과제나 행사에 적극적으로 참여하며 적극적으로 참여한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia11"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>과학적 탐구활동에 전반적으로 흥미를 느끼지 못하며 소극적이다.</p>
+                            <p>과학 관련 현상이나 과제를 탐구하는 활동에 관심이 없고 소극적이다.</p>
+                            <p>과학적 탐구활동 모임이나 행사에 참여하고자 하는 욕구가 부족하다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia11"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문12 <span style="width:100%;">(실험설계)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>과학적 탐구주제 영역에서 가설을 세우며 그에 따른 변인통제를 구체적으로 세우는 능력이 있다.</p>
+                            <p>창의적인 탐구를 체계적으로 진행하며 과오를 범했을 경우 곧바로 수정하는 능력이 있으며, 창의적인 관점의 관찰로 확장된 실험설계를 하며 이를 수행하는 능력이 탁월하다.</p> 
+                            </td>
+                            <td><input type="radio" name="dia12"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>과학적 탐구주제 영역에서 가설을 세우기는 하나, 변인통제를 구체적으로 하는 능력이 부족하다.</p>
+                            <p>창의적인 탐구가 체계적으로 진행되기는 하지만 프로세스에 과오를 범했을 경우 곧바로 수정해서 진행하는 능력이 부족하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia12"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>과학적 탐구영역에서 가설이나 변인통제의 개념이 확실치 않다.</p>
+                            <p>창의적인 탐구가 이루어지지 않으며 탐구영역의 정해진 순서를 따르기는 하나 프로세스에 과오를 범한다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia12ㄴ"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문13 <span style="width:100%;">(실험결과 오차분석)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>과학적 탐구과정 중 발생되는 오차가 발견되는 경우 이를 분석하는 능력이 탁월하며 원인을 해결하기 위한 의지가 강하다.</p>
+                            <p>오차를 발견하였을 때 원인파악을 위한 정확한 노력을 하며 스스로 해결하고자 하여 자발적으로 심층탐구 활동을 통하여 해결하려는 의지가 강하다.</p> 
+                            </td>
+                            <td><input type="radio" name="dia13"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>과학적 탐구과정 중 발생되는 오차가 발견되는 경우 이를 분석하는 능력이 약하며 원인을 해결하기 위한 의지가 약하다.</p>
+                            <p>오차를 발견하였을 때 원인 파악을 위해 노력을 하여 외부의 도움으로라도 해결하고자 하나 자발적으로 심층탐구활동을 통하여 해결하려는 의지가 약하다.</p> 
+                            </td>
+                            <td><input type="radio" name="dia13"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>과학적 탐구과정 중 발생되는 오차를 분석하는 능력이 또래집단과 비슷하다.</p>
+                            <p>오차를 분석하는 능력이 부족하며 이를 해결하고자 하는 의지가 약하고 발견되었을 시 재확인하려는 욕구가 약하다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia13"></td>
+                        </tr>
+                        
+                        <!-- 공학  -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_2">공학<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문14 <span style="width:100%;">(공학기술 습득력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>컴퓨터 및 스마트 기기를 습득하는 능력이 또래에 비해 매우 탁월하다.</p>
+                            <p>전문적인 수준의 공학 기술에 대한 개념을 잘 이해한다.</p>
+                            <p>습득한 공학기술의 깊은 이해도로 우수한 결과물을 도출할 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>컴퓨터 및 스마트 기기를 습득하는 능력이 또래집단보다 조금 우위에 있다.</p>
+                            <p>공학 기술에 대한 이해도가 또래보다 우위에 있으나 전반적인 수준의 공학 기술까지는 잘 이해하지 못한다.</p>
+                            <p>습득한 기술을 활용하여 연습을 반복하면 결과물을 도출할 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>컴퓨터 및 스마트 기기를 습득하는 능력이 또래집단과 비슷하다.</p>
+                            <p>기초적인 수준의 공학 정도만 이해한다.</p>
+                            <p>습득한 공학 기술을 사용하여 결과물을 도출할 수 있는 능력은 부족하다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia14"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문15 <span style="width:100%;">(알고리즘 개발 및 분석)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>알고리즘의 기본원리뿐 아니라 심도있는 내용을 이해하며 복잡한 알고리즘도 구성할 수 있는 능력이 매우 우수하다.</p>
+                            <p>이를 이용한 과제해결 능력과 데이터를 체계적으로 이해하여 활용하는 능력이 매우 탁월하다.</p>
+                            <p>알고리즘의 분석결과를 데이터베이스화하거나 표나 그래프로 표현하는 능력이 매우 탁월하다. </p>
+                            </td>
+                            <td><input type="radio" name="dia15"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>알고리즘의 기본 원리를 이해하고 있으며 간단하게 이를 구성할 수 있는 능력이 또래보다 우수하다.</p>
+                            <p>과제를 해결하기 위해 자료들의 논리적인 관계를 파악하고 정리하고 해결하는 능력이 또래보다 우수하다.</p>
+                            <p>알고리즘의 분석 결과를 데이터베이스화하거나 표 또는 그래프로 표현하는 능력이 우수하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia15"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>알고리즘의 기본 원리를 이해하고 있으나 이를 자력으로 구성하는 능력이 다소 부족하다.</p>
+                            <p>이를 이용한 과제해결 능력이 또래집단과 비슷하며 데이터를 이해하여 활용하는 기술이 부족하다.</p>
+                            <p>알고리즘의 분석 결과를 데이터베이스화하거나 표나 그래프로 표현하는 것에 어려움을 느끼곤 한다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia15"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문16 <span style="width:100%;">(정보화기기 흥미 및 과제집착)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>정보화 기기를 이용하는 수업 및 과제를 수행하는 활동을 매우 선호하여 적극적으로 즐기며 수행한다</p>
+                            <p>새로운 정보화 기기 기술 습득에 오랜 시간 몰두하며 어려워도 끝가지 포기하지 않는다.</p>
+                            </td>
+                            <td><input type="radio" name="dia16"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>정보화 기기를 이용하여 과제를 수행하는 활동을 선호하여 과제를 열심히 수행한다.</p>
+                            <p>새로운 정보화 기술을 습득하기 위하여 몰두하지만 시간이 걸리며 어려운 기술 습득에 대한 끈기가 부족하다.</p>
+                            </td>
+                            <td><input type="radio" name="dia16"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>정보화 기기를 이용하는 수업이나 과제를 수행하는 활동을 선호하지 않는 편이다.</p>
+                            <p>새로운 정보화 기술습득을 위한 집중도가 미흡하며, 어려운 기술은 쉽게 포기한다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia16"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문17 <span style="width:100%;">(기계작동 원리분석)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>기계의 복잡한 작동원리도 잘 분석하고 그를 이용해 새로운 설계를 구상할 수 있다.</p>
+                            <p>기계공학적 과제에 흥미를 갖고 컴퓨터 조립, 로봇 설계, 전기회로 만들기 등 관련 활동에 흥미를 가지고 꾸준히 참여한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia17"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>기계의 단순한 작동원리는 분석 가능하나, 복잡한 기계의 작동원리를 분석하는 능력은 다소 부족하다.</p>
+                            <p>기계공학에 흥미는 있으나 간단한 컴퓨터 조립, 로봇 설계, 전기회로 만들기 등 공학설계에 적극적으로 참여하진 않는다.
+                            </td>
+                            <td><input type="radio" name="dia17"></td>
+                        </tr>
+                        <tr class=""><td>1점</td>
+                            <td class="pd_left"><p>기계의 작동원리를 설명을 들으면 이해하지만 능동적으로 분석하진 않는다.</p>
+                            <p>기계공학에 흥미가 적으며 관련 활동은 하지 않는 편이다.</p>
+                            </td>
+                           
+                            <td><input type="radio" name="dia17"></td>
+                        </tr>
+                        
+
+                        <!-- 미술  -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_1">미술<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문18 <span style="width:100%;">(시각적 표현)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>자신의 감정 전달을 이모티콘 애니메이션, 그림 등을 사용하여 표현하는 것이 자주 관찰된다.</p>
+                            <p>과제수행시 말보다는 함축적인 의미를 담은 시각적 표현을 사용하여 설명하는 것이 자주 관찰된다.</p>
+                            <p>경험이나 감정을 표현하기 위해 색채, 감촉, 모양 등으로 표현하는 것이 자주 관찰된다.</p>
+                            </td>
+                            <td><input type="radio" name="dia18"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>자신의 감정전달을 이모티콘 애니매이션, 그림 등을 사용하여 표현하는 것이 가끔 관찰된다.</p>
+                            <p>과제 수행시 시각적 표현을 사용하는 것이 가끔 관찰된다.</p>
+                            <p>경험이나 감정을 잘 묘사하며 색채에 관련된 표현을 잘 사용한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia18"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>자신의 감정 전달을 이모티콘 애니메이션, 그림 등을 사용하여 표현하는 것이 관찰되지 않는다.</p>
+                            <p>과제 수행 시 시각적 표현을 좀처럼 사용하지 않는다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia18"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문19 <span style="width:100%;">(정확한 감각)</span></td>
+                           <td>5점</td>
+                            <td class="pd_left"><p>공간, 속도, 방향, 모양에 대해 인지하는 능력이 또래 수준에 비해 월등히 높은 편이다.</p>
+                            <p>과제 수행활동지에 공간, 시간, 속도 및 방향 등 3차원적 요소가 정확히 표현된다.<br>(관찰 예:그림 또는 건축물의 구도와 안정성 및 입체감이 잘 표현되며 방향감이 정교하게 표현됨)</p> 
+                            </td>
+                            <td><input type="radio" name="dia19"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>공간, 속도, 방향, 모양에 대해 인지하는 능력이 또래 수준에 비해 높은 편이다.</p>
+                            <p>과제 수행활동지에 공간, 시간, 속도 및 방향 등 3차원적 요소를 잘 표현한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia19"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>공간, 속도, 방향, 모양에 대해 인지하는 능력이 또래 수준이다.</p>
+                            <p>과제 수행활동지에 공간, 시간, 속도 및 방향 등 3차원적 요소를 표현하는 것이 가끔 관찰된다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia19"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문20 <span style="width:100%;">(미술작품 감상)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>미술작품을 보고 분석하여 자기의 느낌을 비판적으로 분석한 후 감상 표현을 자신감 있게 표현한다.</p>
+                            <p>작품 속의 감각적인 요소와 기법을 잘 찾아내어 전체적으로 주는 효과를 파악하여 작품을 해석하는 능력이 탁월하다.</p>
+                            <p>작자의 의도 및 작품의 주제를 충분히 이해하여 작품에 담긴 의미를 작가의 성향, 사회적ㆍ역사적ㆍ시대적 배경을 활용하여 해석할 수 있는 능력이 뛰어나다.</p>
+                            </td>
+                            <td><input type="radio" name="dia20"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>미술작품을 보고 자기의 느낀 점 등 감상 표현을 사실적으로 표현한다.</p>
+                            <p>작품 속의 감성적인 요소를 찾기는 하나, 전체적으로 작품을 해석하며 표현하지 못한다.</p>
+                            <p>작자의 의도 및 작품의 주제를 알아내기는 하나 작품의 의미를 깊이 있게 깨달아 표현하는 편은 아니다.</p>
+                            </td>
+                            <td><input type="radio" name="dia20"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>미술작품을 보고 자기의 느낀 점 등 감상 표현에 다소 어려움을 느낀다.</p>
+                            <p>작품 속의 감각적인 요소 및 표현기법을 찾아내지 못하는 편이다.</p>
+                            <p>작가의 의도 및 작품의 의미를 깨닫는데 어려움이 있다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia20"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문21 <span style="width:100%;">(미술활동의흥미 및 몰입도)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>미술활동에 왕성한 흥미가 있으며 즐겁게 적극적으로 참여하고, 교내외 다양한 다른 미술활동도 자신이 찾아서 스스로 참여한다.</p>
+                            <p>한번 시작한 미술활동은 시간이 길어지더라도 몰입하여 끝까지 완성을 해낸다.</p> 
+                            </td>
+                            <td><input type="radio" name="dia21"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>미술활동에 흥미와 즐거움을 느끼면서 적극적으로 참여하며, 수업 외 다양한 미술활동에도 가끔 참여한다.</p>
+                            <p>흥미를 가지고 적극적으로 참여하여 작품을 완성하는 편이나, 시간이 길어지면 집중도가 떨어져서 흐트러진다.</p>
+                            </td>
+                            <td><input type="radio" name="dia21"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>미술활동에 흥미를 느끼지 못하여 수업에 적극적인 참여가 부족하다.</p>
+                            <p>작품활동에 몰입도가 떨어져서 주어진 시간 안에 완성을 하지 못할 때도 있다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia21"></td>
+                        </tr>
+                        
+
+                       
+                       
+                        <!-- 음악 -->
+                        <tr class="">
+                            <td rowspan="12" class="rowspan_color_2">음악<span>(4문항)</span></td>
+                            <td rowspan="3" class="rowspan_color_4">질문22 <span style="width:100%;">(음악적 감각력)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>음정, 박자, 리듬에 정확하게 잘 반응하며 그 표현이 또래집단보다 탁월하다.</p>
+                            <p>5마디 이상의 긴 선율이나 리듬을 한두 번 듣고 정확히 따라 할 수 있다.</p>
+                            </td>
+                            <td><input type="radio" name="dia22"></td>
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>음정, 박자, 리듬에 대체적으로 잘 반응하며 그 표현이 또래집단보다 우수하다.</p>
+                            <p>몇 마디(2~4마다)의 선율을 듣고 쉽게 따라 할 수 있다</p>
+                            </td>
+                            <td><input type="radio" name="dia22"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>음정, 박자, 리듬의 차이에 정확하게 반응하지 않으며 표현도 또래와 유사하다.</p>
+                            <p>몇 마디(2~4마다)의 선율을 반복적으로 들어야 대략적으로 따라 할 수 있다.</p> 
+                            </td>
+                           
+                            <td><input type="radio" name="dia22"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문23 <span style="width:100%;">(음악적 감상력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>음악 감상 후 그 안에 담겨있는 다양한 요소들을 파악하여 느낀 점을 매우 풍부하게 표현한다.</p>
+                            <p>연주자의 스킬이나 감정의 차이를 캐치하여 느낄 수 있으며 분량이 긴 음악도 몰입하여 감상할 수 있다</p>
+                            </td>
+                            <td><input type="radio" name="dia23"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                             <td class="pd_left"><p>음악 감상 후 그 안에 담겨있는 요소들을 파악하여 느낀 점을 비교적 다양하게 표현한다.</p>
+                            <p>너무 길지 않은 음악은 몰입하여 감상한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia23"></td>
+                        </tr>
+                        <tr class="">
+                            <td>1점</td>
+                            <td class="pd_left"><p>음악 감상 후 그 안에 담겨있는 요소들을 파악하여 느낀 점을 표현하는 것이 단순하다.</p>
+                            <p>음악 감상의 몰입도가 떨어진다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia23"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_4">질문24 <span style="width:100%;">(음악적 표현력 및 창의력)</span></td>
+                            <td>5점</td>
+                            <td class="pd_left"><p>노래나 악기를 연주할 때 자기의 감정을 월등히 잘 살려 표현하는 능력이 탁월하다.</p>
+                            <p>음악을 듣고 따라 부르거나 다른 사람의 연주를 잘 따라 할 뿐 아니라 자기의 음악적 느낌을 첨가하려 한다.</p>
+                            <p>작곡과 리듬 만들기와 같은 음악적인 창작활동에 매우 적극적이며 느낌에 따른 즉흥연주에 뛰어나다.</p>
+                            </td>
+                            <td><input type="radio" name="dia24"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>노래나 악기를 연주할 때 자기의 감정을 비교적 잘 살려서 표현한다.</p>
+                            <p>음악을 듣고 따라 부르거나 다른 사람의 연주를 대체로 잘 따라 한다.</p>
+                            <p>간단한 작곡과 리듬 만들기와 같은 음악적인 창작활동을 자발적으로 수행하려 한다.</p>
+                            </td>
+                            <td><input type="radio" name="dia24"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>노래나 악기를 연주할 때 자기의 감정을 잘 살려서 표현하지 못한다.</p>
+                            <p>음악을 듣고 따라 부르거나 다른 사람의 연주를 잘 따라 하지 못한다.</p>
+                            <p>간단한 작곡과 리듬 만들기와 같은 음악적인 창작활동에 소극적이다.</p>
+                            </td>
+                            
+                            <td><input type="radio" name="dia24"></td>
+                        </tr>
+                        <tr class="">
+                            <td rowspan="3" class="rowspan_color_3">질문25 <span style="width:100%;">(음악에 대한 흥미와 열정)</span></td>
+                             <td>5점</td>
+                            <td class="pd_left"><p>음악을 매우 좋아하며 수업활동 외의 관련 활동 등 다양한(밴드부, 오케스트라, 공연 관람 등)을 적극적이며 지속적으로 참여한다.</p>
+                            <p>만족할만한 성과를 얻기 위해 몰입하며 오랜 시간 꾸준히 연습하는 모습이 자주 관찰된다.</p>
+                            </td>
+                            <td><input type="radio" name="dia25"></td> 
+                        </tr>
+                        <tr class="">
+                            <td>3점</td>
+                            <td class="pd_left"><p>음악을 좋아하여 관련 활동에 비교적 적극적으로 참여하나 꾸준한 연습으로 실력을 연마하려는 노력이 부족하고 끈기가 없다.</p>  
+                            </td>
+                            <td><input type="radio" name="dia25"></td>
+                        </tr>
+                        <tr class="">
+                           <td>1점</td>
+                            <td class="pd_left"><p>음악 과목이나 관련 활동에 참여하고 싶어 하지 않거나 참여해도 다소 소극적이다.</p>   
+                            </td>
+                            <td><input type="radio" name="dia25"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                 <div class="sample_btn">
+<!--
+                        <button class="s_btn_1">샘플 보기</button>
+                        <button class="s_btn_2">결과지 샘플보기</button>
+-->
+                        <button class="s_btn_2" onclick="location.href='sub2-2-2_table_1.html'">검사 하기</button>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
