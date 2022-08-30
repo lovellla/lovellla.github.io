@@ -14,10 +14,18 @@ box-shadow: 5px 5px 5px rgba(0,0,0,0.2); position: absolute; display: flex; alig
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 @import url("https://fonts.googleapis.com/css?family=Abril\+Fatface");
-h1 { color: #333; font-size: 3rem;
-  font-weight: 100;  line-height: 1.5;  text-transform: uppercase;
-  white-space: nowrap;  overflow: hidden;  position: relative;  width: 600px;
-  padding-left: 20px;}
+h1 { color: #333;
+  font-family: source sans pro;
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+}
+.intro h1{width: 535px;}
 .message {  background-color:#937bbd;  color: #fff;
   display: block;  font-weight: 900;  overflow: hidden;
   position: absolute;  padding-left:0.6rem;  top: 0.2rem;
@@ -150,22 +158,25 @@ z-index: 99;}
   -moz-transform: translateX(0px);
   transform: translateX(0px);
 }
-.photo{width: 22%; float: left; margin-top: 100px; margin-left: 150px; height: 620px; border-right: 1px solid #ccc;}
+.page2_content{display: flex; justify-content: space-around; padding: 100px;}
+.page2_content .photo{padding-right: 100px;}
+/* .photo{width: 22%; float: left; margin-top: 100px; margin-left: 150px; border-right: 1px solid #ccc; height: 600px;} */
+.photo{border-right: 1px solid #ccc;}
 .pro1{margin-left: 15px; margin-top: 20px;}
 .job{margin-bottom: 10px; margin-top: 5px;}
 .pro li{font-size: 1.4em;}
-.text{width: 78%; margin-top: 130px; margin-left: 650px; position: relative;}
-.left{position: absolute;}
+/* .text{width: 78%; margin-top: 80px; position: relative;} */
+/* .left{position: absolute;} */
 .text h3{font-size: 1.5em; line-height: 60px;}
 .text p{font-size: 1.2em; line-height: 30px;}
 .his h3{line-height: 50px;}
 .his p{line-height: 26px;}
 .his span{font-size: 16px;}
-.right{position: absolute; right: 130px;}
-.right h3{font-size: 1.8em; line-height: 80px; margin-right: 420px;}
-.item{width: 160px; height: 140px; float: left; margin-bottom: 20px;}
+/* .right{position: absolute; right: 150px;} */
+.right h3{font-size: 1.8em; line-height: 80px; margin-right: 390px;}
+.item{position: relative; width: 146px; height: 140px; float: left; margin-bottom: 20px;}
 #circle1, #circle2,#circle3,#circle4,#circle5,#circle6{stroke-dasharray: 314; animation-duration: 7s; animation-iteration-count: infinite;}
-.skill{width: 550px; height: 350px; position: absolute; right: 0;}
+/* .skill{width: 500px; position: absolute; right: 0;} */
 .box .item{transform: rotate(270deg);}
 #circle1{animation-name: mov1;}
 /*  animation-fill-mode: both; 애니메이션이 원상태로 돌아가지 않게 해줌 */
@@ -186,17 +197,17 @@ z-index: 99;}
 
     @keyframes mov3{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:78.5;}
+        100%{stroke-dashoffset:31.4;}
     }
 
     @keyframes mov4{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:62.8;}
+        100%{stroke-dashoffset:31.4;}
     }
 
     @keyframes mov5{
         0%{stroke-dashoffset:314;}
-        100%{stroke-dashoffset:157;}
+        100%{stroke-dashoffset:125.6;}
     }
 
     @keyframes mov6{
@@ -205,12 +216,12 @@ z-index: 99;}
     }
     
     .txt_box{position: relative;}
-    .cat_tit{position: absolute; left: 62px; top: 50px; text-align: center; width: 120px;}
-    .cat_tit1{position: absolute; left: 220px; top: 50px; text-align: center; width: 120px;}
-    .cat_tit2{position: absolute; left: 380px; top: 50px; text-align: center;width: 120px;}
-    .cat_tit3{position: absolute; left: 62px; top: 215px; text-align: center; width: 120px;}
-    .cat_tit4{position: absolute; left: 222px; top: 215px; text-align: center; width: 120px;}
-    .cat_tit5{position: absolute; left: 380px; top: 215px; text-align: center; width: 120px;}
+    .cat_tit{position: absolute; left: 5px; top: 43px; text-align: center; width: 120px;}
+    .cat_tit1{position: absolute; left: 150px; top: 43px; text-align: center; width: 120px;}
+    .cat_tit2{position: absolute; left: 295px; top: 43px; text-align: center;width: 120px;}
+    .cat_tit3{position: absolute; left: 4px; top: 207px; text-align: center; width: 120px;}
+    .cat_tit4{position: absolute; left: 150px; top: 205px; text-align: center; width: 120px;}
+    .cat_tit5{position: absolute; left: 295px; top: 205px; text-align: center; width: 120px;}
     .txt_box span{font-family: 'Noto Sans KR', sans-serif; font-weight: 500;}
     /* .txt:after{content:attr(data-val); font-size: 1.0em; display: block; width: 120px; height: 40px; position: absolute; left: 10px; top: 110px;
     text-align: center; color:#000;} */
@@ -420,7 +431,7 @@ border: 1px solid #000;}
 .con_box.th img{margin-top: 130px;}
 
 
-.drawsvg, svg {width: 100%; margin-top: 50px; margin-left: 20px;}
+.drawsvg, svg {width: 100%; margin-top: 0px; margin-left: 20px;}
 .stroke { stroke: #7262ab;  stroke-width: 2px;  stroke-dasharray: 0 250;
     stroke-opacity: 1;   fill: none;
     animation: stroke_offset 5s infinite;
