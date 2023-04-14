@@ -44,7 +44,7 @@ html,body{width: 100%; height: 100%; min-width: 290px; color: #fff;  font-family
 .txt_ul li:first-child::before{content: " "; background-image: url("../images/content/ico_02.png"); background-repeat: no-repeat; display: inline-block; width: 10px; height: 11px; margin-right: 3px;}
 
 .image_box button{position: absolute; bottom: 10px; right: 10px; padding: 5px 10px; background-color: #fff; border-radius: 30px; float: right; color:#167073;}
-.image_box button::before{content: url('../images/content/ico_01.png'); vertical-align: middle; margin-right: 5px;}
+.image_box button::before{content: url('../images/content/ico_01.png'); vertical-align: top; margin-right: 5px;}
 
 .image_box01{cursor: pointer;}
 
